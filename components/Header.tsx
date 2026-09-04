@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { locales, localeNames, localizedPath, swapLocale, type Locale } from "@/lib/i18n";
-import LogoMark from "./LogoMark";
+import Image from "next/image";
 
 type NavDict = { about: string; programmes: string; events: string; impact: string; news: string; partners: string; contact: string; join: string; menu: string; close: string; language: string };
 
@@ -43,7 +43,7 @@ export default function Header({ locale, nav, dark = false }: { locale: Locale; 
       <header className={cls}>
         <div className="container header__inner">
           <Link href={localizedPath(locale, "/")} className="brand" aria-label="GACEE home">
-            <LogoMark />
+            <span className="brand__seal"><Image src="/seal.png" alt="" width={40} height={40} priority /></span>
             <span>GACEE</span>
           </Link>
           <nav className="nav" aria-label="Primary">
@@ -67,7 +67,7 @@ export default function Header({ locale, nav, dark = false }: { locale: Locale; 
       {open && (
         <div className="menu" role="dialog" aria-modal="true">
           <div className="menu__top">
-            <span className="brand"><LogoMark /><span>GACEE</span></span>
+            <span className="brand"><span className="brand__seal"><Image src="/seal.png" alt="" width={40} height={40} /></span><span>GACEE</span></span>
             <button className="btn btn--ghost btn--sm" onClick={() => setOpen(false)}>{nav.close}</button>
           </div>
           <div className="menu__links">

@@ -6,7 +6,6 @@ import HeroGlobe from "@/components/HeroGlobe";
 import Reveal from "@/components/Reveal";
 import Arrow from "@/components/Arrow";
 import ProgrammeArt from "@/components/ProgrammeArt";
-import LogoMark from "@/components/LogoMark";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -119,7 +118,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <div className="net">
             {t.network.items.map((it, i) => (
               <Reveal key={i} className="net__item" delay={i * 60}>
-                <LogoMark className="net__ring" />
+                <span className="net__n">0{i + 1}</span>
                 <div><h3>{it.title}</h3><p>{it.body}</p></div>
               </Reveal>
             ))}
