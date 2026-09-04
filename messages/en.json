@@ -20,7 +20,8 @@
     "join": "Get involved",
     "menu": "Menu",
     "close": "Close",
-    "language": "Language"
+    "language": "Language",
+    "signin": "Sign in"
   },
   "hero": {
     "eyebrow": "Singapore · Est. 2025",
@@ -31,10 +32,22 @@
     "scroll": "Scroll"
   },
   "stats": [
-    { "value": "126", "label": "countries represented in our network" },
-    { "value": "180", "label": "school principals hosted across three editions" },
-    { "value": "34", "label": "countries on the Principals Tour" },
-    { "value": "10,000+", "label": "students in the World Chinese Composition Competition" }
+    {
+      "value": "126",
+      "label": "countries represented in our network"
+    },
+    {
+      "value": "180",
+      "label": "school principals hosted across three editions"
+    },
+    {
+      "value": "34",
+      "label": "countries on the Principals Tour"
+    },
+    {
+      "value": "10,000+",
+      "label": "students in the World Chinese Composition Competition"
+    }
   ],
   "intro": {
     "eyebrow": "Who we are",
@@ -46,11 +59,26 @@
     "eyebrow": "Five directions",
     "title": "What we work on",
     "items": [
-      { "title": "International Chinese education", "body": "Connecting Chinese-language schools and institutions worldwide, and bringing quality teaching resources, teachers and curricula to them." },
-      { "title": "Cultural exchange", "body": "Reading, writing, publishing, heritage crafts and theatre, presented in ways that are young, contemporary and international." },
-      { "title": "AI and the future of learning", "body": "Exploring the capabilities young people will need in an AI era, with teachers leading and technology in support." },
-      { "title": "Global youth exchange", "body": "Competitions, study journeys, school partnerships and international youth projects that build both roots and a global outlook." },
-      { "title": "Public good", "body": "Free public lectures, reading initiatives, volunteering and support for children with special needs, so education reaches more people." }
+      {
+        "title": "International Chinese education",
+        "body": "Connecting Chinese-language schools and institutions worldwide, and bringing quality teaching resources, teachers and curricula to them."
+      },
+      {
+        "title": "Cultural exchange",
+        "body": "Reading, writing, publishing, heritage crafts and theatre, presented in ways that are young, contemporary and international."
+      },
+      {
+        "title": "AI and the future of learning",
+        "body": "Exploring the capabilities young people will need in an AI era, with teachers leading and technology in support."
+      },
+      {
+        "title": "Global youth exchange",
+        "body": "Competitions, study journeys, school partnerships and international youth projects that build both roots and a global outlook."
+      },
+      {
+        "title": "Public good",
+        "body": "Free public lectures, reading initiatives, volunteering and support for children with special needs, so education reaches more people."
+      }
     ]
   },
   "programmes": {
@@ -72,9 +100,18 @@
           "Our principle is one region per edition, one culture per place, and one lasting connection per exchange."
         ],
         "facts": [
-          { "label": "Editions", "value": "3 completed" },
-          { "label": "Participants", "value": "180 principals, 34 countries" },
-          { "label": "Next edition", "value": "Anhui / Hangzhou–Shaoxing, dates to be announced" }
+          {
+            "label": "Editions",
+            "value": "3 completed"
+          },
+          {
+            "label": "Participants",
+            "value": "180 principals, 34 countries"
+          },
+          {
+            "label": "Next edition",
+            "value": "Anhui / Hangzhou–Shaoxing, dates to be announced"
+          }
         ]
       },
       "composition-competition": {
@@ -87,9 +124,18 @@
           "From a single composition to an understanding of a culture; from a competition to a lasting platform connecting young people worldwide with China."
         ],
         "facts": [
-          { "label": "Editions", "value": "2" },
-          { "label": "Reach", "value": "30+ countries, 100+ schools" },
-          { "label": "Age groups", "value": "Primary, junior secondary, senior secondary" }
+          {
+            "label": "Editions",
+            "value": "2"
+          },
+          {
+            "label": "Reach",
+            "value": "30+ countries, 100+ schools"
+          },
+          {
+            "label": "Age groups",
+            "value": "Primary, junior secondary, senior secondary"
+          }
         ]
       },
       "study-tours": {
@@ -102,9 +148,18 @@
           "New routes are in development: Anhui for Hui culture and historic villages; Chaoshan for Lingnan culture, folk traditions and cuisine. Each route is a walking classroom with its own mentors, from academics to heritage bearers."
         ],
         "facts": [
-          { "label": "Routes", "value": "Xi'an · Anhui · Chaoshan" },
-          { "label": "Latest departure", "value": "Xi'an, 30 August 2026" },
-          { "label": "Format", "value": "Expert-led immersive journeys" }
+          {
+            "label": "Routes",
+            "value": "Xi'an · Anhui · Chaoshan"
+          },
+          {
+            "label": "Latest departure",
+            "value": "Xi'an, 30 August 2026"
+          },
+          {
+            "label": "Format",
+            "value": "Expert-led immersive journeys"
+          }
         ]
       },
       "principals-forum": {
@@ -116,8 +171,14 @@
           "The forum runs alongside the Principals Tour, turning a visit into a professional community."
         ],
         "facts": [
-          { "label": "Latest", "value": "Zhengzhou, 1 April 2025" },
-          { "label": "Audience", "value": "Principals and education leaders" }
+          {
+            "label": "Latest",
+            "value": "Zhengzhou, 1 April 2025"
+          },
+          {
+            "label": "Audience",
+            "value": "Principals and education leaders"
+          }
         ]
       },
       "online-chinese": {
@@ -130,9 +191,18 @@
           "Compliance, data protection and school-level data separation are built into the foundation from day one."
         ],
         "facts": [
-          { "label": "Pilot", "value": "Nigeria" },
-          { "label": "Format", "value": "Live, recorded and offline learning" },
-          { "label": "Standards", "value": "Aligned with HSK / YCT" }
+          {
+            "label": "Pilot",
+            "value": "Nigeria"
+          },
+          {
+            "label": "Format",
+            "value": "Live, recorded and offline learning"
+          },
+          {
+            "label": "Standards",
+            "value": "Aligned with HSK / YCT"
+          }
         ]
       },
       "future-academy": {
@@ -145,9 +215,18 @@
           "The path runs from curriculum to international classroom, to study journeys, to global exchange, to a community of young people growing up together across countries."
         ],
         "facts": [
-          { "label": "Strands", "value": "4" },
-          { "label": "Audience", "value": "Young people worldwide" },
-          { "label": "Status", "value": "Framework in development" }
+          {
+            "label": "Strands",
+            "value": "4"
+          },
+          {
+            "label": "Audience",
+            "value": "Young people worldwide"
+          },
+          {
+            "label": "Status",
+            "value": "Framework in development"
+          }
         ]
       },
       "public-good": {
@@ -160,8 +239,14 @@
           "All public-good programmes are clearly marked, free to participants, and funded through the association and its philanthropic partners."
         ],
         "facts": [
-          { "label": "Lectures", "value": "Free, global, online and in person" },
-          { "label": "EduLink-Africa", "value": "School support in Africa" }
+          {
+            "label": "Lectures",
+            "value": "Free, global, online and in person"
+          },
+          {
+            "label": "EduLink-Africa",
+            "value": "School support in Africa"
+          }
         ]
       }
     }
@@ -171,14 +256,38 @@
     "title": "Six partnership networks, one open ecosystem",
     "body": "Working from Singapore, GACEE connects schools, universities, cultural institutions, publishers, technology companies and philanthropic organisations. We are building not one-off collaborations, but shared resources, joint programmes, talent exchange, youth visits and long-term partnerships.",
     "items": [
-      { "title": "Schools", "body": "Chinese-language schools, international schools and Chinese schools" },
-      { "title": "Universities and experts", "body": "Universities, scholars and education specialists" },
-      { "title": "Cultural institutions", "body": "Museums, heritage bodies, arts and cultural groups" },
-      { "title": "Publishing and media", "body": "Publishers, education media and international platforms" },
-      { "title": "Technology and industry", "body": "AI companies, technology firms and education innovators" },
-      { "title": "Philanthropy", "body": "Foundations, charities and volunteer networks" }
+      {
+        "title": "Schools",
+        "body": "Chinese-language schools, international schools and Chinese schools"
+      },
+      {
+        "title": "Universities and experts",
+        "body": "Universities, scholars and education specialists"
+      },
+      {
+        "title": "Cultural institutions",
+        "body": "Museums, heritage bodies, arts and cultural groups"
+      },
+      {
+        "title": "Publishing and media",
+        "body": "Publishers, education media and international platforms"
+      },
+      {
+        "title": "Technology and industry",
+        "body": "AI companies, technology firms and education innovators"
+      },
+      {
+        "title": "Philanthropy",
+        "body": "Foundations, charities and volunteer networks"
+      }
     ],
-    "regions": ["Asia", "Europe", "Americas", "Africa", "Oceania"]
+    "regions": [
+      "Asia",
+      "Europe",
+      "Americas",
+      "Africa",
+      "Oceania"
+    ]
   },
   "newsHome": {
     "eyebrow": "Latest",
@@ -189,12 +298,42 @@
     "eyebrow": "News",
     "title": "News and media coverage",
     "items": [
-      { "date": "2026-08-30", "title": "Second study journey departs for Xi'an", "source": "GACEE", "body": "Outstanding entrants from the World Chinese Composition Competition begin a walking classroom through the ancient capital of thirteen dynasties." },
-      { "date": "2026-05-01", "title": "Second World Chinese Composition Competition opens", "source": "GACEE", "body": "Themed \"Chinese connects the world: my cultural journey\", the second edition invites students worldwide to write about culture, characters, AI and the future." },
-      { "date": "2025-05-15", "title": "First World Chinese Composition Competition launches across five continents", "source": "GACEE", "body": "More than one hundred schools in over thirty countries take part; outstanding works are collected in a published anthology." },
-      { "date": "2025-04-02", "title": "Henan TV covers the Principals Tour", "source": "Henan TV", "body": "Provincial television reports on the 2025 study visit of overseas Chinese-school principals to Henan, \"Studying in the Central Plains, Sailing to the Future\"." },
-      { "date": "2025-04-01", "title": "Global Chinese Principals Forum held in Zhengzhou", "source": "GACEE", "body": "School leaders and experts discuss the transformation of international Chinese education in the AI era." },
-      { "date": "2025-03-27", "title": "First Global 100 Principals China Tour opens in Henan", "source": "GACEE", "body": "One hundred principals from more than twenty countries on five continents gather for a week of education dialogue and cultural immersion." }
+      {
+        "date": "2026-08-30",
+        "title": "Second study journey departs for Xi'an",
+        "source": "GACEE",
+        "body": "Outstanding entrants from the World Chinese Composition Competition begin a walking classroom through the ancient capital of thirteen dynasties."
+      },
+      {
+        "date": "2026-05-01",
+        "title": "Second World Chinese Composition Competition opens",
+        "source": "GACEE",
+        "body": "Themed \"Chinese connects the world: my cultural journey\", the second edition invites students worldwide to write about culture, characters, AI and the future."
+      },
+      {
+        "date": "2025-05-15",
+        "title": "First World Chinese Composition Competition launches across five continents",
+        "source": "GACEE",
+        "body": "More than one hundred schools in over thirty countries take part; outstanding works are collected in a published anthology."
+      },
+      {
+        "date": "2025-04-02",
+        "title": "Henan TV covers the Principals Tour",
+        "source": "Henan TV",
+        "body": "Provincial television reports on the 2025 study visit of overseas Chinese-school principals to Henan, \"Studying in the Central Plains, Sailing to the Future\"."
+      },
+      {
+        "date": "2025-04-01",
+        "title": "Global Chinese Principals Forum held in Zhengzhou",
+        "source": "GACEE",
+        "body": "School leaders and experts discuss the transformation of international Chinese education in the AI era."
+      },
+      {
+        "date": "2025-03-27",
+        "title": "First Global 100 Principals China Tour opens in Henan",
+        "source": "GACEE",
+        "body": "One hundred principals from more than twenty countries on five continents gather for a week of education dialogue and cultural immersion."
+      }
     ]
   },
   "cta": {
@@ -227,10 +366,22 @@
     "vision": "Culture beyond borders, education connecting the future: an open, shared and sustainable global ecosystem for cultural and educational cooperation.",
     "valuesTitle": "What we hold to",
     "values": [
-      { "title": "Education as a public good", "body": "We keep the public-interest character of education at the centre of everything we do." },
-      { "title": "Teachers first", "body": "In every programme, including those using AI, teachers lead and technology supports." },
-      { "title": "Facts before claims", "body": "We say what we did, how many, and where, before we say what it means." },
-      { "title": "Start where it is hardest", "body": "If a programme works in the most difficult conditions, it will work anywhere." }
+      {
+        "title": "Education as a public good",
+        "body": "We keep the public-interest character of education at the centre of everything we do."
+      },
+      {
+        "title": "Teachers first",
+        "body": "In every programme, including those using AI, teachers lead and technology supports."
+      },
+      {
+        "title": "Facts before claims",
+        "body": "We say what we did, how many, and where, before we say what it means."
+      },
+      {
+        "title": "Start where it is hardest",
+        "body": "If a programme works in the most difficult conditions, it will work anywhere."
+      }
     ],
     "strategyTitle": "Three-year direction",
     "strategy": [
@@ -243,10 +394,22 @@
     ],
     "structureTitle": "How the pieces fit",
     "structure": [
-      { "title": "Publishing", "body": "Curates and preserves quality content." },
-      { "title": "Future Academy", "body": "Turns content into curricula and real learning settings." },
-      { "title": "Learning platform", "body": "Scales content and teaching with technology." },
-      { "title": "The association", "body": "Connects schools, teachers, experts, international resources and programmes." }
+      {
+        "title": "Publishing",
+        "body": "Curates and preserves quality content."
+      },
+      {
+        "title": "Future Academy",
+        "body": "Turns content into curricula and real learning settings."
+      },
+      {
+        "title": "Learning platform",
+        "body": "Scales content and teaching with technology."
+      },
+      {
+        "title": "The association",
+        "body": "Connects schools, teachers, experts, international resources and programmes."
+      }
     ]
   },
   "events": {
@@ -257,13 +420,55 @@
     "register": "Register interest",
     "tba": "Dates to be announced",
     "items": [
-      { "date": "TBA", "title": "Fourth Global 100 Principals China Tour", "place": "Anhui / Hangzhou–Shaoxing, China", "body": "From the Central Plains to a wider China: culture, education exchange, technology and school-to-school cooperation.", "upcoming": true },
-      { "date": "2026", "title": "Second World Chinese Composition Competition", "place": "Worldwide, online", "body": "Open to primary and secondary students. Winners receive study-journey opportunities in China.", "upcoming": true },
-      { "date": "TBA", "title": "Anhui study journey: Hui culture", "place": "Anhui, China", "body": "Historic villages, Hui architecture, heritage crafts and local life.", "upcoming": true },
-      { "date": "TBA", "title": "Chaoshan study journey: Lingnan culture", "place": "Chaoshan, China", "body": "Folk traditions, heritage crafts, regional culture and cuisine.", "upcoming": true },
-      { "date": "2026-08-30", "title": "Second study journey: Xi'an", "place": "Xi'an, China", "body": "A walking classroom through the ancient capital.", "upcoming": false },
-      { "date": "2025-04-01", "title": "Global Chinese Principals Forum", "place": "Zhengzhou, China", "body": "The transformation of international Chinese education.", "upcoming": false },
-      { "date": "2025-03-27", "title": "First Global 100 Principals China Tour", "place": "Henan, China", "body": "One hundred principals from over twenty countries.", "upcoming": false }
+      {
+        "date": "TBA",
+        "title": "Fourth Global 100 Principals China Tour",
+        "place": "Anhui / Hangzhou–Shaoxing, China",
+        "body": "From the Central Plains to a wider China: culture, education exchange, technology and school-to-school cooperation.",
+        "upcoming": true
+      },
+      {
+        "date": "2026",
+        "title": "Second World Chinese Composition Competition",
+        "place": "Worldwide, online",
+        "body": "Open to primary and secondary students. Winners receive study-journey opportunities in China.",
+        "upcoming": true
+      },
+      {
+        "date": "TBA",
+        "title": "Anhui study journey: Hui culture",
+        "place": "Anhui, China",
+        "body": "Historic villages, Hui architecture, heritage crafts and local life.",
+        "upcoming": true
+      },
+      {
+        "date": "TBA",
+        "title": "Chaoshan study journey: Lingnan culture",
+        "place": "Chaoshan, China",
+        "body": "Folk traditions, heritage crafts, regional culture and cuisine.",
+        "upcoming": true
+      },
+      {
+        "date": "2026-08-30",
+        "title": "Second study journey: Xi'an",
+        "place": "Xi'an, China",
+        "body": "A walking classroom through the ancient capital.",
+        "upcoming": false
+      },
+      {
+        "date": "2025-04-01",
+        "title": "Global Chinese Principals Forum",
+        "place": "Zhengzhou, China",
+        "body": "The transformation of international Chinese education.",
+        "upcoming": false
+      },
+      {
+        "date": "2025-03-27",
+        "title": "First Global 100 Principals China Tour",
+        "place": "Henan, China",
+        "body": "One hundred principals from over twenty countries.",
+        "upcoming": false
+      }
     ]
   },
   "impact": {
@@ -271,9 +476,18 @@
     "title": "Education that reaches further",
     "lede": "Free lectures, reading initiatives, volunteering and school support in Africa. Public-good programmes are free to participants and clearly marked.",
     "sections": [
-      { "title": "Global public lectures", "body": "Educators and experts speak to schools and communities free of charge, online and in person, on reading, culture, family education and learning in the AI era." },
-      { "title": "EduLink-Africa", "body": "An education support initiative for African schools: learning resources, teacher connections and infrastructure, with the belief that every child should have the chance to pursue a dream." },
-      { "title": "Reading and volunteering", "body": "Reading promotion such as \"Five continents read one book\", volunteer service and care for children with special needs." }
+      {
+        "title": "Global public lectures",
+        "body": "Educators and experts speak to schools and communities free of charge, online and in person, on reading, culture, family education and learning in the AI era."
+      },
+      {
+        "title": "EduLink-Africa",
+        "body": "An education support initiative for African schools: learning resources, teacher connections and infrastructure, with the belief that every child should have the chance to pursue a dream."
+      },
+      {
+        "title": "Reading and volunteering",
+        "body": "Reading promotion such as \"Five continents read one book\", volunteer service and care for children with special needs."
+      }
     ],
     "principlesTitle": "How we work in Africa",
     "principles": [
@@ -290,12 +504,30 @@
     "title": "There is a place for you in the network.",
     "lede": "GACEE works through partnerships. Tell us who you are and we will follow up with the right programme lead.",
     "types": [
-      { "title": "Schools", "body": "Join the Principals Tour, enter the Composition Competition, host a study journey or bring the online Chinese programme to your classrooms." },
-      { "title": "Universities and experts", "body": "Lecture, mentor a study journey, review curricula or join the Principals Forum." },
-      { "title": "Publishers and cultural institutions", "body": "Co-publish anthologies and readers, or bring heritage and arts programmes to international audiences." },
-      { "title": "Companies", "body": "Commission Chinese-language classes for local teams, or support technology and education innovation." },
-      { "title": "Foundations", "body": "Fund public lectures, EduLink-Africa and inclusive access to learning." },
-      { "title": "Volunteers", "body": "Support events, reading initiatives and translation." }
+      {
+        "title": "Schools",
+        "body": "Join the Principals Tour, enter the Composition Competition, host a study journey or bring the online Chinese programme to your classrooms."
+      },
+      {
+        "title": "Universities and experts",
+        "body": "Lecture, mentor a study journey, review curricula or join the Principals Forum."
+      },
+      {
+        "title": "Publishers and cultural institutions",
+        "body": "Co-publish anthologies and readers, or bring heritage and arts programmes to international audiences."
+      },
+      {
+        "title": "Companies",
+        "body": "Commission Chinese-language classes for local teams, or support technology and education innovation."
+      },
+      {
+        "title": "Foundations",
+        "body": "Fund public lectures, EduLink-Africa and inclusive access to learning."
+      },
+      {
+        "title": "Volunteers",
+        "body": "Support events, reading initiatives and translation."
+      }
     ],
     "form": {
       "title": "Tell us about your organisation",
@@ -352,5 +584,51 @@
       "Information on this site is provided in good faith. Programme details, dates and locations may change; we will publish updates here.",
       "These terms are governed by the laws of Singapore."
     ]
+  },
+  "login": {
+    "eyebrow": "Sign in",
+    "title": "One entrance for members, partners and learners.",
+    "lede": "Choose where you are going. Accounts are being set up alongside the association's programmes; this preview shows the entrances that will be live.",
+    "tabs": [
+      {
+        "key": "members",
+        "label": "Members & partners"
+      },
+      {
+        "key": "learn",
+        "label": "Learning platform"
+      },
+      {
+        "key": "events",
+        "label": "Event registrations"
+      }
+    ],
+    "members": {
+      "title": "Members and partners",
+      "body": "For association members, partner schools and institutions: programme documents, registrations and partnership records.",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "forgot": "Forgot password?",
+      "apply": "Apply to become a partner",
+      "note": "Preview: member accounts open with the first partner cohort."
+    },
+    "learn": {
+      "title": "Learning platform",
+      "body": "Teachers, learners and schools on the Global Online Chinese Programme sign in on the learning platform.",
+      "button": "Go to learn.gacee.org",
+      "status": "Opens with the first pilot cohort in October 2026.",
+      "teacher": "Teacher sign-in",
+      "learner": "Learner sign-in",
+      "school": "School administrator"
+    },
+    "events": {
+      "title": "Event registrations",
+      "body": "Look up or change a registration with the email you used. We send a one-time code; no password needed.",
+      "email": "Email used for registration",
+      "submit": "Send code",
+      "sent": "If a registration exists for this address, a code is on its way.",
+      "note": "Preview: codes are not yet sent."
+    }
   }
 }
