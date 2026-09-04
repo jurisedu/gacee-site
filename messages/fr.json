@@ -1,0 +1,356 @@
+{
+  "meta": {
+    "title": "GACEE · Association mondiale pour les échanges culturels et éducatifs",
+    "description": "Une association basée à Singapour qui relie écoles, éducateurs et jeunes du monde entier par les échanges culturels et éducatifs."
+  },
+  "org": {
+    "name": "Global Association of Cultural and Educational Exchange",
+    "short": "GACEE",
+    "tagline": "Relier le monde, inspirer l'avenir",
+    "location": "Singapour"
+  },
+  "nav": {
+    "about": "À propos",
+    "programmes": "Programmes",
+    "events": "Événements",
+    "impact": "Intérêt public",
+    "news": "Actualités",
+    "partners": "Partenariats",
+    "contact": "Contact",
+    "join": "S'engager",
+    "menu": "Menu",
+    "close": "Fermer",
+    "language": "Langue"
+  },
+  "hero": {
+    "eyebrow": "Singapour · Fondée en 2025",
+    "title": "Relier le monde, inspirer l'avenir.",
+    "subtitle": "GACEE réunit chefs d'établissement, enseignants et jeunes des cinq continents : échanges de directeurs, concours mondial d'écriture, voyages d'étude et apprentissage guidé par les enseignants, jusque dans les classes les plus difficiles à connecter.",
+    "cta1": "Découvrir les programmes",
+    "cta2": "Devenir partenaire",
+    "scroll": "Défiler"
+  },
+  "stats": [
+    { "value": "126", "label": "pays représentés dans notre réseau" },
+    { "value": "180", "label": "chefs d'établissement accueillis en trois éditions" },
+    { "value": "34", "label": "pays présents à la Tournée des directeurs" },
+    { "value": "10 000+", "label": "élèves au Concours mondial de composition en chinois" }
+  ],
+  "intro": {
+    "eyebrow": "Qui nous sommes",
+    "title": "Une association conçue comme un pont.",
+    "body": "Fondée à Singapour en 2025, GACEE est une association à but non lucratif qui relie la Chine et le monde par l'éducation. Nous travaillons avec des écoles, des universités, des éditeurs, des institutions culturelles, des partenaires technologiques et des organisations philanthropiques pour créer des échanges qui durent au-delà d'un seul événement.",
+    "link": "À propos de l'association"
+  },
+  "pillars": {
+    "eyebrow": "Cinq axes",
+    "title": "Nos domaines d'action",
+    "items": [
+      { "title": "Enseignement international du chinois", "body": "Relier les écoles et institutions de langue chinoise dans le monde et leur apporter ressources, enseignants et programmes de qualité." },
+      { "title": "Échanges culturels", "body": "Lecture, écriture, édition, patrimoine et théâtre, présentés de façon jeune, contemporaine et internationale." },
+      { "title": "IA et avenir de l'apprentissage", "body": "Explorer les compétences dont les jeunes auront besoin à l'ère de l'IA, avec les enseignants aux commandes et la technologie en appui." },
+      { "title": "Échanges mondiaux de jeunes", "body": "Concours, voyages d'étude, partenariats scolaires et projets internationaux qui donnent des racines et une ouverture sur le monde." },
+      { "title": "Intérêt public", "body": "Conférences gratuites, promotion de la lecture, bénévolat et soutien aux enfants à besoins particuliers." }
+    ]
+  },
+  "programmes": {
+    "eyebrow": "Programmes",
+    "title": "Programmes phares",
+    "body": "Chaque programme est conçu comme une plateforme durable plutôt qu'un événement ponctuel : les directeurs mènent aux écoles, les écoles aux élèves, et les élèves à des partenariats durables.",
+    "all": "Tous les programmes",
+    "learnMore": "En savoir plus",
+    "factsTitle": "En bref",
+    "backToAll": "Tous les programmes",
+    "items": {
+      "principals-tour": {
+        "title": "Tournée en Chine des 100 directeurs",
+        "tagline": "Les directeurs, ponts entre les écoles et la Chine",
+        "summary": "Un programme annuel qui accueille en Chine cent chefs d'établissement d'écoles de langue chinoise du monde entier pour des dialogues éducatifs, des visites d'écoles et une immersion culturelle.",
+        "body": [
+          "Trois éditions ont eu lieu dans la province du Henan, accueillant 180 directeurs de 34 pays. Chaque édition associe forums éducatifs, visites d'écoles chinoises, échanges entre directeurs et immersion dans la culture et le patrimoine chinois.",
+          "La quatrième édition s'étendra au-delà du Henan, l'Anhui et la région Hangzhou–Shaoxing étant à l'étude. Elle passe de la visite culturelle à des échanges éducatifs approfondis, aux thèmes de la technologie et de l'avenir de l'apprentissage, et à une coopération concrète entre écoles : visites d'élèves, programmes partagés et partenariats durables.",
+          "Notre principe : une région par édition, une culture par lieu, un lien durable par échange."
+        ],
+        "facts": [
+          { "label": "Éditions", "value": "3 réalisées" },
+          { "label": "Participants", "value": "180 directeurs, 34 pays" },
+          { "label": "Prochaine édition", "value": "Anhui / Hangzhou–Shaoxing, dates à confirmer" }
+        ]
+      },
+      "composition-competition": {
+        "title": "Concours mondial de composition en chinois",
+        "tagline": "Le chinois relie le monde, l'écriture relie l'avenir",
+        "summary": "Un concours mondial d'écriture pour élèves du primaire et du secondaire, avec anthologies publiées et voyages d'étude pour les lauréats.",
+        "body": [
+          "Lancée en mai 2025, la première édition a touché plus de cent écoles dans plus de trente pays sur cinq continents, avec plus de dix mille participations réparties en trois catégories d'âge. Les meilleures œuvres ont été publiées dans une anthologie largement relayée par les médias internationaux.",
+          "La deuxième édition, sur le thème « Le chinois relie le monde : mon voyage culturel », invite les élèves à écrire sur la culture, les caractères, l'IA, l'avenir et le fait de grandir. Les lauréats reçoivent des voyages d'étude en Chine et un accompagnement.",
+          "D'une simple composition à la compréhension d'une culture ; d'un concours à une plateforme durable reliant les jeunes du monde à la Chine."
+        ],
+        "facts": [
+          { "label": "Éditions", "value": "2" },
+          { "label": "Portée", "value": "30+ pays, 100+ écoles" },
+          { "label": "Catégories", "value": "Primaire, collège, lycée" }
+        ]
+      },
+      "study-tours": {
+        "title": "Voyages d'étude internationaux",
+        "tagline": "De la Chine qu'on écrit à la Chine qu'on parcourt",
+        "summary": "Des voyages d'étude immersifs qui mènent les jeunes de la Chine qu'ils ont décrite à celle qu'ils peuvent voir, entendre et toucher.",
+        "body": [
+          "Le premier voyage, « Parcourir la Chine, prolonger l'héritage », a conduit les lauréats du concours sur des sites patrimoniaux, dans des ateliers de patrimoine immatériel et au contact des technologies modernes, guidés par des universitaires et des maîtres artisans.",
+          "Le deuxième voyage est parti pour Xi'an le 30 août 2026, à la découverte de l'ancienne capitale de treize dynasties, des vestiges historiques à la vie urbaine contemporaine.",
+          "De nouveaux itinéraires sont en préparation : l'Anhui pour la culture Hui et ses villages historiques ; Chaoshan pour la culture Lingnan, ses traditions et sa cuisine. Chaque itinéraire est une classe itinérante avec ses propres mentors."
+        ],
+        "facts": [
+          { "label": "Itinéraires", "value": "Xi'an · Anhui · Chaoshan" },
+          { "label": "Dernier départ", "value": "Xi'an, 30 août 2026" },
+          { "label": "Format", "value": "Voyages immersifs guidés par des experts" }
+        ]
+      },
+      "principals-forum": {
+        "title": "Forum mondial des directeurs d'écoles chinoises",
+        "tagline": "Un forum de haut niveau sur l'avenir de l'enseignement international du chinois",
+        "summary": "Un forum annuel où chefs d'établissement et experts examinent l'innovation pédagogique et la transformation de l'enseignement du chinois à l'ère de l'IA.",
+        "body": [
+          "Le forum s'est tenu à Zhengzhou le 1er avril 2025, organisé avec le journal Secondary School Students' Study Newspaper. Il a abordé la philosophie éducative, les méthodes, l'innovation et les orientations de transformation, et a été chaleureusement accueilli par les directeurs et les éducateurs internationaux.",
+          "Le forum se tient en parallèle de la Tournée des directeurs et transforme une visite en communauté professionnelle."
+        ],
+        "facts": [
+          { "label": "Dernière édition", "value": "Zhengzhou, 1er avril 2025" },
+          { "label": "Public", "value": "Directeurs et responsables éducatifs" }
+        ]
+      },
+      "online-chinese": {
+        "title": "Programme mondial de chinois en ligne",
+        "tagline": "Guidé par les enseignants, assisté par l'IA, conçu pour les classes les plus difficiles à connecter",
+        "summary": "Cours de chinois en direct et enregistrés, dispensés par des enseignants expérimentés et conçus pour fonctionner sur réseaux faibles et hors ligne. Premières cohortes au Nigeria.",
+        "body": [
+          "Le programme a commencé par des formations en ligne pour Great Heights School et New Horizon School au Nigeria. Il associe des enseignants à distance à des classes locales et se développe, avec un partenaire technologique, en une plateforme d'apprentissage alignée sur les normes internationales de compétence en chinois.",
+          "Nos principes sont fermes : les enseignants dirigent et valident chaque jugement clé ; l'IA assiste la pratique, la révision et le retour d'information ; le contenu reste dans un périmètre de connaissances vérifiées ; la faible connectivité et le hors-ligne sont la condition par défaut. Les langues premières des apprenants servent d'échafaudage, avec un soutien prévu en swahili, français, arabe et anglais.",
+          "Conformité, protection des données et cloisonnement des données par école sont intégrés dès le premier jour."
+        ],
+        "facts": [
+          { "label": "Pilote", "value": "Nigeria" },
+          { "label": "Format", "value": "Direct, enregistré et hors ligne" },
+          { "label": "Normes", "value": "Aligné sur HSK / YCT" }
+        ]
+      },
+      "future-academy": {
+        "title": "Future Academy",
+        "tagline": "Enraciné dans la culture, ouvert sur le monde, prêt pour la suite",
+        "summary": "Un programme international pour les jeunes en quatre volets : culture et langue chinoises, civilisations du monde, IA et compétences d'avenir, croissance personnelle par la pratique.",
+        "body": [
+          "Future Academy est le cadre éducatif international de GACEE. Il combine cours, lecture, voyages d'étude, projets pratiques et échanges internationaux pour former des jeunes dotés de racines culturelles, d'une ouverture mondiale, d'une pensée indépendante, de créativité et de responsabilité sociale.",
+          "Les quatre volets : culture et langue chinoises ; civilisations du monde et compétence globale ; littératie en IA, démarche scientifique et apprentissage interdisciplinaire ; croissance par le débat, le leadership, le service et l'apprentissage par projet.",
+          "Le parcours va du programme à la classe internationale, aux voyages d'étude, aux échanges mondiaux, jusqu'à une communauté de jeunes grandissant ensemble à travers les pays."
+        ],
+        "facts": [
+          { "label": "Volets", "value": "4" },
+          { "label": "Public", "value": "Jeunes du monde entier" },
+          { "label": "Statut", "value": "Cadre en développement" }
+        ]
+      },
+      "public-good": {
+        "title": "Conférences publiques et EduLink-Africa",
+        "tagline": "L'éducation est l'étincelle qui éclaire l'avenir",
+        "summary": "Conférences publiques gratuites pour les écoles et communautés du monde entier, et EduLink-Africa, notre initiative de soutien aux écoles africaines.",
+        "body": [
+          "Le cycle de conférences publiques de GACEE amène gratuitement éducateurs et experts dans les écoles et les communautés, sur la lecture, la culture, l'apprentissage à l'ère de l'IA et l'éducation familiale.",
+          "EduLink-Africa soutient des écoles en Afrique par des ressources pédagogiques, des liens avec des enseignants et des infrastructures. Nous ne sommes pas seulement bâtisseurs : nous voulons que chaque enfant ait la chance de poursuivre un rêve.",
+          "Tous les programmes d'intérêt public sont clairement identifiés, gratuits pour les participants et financés par l'association et ses partenaires philanthropiques."
+        ],
+        "facts": [
+          { "label": "Conférences", "value": "Gratuites, mondiales, en ligne et sur place" },
+          { "label": "EduLink-Africa", "value": "Soutien aux écoles en Afrique" }
+        ]
+      }
+    }
+  },
+  "network": {
+    "eyebrow": "Réseau mondial",
+    "title": "Six réseaux de partenaires, un écosystème ouvert",
+    "body": "Depuis Singapour, GACEE relie écoles, universités, institutions culturelles, éditeurs, entreprises technologiques et organisations philanthropiques. Nous construisons non pas des collaborations ponctuelles, mais des ressources partagées, des programmes communs, des échanges de talents, des visites de jeunes et des partenariats durables.",
+    "items": [
+      { "title": "Écoles", "body": "Écoles de langue chinoise, écoles internationales et écoles chinoises" },
+      { "title": "Universités et experts", "body": "Universités, chercheurs et spécialistes de l'éducation" },
+      { "title": "Institutions culturelles", "body": "Musées, organismes du patrimoine, groupes artistiques et culturels" },
+      { "title": "Édition et médias", "body": "Éditeurs, médias éducatifs et plateformes internationales" },
+      { "title": "Technologie et industrie", "body": "Entreprises d'IA, sociétés technologiques et innovateurs en éducation" },
+      { "title": "Philanthropie", "body": "Fondations, organisations caritatives et réseaux de bénévoles" }
+    ],
+    "regions": ["Asie", "Europe", "Amériques", "Afrique", "Océanie"]
+  },
+  "newsHome": {
+    "eyebrow": "Dernières",
+    "title": "Actualités et médias",
+    "all": "Toutes les actualités"
+  },
+  "news": {
+    "eyebrow": "Actualités",
+    "title": "Actualités et couverture médiatique",
+    "items": [
+      { "date": "2026-08-30", "title": "Le deuxième voyage d'étude part pour Xi'an", "source": "GACEE", "body": "Les lauréats du Concours mondial de composition en chinois entament une classe itinérante dans l'ancienne capitale de treize dynasties." },
+      { "date": "2026-05-01", "title": "Ouverture du deuxième Concours mondial de composition en chinois", "source": "GACEE", "body": "Sur le thème « Le chinois relie le monde : mon voyage culturel », la deuxième édition invite les élèves du monde entier à écrire sur la culture, les caractères, l'IA et l'avenir." },
+      { "date": "2025-05-15", "title": "Lancement du premier concours sur cinq continents", "source": "GACEE", "body": "Plus de cent écoles dans plus de trente pays participent ; les meilleures œuvres sont réunies dans une anthologie." },
+      { "date": "2025-04-02", "title": "Henan TV couvre la Tournée des directeurs", "source": "Henan TV", "body": "La télévision provinciale rend compte de la visite d'étude 2025 des directeurs d'écoles chinoises d'outre-mer au Henan." },
+      { "date": "2025-04-01", "title": "Forum mondial des directeurs à Zhengzhou", "source": "GACEE", "body": "Chefs d'établissement et experts débattent de la transformation de l'enseignement international du chinois à l'ère de l'IA." },
+      { "date": "2025-03-27", "title": "Ouverture de la première Tournée des 100 directeurs au Henan", "source": "GACEE", "body": "Cent directeurs de plus de vingt pays sur cinq continents se réunissent pour une semaine de dialogue éducatif et d'immersion culturelle." }
+    ]
+  },
+  "cta": {
+    "title": "Construisons le pont ensemble.",
+    "body": "Écoles, universités, éditeurs, institutions culturelles, partenaires technologiques et fondations : il y a une place pour vous dans le réseau.",
+    "button": "Engager la conversation"
+  },
+  "footer": {
+    "address": "Singapour",
+    "registered": "Association à but non lucratif enregistrée à Singapour, 2025.",
+    "rights": "Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "tech": "Partenaire technologique",
+    "explore": "Explorer",
+    "association": "Association",
+    "newsletter": "Restons en contact",
+    "newsletterBody": "Des nouvelles occasionnelles sur les programmes, événements et opportunités.",
+    "email": "Adresse e-mail",
+    "subscribe": "S'abonner",
+    "subscribed": "Merci. Vous êtes inscrit."
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "Depuis Singapour, relier la Chine et le monde.",
+    "lede": "GACEE a été fondée à Singapour en 2025 comme plateforme internationale d'échanges culturels et éducatifs. La culture est notre racine, l'éducation notre pont, et les jeunes notre avenir.",
+    "missionTitle": "Mission",
+    "mission": "Relier les ressources mondiales en éducation, culture, technologie et intérêt public ; faire rayonner le meilleur de la culture chinoise ; favoriser les échanges et l'apprentissage mutuel entre civilisations.",
+    "visionTitle": "Vision",
+    "vision": "La culture au-delà des frontières, l'éducation reliant l'avenir : un écosystème mondial ouvert, partagé et durable de coopération culturelle et éducative.",
+    "valuesTitle": "Nos engagements",
+    "values": [
+      { "title": "L'éducation comme bien public", "body": "Le caractère d'intérêt public de l'éducation reste au centre de tout ce que nous faisons." },
+      { "title": "Les enseignants d'abord", "body": "Dans chaque programme, y compris ceux qui utilisent l'IA, les enseignants dirigent et la technologie soutient." },
+      { "title": "Les faits avant les affirmations", "body": "Nous disons ce que nous avons fait, combien et où, avant de dire ce que cela signifie." },
+      { "title": "Commencer là où c'est le plus difficile", "body": "Un programme qui fonctionne dans les conditions les plus difficiles fonctionnera partout." }
+    ],
+    "strategyTitle": "Orientation sur trois ans",
+    "strategy": [
+      "Constituer un portefeuille de programmes phares reconnus internationalement.",
+      "Développer un réseau mondial pour l'enseignement du chinois entre écoles, institutions et experts.",
+      "Établir un système durable d'échanges de jeunes dans les deux sens entre la Chine et le monde.",
+      "Approfondir l'intégration de la culture, de la technologie et de l'éducation.",
+      "Porter des contenus culturels et éducatifs de qualité vers les publics internationaux.",
+      "Bâtir une plateforme ouverte et intersectorielle de coopération culturelle et éducative mondiale."
+    ],
+    "structureTitle": "Comment les pièces s'assemblent",
+    "structure": [
+      { "title": "Édition", "body": "Sélectionne et préserve des contenus de qualité." },
+      { "title": "Future Academy", "body": "Transforme les contenus en programmes et en situations réelles d'apprentissage." },
+      { "title": "Plateforme d'apprentissage", "body": "Met les contenus et l'enseignement à l'échelle grâce à la technologie." },
+      { "title": "L'association", "body": "Relie écoles, enseignants, experts, ressources internationales et programmes." }
+    ]
+  },
+  "events": {
+    "eyebrow": "Événements",
+    "title": "À venir et récents",
+    "upcoming": "À venir",
+    "past": "Récents",
+    "register": "Manifester son intérêt",
+    "tba": "Dates à confirmer",
+    "items": [
+      { "date": "À confirmer", "title": "Quatrième Tournée en Chine des 100 directeurs", "place": "Anhui / Hangzhou–Shaoxing, Chine", "body": "Des Plaines centrales vers une Chine plus large : culture, échanges éducatifs, technologie et coopération entre écoles.", "upcoming": true },
+      { "date": "2026", "title": "Deuxième Concours mondial de composition en chinois", "place": "Monde entier, en ligne", "body": "Ouvert aux élèves du primaire et du secondaire. Les lauréats reçoivent des voyages d'étude en Chine.", "upcoming": true },
+      { "date": "À confirmer", "title": "Voyage d'étude en Anhui : culture Hui", "place": "Anhui, Chine", "body": "Villages historiques, architecture Hui, artisanat patrimonial et vie locale.", "upcoming": true },
+      { "date": "À confirmer", "title": "Voyage d'étude à Chaoshan : culture Lingnan", "place": "Chaoshan, Chine", "body": "Traditions populaires, patrimoine, culture régionale et cuisine.", "upcoming": true },
+      { "date": "2026-08-30", "title": "Deuxième voyage d'étude : Xi'an", "place": "Xi'an, Chine", "body": "Une classe itinérante dans l'ancienne capitale.", "upcoming": false },
+      { "date": "2025-04-01", "title": "Forum mondial des directeurs d'écoles chinoises", "place": "Zhengzhou, Chine", "body": "La transformation de l'enseignement international du chinois.", "upcoming": false },
+      { "date": "2025-03-27", "title": "Première Tournée en Chine des 100 directeurs", "place": "Henan, Chine", "body": "Cent directeurs de plus de vingt pays.", "upcoming": false }
+    ]
+  },
+  "impact": {
+    "eyebrow": "Intérêt public",
+    "title": "Une éducation qui va plus loin",
+    "lede": "Conférences gratuites, promotion de la lecture, bénévolat et soutien aux écoles en Afrique. Les programmes d'intérêt public sont gratuits pour les participants et clairement identifiés.",
+    "sections": [
+      { "title": "Conférences publiques mondiales", "body": "Éducateurs et experts s'adressent gratuitement aux écoles et aux communautés, en ligne et sur place, sur la lecture, la culture, l'éducation familiale et l'apprentissage à l'ère de l'IA." },
+      { "title": "EduLink-Africa", "body": "Une initiative de soutien aux écoles africaines : ressources pédagogiques, liens avec des enseignants et infrastructures, avec la conviction que chaque enfant doit pouvoir poursuivre un rêve." },
+      { "title": "Lecture et bénévolat", "body": "Promotion de la lecture, comme « Cinq continents lisent un livre », bénévolat et soutien aux enfants à besoins particuliers." }
+    ],
+    "principlesTitle": "Notre façon de travailler en Afrique",
+    "principles": [
+      "Les enseignants dirigent ; la technologie assiste sans jamais remplacer.",
+      "L'inclusion d'abord : appareils partagés, profils multiples, téléphones à bas coût.",
+      "Réseaux faibles et hors-ligne sont la condition de conception par défaut.",
+      "Les langues premières des apprenants, dont le swahili, comme échafaudage vers le chinois.",
+      "Conformité et protection des données intégrées aux fondations."
+    ],
+    "cta": "Soutenir un programme"
+  },
+  "partners": {
+    "eyebrow": "Partenariats",
+    "title": "Il y a une place pour vous dans le réseau.",
+    "lede": "GACEE travaille par partenariats. Dites-nous qui vous êtes et le responsable de programme concerné vous contactera.",
+    "types": [
+      { "title": "Écoles", "body": "Rejoindre la Tournée des directeurs, participer au concours, accueillir un voyage d'étude ou introduire le programme de chinois en ligne dans vos classes." },
+      { "title": "Universités et experts", "body": "Donner une conférence, encadrer un voyage d'étude, évaluer des programmes ou rejoindre le forum des directeurs." },
+      { "title": "Éditeurs et institutions culturelles", "body": "Coéditer anthologies et lectures, ou porter des programmes patrimoniaux et artistiques vers des publics internationaux." },
+      { "title": "Entreprises", "body": "Commander des cours de chinois pour vos équipes locales, ou soutenir l'innovation technologique et éducative." },
+      { "title": "Fondations", "body": "Financer les conférences publiques, EduLink-Africa et l'accès inclusif à l'apprentissage." },
+      { "title": "Bénévoles", "body": "Soutenir les événements, la promotion de la lecture et la traduction." }
+    ],
+    "form": {
+      "title": "Parlez-nous de votre organisation",
+      "name": "Votre nom",
+      "org": "Organisation",
+      "email": "E-mail",
+      "type": "Je représente",
+      "message": "Comment souhaitez-vous collaborer ?",
+      "submit": "Envoyer",
+      "sent": "Merci. Nous vous répondrons sous cinq jours ouvrés.",
+      "note": "Site en prévisualisation : les envois ne sont pas encore enregistrés."
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Nous contacter",
+    "lede": "Pour les questions sur les programmes, les partenariats, les médias et les demandes générales.",
+    "generalTitle": "Général",
+    "general": "info@gacee.org",
+    "partnersTitle": "Partenariats",
+    "partnersEmail": "partners@gacee.org",
+    "pressTitle": "Médias",
+    "press": "press@gacee.org",
+    "officeTitle": "Siège",
+    "office": "Singapour",
+    "form": {
+      "title": "Envoyer un message",
+      "name": "Votre nom",
+      "email": "E-mail",
+      "subject": "Objet",
+      "message": "Message",
+      "submit": "Envoyer",
+      "sent": "Merci. Votre message a bien été reçu.",
+      "note": "Site en prévisualisation : les envois ne sont pas encore enregistrés."
+    }
+  },
+  "legal": {
+    "privacyTitle": "Politique de confidentialité",
+    "termsTitle": "Conditions d'utilisation",
+    "updated": "Dernière mise à jour",
+    "privacy": [
+      "Cette politique explique comment la Global Association of Cultural and Educational Exchange (« GACEE », « nous ») traite les données personnelles sur gacee.org, conformément au Personal Data Protection Act de Singapour.",
+      "Ce que nous collectons : les informations que vous fournissez lors d'une inscription à un événement, d'une participation à un concours, d'un abonnement ou d'une prise de contact, telles que nom, organisation, adresse e-mail et, pour les concours, la catégorie d'âge et l'école du participant. Nous ne collectons que ce dont un programme a besoin.",
+      "Mineurs : les inscriptions et participations des moins de 18 ans requièrent le consentement d'un parent ou tuteur, y compris pour toute publication d'une œuvre ou d'une image.",
+      "Utilisation : pour gérer le programme concerné, communiquer avec vous à son sujet et, avec votre consentement, vous envoyer des nouvelles occasionnelles. Nous ne vendons pas de données personnelles.",
+      "Conservation : les données principales sont stockées à Singapour. Lorsqu'un programme implique des partenaires dans d'autres pays, nous vous en informons au moment de la collecte.",
+      "Vos droits : vous pouvez demander l'accès, la rectification ou la suppression de vos données, ou retirer votre consentement, en écrivant à info@gacee.org. Notre délégué à la protection des données est joignable à la même adresse.",
+      "Ce site utilise des statistiques respectueuses de la vie privée, sans cookies de suivi inter-sites."
+    ],
+    "terms": [
+      "En utilisant gacee.org, vous acceptez ces conditions. Le site est exploité par la Global Association of Cultural and Educational Exchange, association à but non lucratif enregistrée à Singapour.",
+      "Les contenus du site, y compris textes, images et sceau GACEE, appartiennent à GACEE ou à ses concédants et ne peuvent être reproduits sans autorisation, hors citation loyale avec mention de la source.",
+      "Les inscriptions aux événements et les participations aux concours sont régies par les règles publiées pour chaque programme, y compris frais, conditions de remboursement et exigences de consentement.",
+      "Les informations sont fournies de bonne foi. Les détails, dates et lieux des programmes peuvent changer ; les mises à jour sont publiées ici.",
+      "Ces conditions sont régies par le droit de Singapour."
+    ]
+  }
+}
