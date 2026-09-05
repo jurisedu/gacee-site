@@ -1,7 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import { randomBytes } from "crypto";
 
-export const sql = neon(process.env.DATABASE_URL!);
+export const sql = neon(process.env.SG_DATABASE_URL ?? process.env.DATABASE_URL!);
 
 export const SCHEMA = [
   `CREATE TABLE IF NOT EXISTS events (
