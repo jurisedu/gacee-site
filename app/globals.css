@@ -348,3 +348,47 @@ html[lang="zh-Hans"] .footer__name { font-size: 18px; letter-spacing: 0.06em; }
 html[lang="zh-Hans"] .steps li { line-height: 1.9; }
 html[lang="zh-Hans"] .num, html[lang="zh-Hans"] time, html[lang="zh-Hans"] .facts dd { font-family: var(--font-manrope), var(--font-noto-sans), sans-serif; }
 html[lang="zh-Hans"] .event time { font-family: var(--font-garamond), Georgia, serif; }
+
+/* ---------- Live events module ---------- */
+.tz{display:grid;gap:6px;font-size:14px;max-width:420px}
+.tz>div{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid var(--line)}
+.tz__k{color:var(--mute)}.tz__v{font-variant-numeric:tabular-nums;font-weight:600}
+.tz__local .tz__v{color:var(--blue)}
+.choice{border:0;padding:0;margin:0;display:grid;gap:8px}
+.choice legend{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:700;margin-bottom:6px}
+.choice__opt{display:flex;align-items:center;gap:10px;font-size:15px;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:500;padding:10px 12px;border:1px solid var(--line-strong);border-radius:6px;cursor:pointer}
+.choice__opt:has(input:checked){border-color:var(--blue);background:var(--blue-soft)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:400;line-height:1.5}
+.check input{margin-top:4px;width:16px;height:16px;flex:none}
+.form__err{padding:10px 14px;border-radius:6px;background:color-mix(in srgb,#d64545 10%,#fff);color:#a33;font-weight:600;font-size:14px}
+html[lang="zh-Hans"] .choice legend{letter-spacing:.16em;text-transform:none}
+.join{display:grid;grid-template-columns:7fr 5fr;gap:24px;align-items:start}
+.join__side{display:grid;gap:20px}
+.join__card{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:28px}
+.join__btns{display:grid;gap:12px;margin-top:20px}
+.joinbtn{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:16px 20px;border-radius:8px;border:1.5px solid var(--line-strong);background:var(--white);text-align:left;font:inherit;cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s}
+.joinbtn b{font-size:17px}.joinbtn span{font-size:13px;color:var(--mute)}
+.joinbtn:hover{transform:translateY(-1px);box-shadow:0 12px 30px -18px rgba(20,32,92,.5)}
+.joinbtn--primary{background:var(--blue);border-color:var(--blue);color:#fff}.joinbtn--primary span{color:rgba(255,255,255,.75)}
+.ask{display:grid;gap:10px;margin-top:12px}
+.ask textarea{width:100%;font:inherit;font-size:15px;padding:12px;border:1px solid var(--line-strong);border-radius:6px;resize:vertical}
+.qlist{display:grid;gap:14px;margin-top:16px;padding:0;list-style:none;max-width:none}
+.qlist li{padding:12px 0;border-top:1px solid var(--line);font-size:14.5px}
+.qlist__meta{font-size:12px;color:var(--mute);margin-bottom:4px}
+.qlist__ans{margin-top:8px;padding:10px 12px;border-radius:6px;background:var(--blue-soft);color:var(--blue-deep);font-size:14px}
+.panel-lite{padding:24px;color:var(--mute)}
+.admin__stats{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:24px}
+.admin__stat{padding:12px 18px;border:1px solid var(--line);border-radius:8px;background:var(--white);min-width:120px}
+.admin__stat b{display:block;font-family:var(--font-display);font-size:28px;color:var(--blue-deep);line-height:1}
+.admin__stat span{font-size:12px;color:var(--mute)}
+.admin__form{max-width:960px}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--white)}
+.tbl-admin{border-collapse:collapse;width:100%;font-size:13px;min-width:900px}
+.tbl-admin th,.tbl-admin td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+.tbl-admin th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);background:var(--mist)}
+.evlist{display:grid;gap:16px;margin-bottom:56px}
+.evcard{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:24px 28px;border:1px solid var(--line);border-radius:8px;background:var(--white);transition:transform .25s var(--ease),box-shadow .25s}
+.evcard:hover{transform:translateY(-2px);box-shadow:0 20px 40px -30px rgba(20,32,92,.5)}
+.evcard h3{font-size:22px;font-weight:600;margin:6px 0 6px}
+.evcard p{font-size:14px;color:var(--mute);max-width:70ch}
+@media (max-width:860px){.join{grid-template-columns:1fr}.evcard{grid-template-columns:1fr}}
