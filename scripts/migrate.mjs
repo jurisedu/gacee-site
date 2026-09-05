@@ -1,6 +1,6 @@
 // node --env-file=.env.local scripts/migrate.mjs
 import { neon } from "@neondatabase/serverless";
-const sql = neon(process.env.DATABASE_URL);
+const sql = neon(process.env.SG_DATABASE_URL ?? process.env.DATABASE_URL);
 const schema = (await import("../lib/db.ts").catch(() => null)) ?? null;
 // Standalone copy of the schema (kept in sync with lib/db.ts) so the script runs without a TS loader.
 const SCHEMA = [
