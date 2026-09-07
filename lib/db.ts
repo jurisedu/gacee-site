@@ -86,17 +86,6 @@ export async function listEvents(): Promise<EventRow[]> {
 
 export const SEED_EVENTS = [
   {
-    slug: "open-class-0917",
-    title_zh: "线上互动课 · 幼儿园与澳洲分校 30 分钟公开课",
-    title_en: "Live interactive class · 30-minute open lesson with the kindergarten's Australian campus",
-    title_fr: "Cours interactif en ligne · 30 minutes avec le campus australien",
-    body_zh: "由杜老师主场的 30 分钟线上互动课，面向幼儿园与集团澳洲分校的孩子和家长。报名后可通过 Zoom（海外）或腾讯会议（中国大陆）进入，课后可在本页观看回放并留言提问。",
-    body_en: "A 30-minute live interactive class hosted by Du Laoshi for children and parents of the kindergarten and its Australian campus. After registering, join via Zoom (overseas) or Tencent Meeting (mainland China); the replay and Q&A open here after class.",
-    body_fr: "Un cours interactif de 30 minutes animé par Du Laoshi pour les enfants et parents de la maternelle et de son campus australien. Après inscription, rejoignez via Zoom (international) ou Tencent Meeting (Chine continentale) ; le replay et les questions s'ouvrent ici après le cours.",
-    host: "杜老师 Du Laoshi",
-    starts_at: "2026-09-17T08:00:00Z", duration_min: 30, time_confirmed: false,
-  },
-  {
     slug: "reading-week-0921",
     title_zh: "同悦读书会 · 7 天在线公益阅读「一个孩子的诗园」",
     title_en: "Tongyue Reading Club · 7-day online public reading: A Child's Garden of Verses",
