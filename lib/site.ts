@@ -69,6 +69,29 @@ function parseFacts(v: unknown): { label: string; value: string }[] | undefined 
   return undefined;
 }
 
+// 每行「标题 | 说明」→ [{title,body}]；已是数组则原样；空/无效则 undefined（调用方回退静态）。
+export function parsePairs(v: unknown): { title: string; body: string }[] | undefined {
+  if (Array.isArray(v)) return v as { title: string; body: string }[];
+  if (typeof v === "string" && v.trim()) {
+    const out = v.split(/\n/).map((line) => {
+      const i = line.indexOf("|");
+      if (i < 0) return line.trim() ? { title: line.trim(), body: "" } : null;
+      return { title: line.slice(0, i).trim(), body: line.slice(i + 1).trim() };
+    }).filter((x): x is { title: string; body: string } => !!x && !!x.title);
+    return out.length ? out : undefined;
+  }
+  return undefined;
+}
+// 每行一项 → [string]；已是数组则原样。
+export function parseLines(v: unknown): string[] | undefined {
+  if (Array.isArray(v)) return v as string[];
+  if (typeof v === "string" && v.trim()) {
+    const out = v.split(/\n/).map((s) => s.trim()).filter(Boolean);
+    return out.length ? out : undefined;
+  }
+  return undefined;
+}
+
 // 项目按 slug 合并：平台 items 的非空字段覆盖对应 slug 的静态内容；body/facts 由文本解析成数组；配图(art)保持静态。
 export function mergeProgrammes<T extends Blob>(staticItems: Record<string, T>, platform?: Blob): Record<string, T> {
   const items = platform && Array.isArray((platform as { items?: unknown }).items) ? ((platform as { items: Blob[] }).items) : [];
