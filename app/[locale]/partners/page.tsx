@@ -38,7 +38,7 @@ export default async function Partners({ params }: { params: Promise<{ locale: s
                 { name: "type", label: f.type, type: "select", options: t.partners.types.map((x) => x.title), required: true, half: true },
                 { name: "message", label: f.message, type: "textarea" },
               ]}
-              submit={f.submit} sent={f.sent} note={f.note}
+              submit={f.submit} sent={f.sent} note={f.note} lead="partner"
             />
           </Reveal>
         </div>
