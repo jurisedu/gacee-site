@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import PageHead from "@/components/PageHead";
 import Reveal from "@/components/Reveal";
 import { fetchArticles } from "@/lib/content";
+import { mdToHtml } from "@/lib/md";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params; const t = getDictionary((isLocale(locale) ? locale : "en") as Locale);
@@ -33,7 +34,7 @@ export default async function News({ params }: { params: Promise<{ locale: strin
           {items.map((n, i) => (
             <Reveal as="article" key={i} className="news-item" delay={i * 50}>
               <div><time dateTime={n.date}>{n.date}</time><div className="src">{n.source}</div></div>
-              <div><h3>{n.title}</h3><p>{n.body}</p></div>
+              <div><h3>{n.title}</h3><div className="md" dangerouslySetInnerHTML={{ __html: mdToHtml(n.body) }} /></div>
             </Reveal>
           ))}
         </div>
