@@ -6,6 +6,7 @@ import HeroGlobe from "@/components/HeroGlobe";
 import Reveal from "@/components/Reveal";
 import Arrow from "@/components/Arrow";
 import ProgrammeArt from "@/components/ProgrammeArt";
+import { fetchSite, mergeSection } from "@/lib/site";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -16,6 +17,15 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const rest = programmeSlugs.filter((s) => !featuredSlugs.includes(s));
   const news = t.news.items.slice(0, 3);
 
+  // 平台已发布板块覆盖静态字典（未发布/不可达则用静态，官网永远可用）。
+  const site = await fetchSite(l);
+  const hero = mergeSection(t.hero, site?.sections?.hero);
+  const intro = mergeSection(t.intro, site?.sections?.intro);
+  const cta = mergeSection(t.cta, site?.sections?.cta);
+  const pillars = mergeSection(t.pillars, site?.sections?.pillars);
+  const statsItems = site?.sections?.stats?.items;
+  const stats = (Array.isArray(statsItems) ? statsItems : t.stats) as typeof t.stats;
+
   return (
     <>
       <Header locale={l} nav={t.nav} dark />
@@ -24,21 +34,21 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <div className="hero__grad" />
         <div className="container hero__inner">
           <div className="hero__content">
-            <div className="eyebrow eyebrow--gold">{t.hero.eyebrow}</div>
-            <h1 className="display hero__title">{t.hero.title}</h1>
-            <p className="hero__sub">{t.hero.subtitle}</p>
+            <div className="eyebrow eyebrow--gold">{hero.eyebrow}</div>
+            <h1 className="display hero__title">{hero.title}</h1>
+            <p className="hero__sub">{hero.subtitle}</p>
             <div className="hero__actions">
-              <Link href={p("/programmes")} className="btn btn--light">{t.hero.cta1}</Link>
-              <Link href={p("/partners")} className="btn btn--ghost">{t.hero.cta2}</Link>
+              <Link href={p("/programmes")} className="btn btn--light">{hero.cta1}</Link>
+              <Link href={p("/partners")} className="btn btn--ghost">{hero.cta2}</Link>
             </div>
           </div>
-          <div className="hero__scroll">{t.hero.scroll}</div>
+          <div className="hero__scroll">{hero.scroll}</div>
         </div>
       </section>
 
       <section className="stats">
         <div className="container stats__grid">
-          {t.stats.map((s, i) => (
+          {stats.map((s, i) => (
             <Reveal key={i} className="stat" delay={i * 80}>
               <div className="stat__value num">{s.value}</div>
               <div className="stat__label">{s.label}</div>
@@ -50,12 +60,12 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <section className="section">
         <div className="container two">
           <Reveal>
-            <div className="eyebrow">{t.intro.eyebrow}</div>
-            <h2 className="display h2" style={{ marginTop: 14 }}>{t.intro.title}</h2>
+            <div className="eyebrow">{intro.eyebrow}</div>
+            <h2 className="display h2" style={{ marginTop: 14 }}>{intro.title}</h2>
           </Reveal>
           <Reveal delay={120}>
-            <p className="lede">{t.intro.body}</p>
-            <p style={{ marginTop: 28 }}><Link href={p("/about")} className="link">{t.intro.link} <Arrow /></Link></p>
+            <p className="lede">{intro.body}</p>
+            <p style={{ marginTop: 28 }}><Link href={p("/about")} className="link">{intro.link} <Arrow /></Link></p>
           </Reveal>
         </div>
       </section>
@@ -63,10 +73,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <section className="section section--white section--line">
         <div className="container">
           <Reveal className="section__head">
-            <div><div className="eyebrow">{t.pillars.eyebrow}</div><h2 className="display h2">{t.pillars.title}</h2></div>
+            <div><div className="eyebrow">{pillars.eyebrow}</div><h2 className="display h2">{pillars.title}</h2></div>
           </Reveal>
           <ul className="pillars">
-            {t.pillars.items.map((it, i) => (
+            {pillars.items.map((it, i) => (
               <Reveal as="li" key={i} className="pillar" delay={i * 70}>
                 <div className="pillar__n">0{i + 1}</div>
                 <h3>{it.title}</h3>
@@ -149,10 +159,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <section className="cta">
         <div className="container cta__inner">
           <div>
-            <h2 className="display">{t.cta.title}</h2>
-            <p>{t.cta.body}</p>
+            <h2 className="display">{cta.title}</h2>
+            <p>{cta.body}</p>
           </div>
-          <Link href={p("/partners")} className="btn btn--light">{t.cta.button}</Link>
+          <Link href={p("/partners")} className="btn btn--light">{cta.button}</Link>
         </div>
       </section>
     </>
