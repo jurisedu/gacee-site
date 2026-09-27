@@ -50,14 +50,37 @@ export function mergeSection<T extends Blob>(staticVal: T, platform?: Blob): T {
   return Object.keys(clean).length ? ({ ...staticVal, ...clean } as T) : staticVal;
 }
 
-// 项目卡片按 slug 合并：平台 items 的非空字段覆盖对应 slug 的静态卡片；body/facts/art 保持静态。
+// 详情正文：空行分段 → 段落数组；已是数组则原样。
+function parseBody(v: unknown): string[] | undefined {
+  if (Array.isArray(v)) return v as string[];
+  if (typeof v === "string" && v.trim()) return v.split(/\n\s*\n/).map((s) => s.trim()).filter(Boolean);
+  return undefined;
+}
+// 关键信息：每行「标签: 值」（半/全角冒号）→ [{label,value}]；已是数组则原样。
+function parseFacts(v: unknown): { label: string; value: string }[] | undefined {
+  if (Array.isArray(v)) return v as { label: string; value: string }[];
+  if (typeof v === "string" && v.trim()) {
+    return v.split(/\n/).map((line) => {
+      const m = line.split(/[:：]/);
+      if (m.length < 2) return null;
+      return { label: m[0].trim(), value: m.slice(1).join(":").trim() };
+    }).filter((x): x is { label: string; value: string } => !!x && !!x.label);
+  }
+  return undefined;
+}
+
+// 项目按 slug 合并：平台 items 的非空字段覆盖对应 slug 的静态内容；body/facts 由文本解析成数组；配图(art)保持静态。
 export function mergeProgrammes<T extends Blob>(staticItems: Record<string, T>, platform?: Blob): Record<string, T> {
   const items = platform && Array.isArray((platform as { items?: unknown }).items) ? ((platform as { items: Blob[] }).items) : [];
   if (!items.length) return staticItems;
   const merged: Record<string, T> = { ...staticItems };
   for (const it of items) {
     const slug = typeof it.slug === "string" ? it.slug : "";
-    if (slug && merged[slug]) merged[slug] = { ...merged[slug], ...nonEmpty(it) };
+    if (!slug || !merged[slug]) continue;
+    const clean = nonEmpty(it);
+    const body = parseBody(clean.body); if (body && body.length) clean.body = body; else delete clean.body;
+    const facts = parseFacts(clean.facts); if (facts && facts.length) clean.facts = facts; else delete clean.facts;
+    merged[slug] = { ...merged[slug], ...clean };
   }
   return merged;
 }
