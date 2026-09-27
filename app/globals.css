@@ -392,3 +392,15 @@ html[lang="zh-Hans"] .choice legend{letter-spacing:.16em;text-transform:none}
 .evcard h3{font-size:22px;font-weight:600;margin:6px 0 6px}
 .evcard p{font-size:14px;color:var(--mute);max-width:70ch}
 @media (max-width:860px){.join{grid-template-columns:1fr}.evcard{grid-template-columns:1fr}}
+
+/* 内容媒体（平台文章的图片/视频）自适应 */
+.md img,.md video{max-width:100%;height:auto;border-radius:6px;display:block;margin:14px 0}
+.md video{width:100%;background:#000}
+.md blockquote{border-left:3px solid var(--gold);margin:14px 0;padding:2px 0 2px 16px;color:var(--mute)}
+.md pre{background:var(--paper-2,#f4f1ea);border-radius:6px;padding:14px;overflow:auto;font-size:13px}
+.md h2,.md h3{margin:18px 0 10px}
+
+/* 平台可编辑配图（programmes 卡片/详情、about 卡片） */
+.prog-card__img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:8px;margin:16px 0 0;display:block}
+.prog-detail__img{width:100%;border-radius:10px;display:block}
+.card__img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:14px;display:block}

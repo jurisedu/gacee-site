@@ -21,7 +21,7 @@ export default async function Programmes({ params }: { params: Promise<{ locale:
   const l = (isLocale(locale) ? locale : "en") as Locale;
   const t = getDictionary(l);
   const site = await fetchSite(l);
-  const items = mergeProgrammes(t.programmes.items as Record<string, { title: string; tagline: string; summary: string }>, site?.sections?.programmes);
+  const items = mergeProgrammes(t.programmes.items as Record<string, { title: string; tagline: string; summary: string; image?: string }>, site?.sections?.programmes);
   return (
     <>
       <Header locale={l} nav={t.nav} />
@@ -34,7 +34,7 @@ export default async function Programmes({ params }: { params: Promise<{ locale:
                 <div className="prog-card__tag">{items[slug].tagline}</div>
                 <h3>{items[slug].title}</h3>
                 <p className="prog-card__sum">{items[slug].summary}</p>
-                <ProgrammeArt slug={slug} />
+                {items[slug].image ? <img className="prog-card__img" src={items[slug].image} alt={items[slug].title} loading="lazy" /> : <ProgrammeArt slug={slug} />}
                 <div className="prog-card__foot"><span className="link" style={{ color: "inherit" }}>{t.programmes.learnMore} <Arrow /></span></div>
               </Link>
             </Reveal>

@@ -12,7 +12,12 @@ const safeUrl = (u: string) => {
 function inline(s: string): string {
   let out = s;
   out = out.replace(/`([^`]+)`/g, (_m, c) => `<code>${c}</code>`);
-  out = out.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (_m, alt, url) => `<img src="${escHtml(safeUrl(url))}" alt="${alt}" loading="lazy" />`);
+  out = out.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (_m, alt, url) => {
+    const u = escHtml(safeUrl(url));
+    return /\.(mp4|webm|ogg|ogv|mov|m4v)(\?|#|$)/i.test(url)
+      ? `<video src="${u}" controls preload="metadata"${alt ? ` aria-label="${alt}"` : ""}></video>`
+      : `<img src="${u}" alt="${alt}" loading="lazy" />`;
+  });
   out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_m, txt, url) => {
     const u = safeUrl(url);
     const ext = /^https?:\/\//i.test(u);
