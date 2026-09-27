@@ -15,6 +15,19 @@ export type SiteData = {
 
 const BASE = process.env.PLATFORM_CONTENT_API_URL ?? "https://hub.gacee.org";
 
+export type SiteMode = "live" | "coming_soon" | "maintenance";
+// 站点模式（平台可控）。平台不可达/异常 → 默认 live（不因平台故障拦住官网）。ISR 60s。
+export async function fetchSiteMode(): Promise<SiteMode> {
+  try {
+    const res = await fetch(`${BASE}/api/site-mode`, { next: { revalidate: 60 } });
+    if (!res.ok) return "live";
+    const d = await res.json();
+    return d?.mode === "coming_soon" || d?.mode === "maintenance" ? d.mode : "live";
+  } catch {
+    return "live";
+  }
+}
+
 export async function fetchSite(locale: Locale): Promise<SiteData | null> {
   try {
     const res = await fetch(`${BASE}/api/site?locale=${locale}`, { next: { revalidate: 300 } });
