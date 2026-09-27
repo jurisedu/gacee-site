@@ -13,7 +13,7 @@
     "about": "À propos",
     "programmes": "Programmes",
     "events": "Événements",
-    "impact": "Intérêt public",
+    "impact": "Action caritative",
     "news": "Actualités",
     "partners": "Partenariats",
     "contact": "Contact",
@@ -505,28 +505,28 @@
     "lede": "GACEE travaille par partenariats. Dites-nous qui vous êtes et le responsable de programme concerné vous contactera.",
     "types": [
       {
-        "title": "Écoles",
-        "body": "Rejoindre la Tournée des directeurs, participer au concours, accueillir un voyage d'étude ou introduire le programme de chinois en ligne dans vos classes."
+        "title": "Écoles et universités",
+        "body": "Partage de ressources éducatives · Échanges enseignants-étudiants · Co-construction de cours et projets"
       },
       {
-        "title": "Universités et experts",
-        "body": "Donner une conférence, encadrer un voyage d'étude, évaluer des programmes ou rejoindre le forum des directeurs."
+        "title": "Experts et chercheurs",
+        "body": "Soutien de groupes de réflexion et recherche · Échanges académiques · Conseil professionnel"
       },
       {
-        "title": "Éditeurs et institutions culturelles",
-        "body": "Coéditer anthologies et lectures, ou porter des programmes patrimoniaux et artistiques vers des publics internationaux."
+        "title": "Organisations culturelles et groupes sociaux",
+        "body": "Diffusion et échange culturels · Collaboration événementielle internationale · Réseaux de ressources"
       },
       {
-        "title": "Entreprises",
-        "body": "Commander des cours de chinois pour vos équipes locales, ou soutenir l'innovation technologique et éducative."
+        "title": "Technologie et industrie",
+        "body": "Partenariats d'innovation · Mise en relation des ressources industrielles · Plateformes numériques"
       },
       {
-        "title": "Fondations",
-        "body": "Financer les conférences publiques, EduLink-Africa et l'accès inclusif à l'apprentissage."
+        "title": "Édition et médias",
+        "body": "Co-création et diffusion de contenus · Collaboration médiatique internationale · Marque et relations publiques"
       },
       {
-        "title": "Bénévoles",
-        "body": "Soutenir les événements, la promotion de la lecture et la traduction."
+        "title": "À but non lucratif et bénévoles",
+        "body": "Collaboration de projets caritatifs · Soutien au bénévolat · Développement durable"
       }
     ],
     "form": {
