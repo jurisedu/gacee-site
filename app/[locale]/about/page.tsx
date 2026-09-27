@@ -3,7 +3,7 @@ import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
 import Header from "@/components/Header";
 import PageHead from "@/components/PageHead";
 import Reveal from "@/components/Reveal";
-import { fetchSite, mergeSection } from "@/lib/site";
+import { fetchSite, mergeSection, parsePairs, parseLines } from "@/lib/site";
 
 export const revalidate = 300; // ISR：平台 about 文案编辑后 5 分钟内生效
 
@@ -17,7 +17,13 @@ export default async function About({ params }: { params: Promise<{ locale: stri
   const l = (isLocale(locale) ? locale : "en") as Locale;
   const t = getDictionary(l);
   const site = await fetchSite(l);
-  const about = mergeSection(t.about, site?.sections?.about); // 平铺文案平台可覆盖；values/strategy/structure 数组保持静态
+  const raw = mergeSection(t.about, site?.sections?.about); // 平铺文案平台可覆盖
+  const about = { // values/structure（每行「标题 | 说明」）、strategy（每行一步）平台可覆盖，未填回退静态
+    ...raw,
+    values: parsePairs(raw.values) ?? t.about.values,
+    strategy: parseLines(raw.strategy) ?? t.about.strategy,
+    structure: parsePairs(raw.structure) ?? t.about.structure,
+  };
   return (
     <>
       <Header locale={l} nav={t.nav} />
