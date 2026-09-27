@@ -12,7 +12,6 @@ type Login = {
 export default function LoginPanel({ t, partnersHref }: { t: Login; partnersHref: string }) {
   const [tab, setTab] = useState(t.tabs[0].key);
   const [sent, setSent] = useState(false);
-  const [signed, setSigned] = useState(false);
   return (
     <div className="login">
       <div className="login__tabs" role="tablist">
@@ -25,17 +24,8 @@ export default function LoginPanel({ t, partnersHref }: { t: Login; partnersHref
           <>
             <h2 className="display h3">{t.members.title}</h2>
             <p className="mute">{t.members.body}</p>
-            {signed ? <div className="form__sent">{t.members.note}</div> : (
-              <form className="form" onSubmit={(e) => { e.preventDefault(); setSigned(true); }}>
-                <label>{t.members.email}<input type="email" name="email" required autoComplete="username" /></label>
-                <label>{t.members.password}<input type="password" name="password" required autoComplete="current-password" /></label>
-                <div className="login__row">
-                  <button type="submit" className="btn btn--primary">{t.members.submit}</button>
-                  <a href="#" className="link" onClick={(e) => e.preventDefault()}>{t.members.forgot}</a>
-                </div>
-                <p className="form__note">{t.members.note}</p>
-              </form>
-            )}
+            <p><a href="https://hub.gacee.org/login" className="btn btn--primary" rel="noopener">{t.members.submit} →</a></p>
+            <p className="form__note">{t.members.note}</p>
             <p style={{ marginTop: 24 }}><Link href={partnersHref} className="link">{t.members.apply} →</Link></p>
           </>
         )}

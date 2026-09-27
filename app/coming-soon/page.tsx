@@ -78,6 +78,20 @@ export default function ComingSoon() {
           <p className="soon__tag-en">Connecting the World · Cultivating the Future</p>
         </div>
 
+        <div className="soon__portal">
+          <span className="soon__portal-label">现已开放 · Now Open</span>
+          <div className="soon__portal-links">
+            <a className="soon__portal-link" href="https://hub.gacee.org">
+              会员平台 <span className="en">Member Platform</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a className="soon__portal-link" href="https://learn.gacee.org">
+              山海同文 <span className="en">Shanhai Tongwen</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+        </div>
+
         <div className="soon__contact">
           <span className="soon__contact-label">合作与事务联络 · For enquiries</span>
           <a className="soon__mail" href="mailto:info@gacee.org">
