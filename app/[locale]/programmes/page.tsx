@@ -7,6 +7,9 @@ import PageHead from "@/components/PageHead";
 import Reveal from "@/components/Reveal";
 import Arrow from "@/components/Arrow";
 import ProgrammeArt from "@/components/ProgrammeArt";
+import { fetchSite, mergeProgrammes } from "@/lib/site";
+
+export const revalidate = 300; // ISR：平台项目卡片编辑后 5 分钟内生效
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params; const t = getDictionary((isLocale(locale) ? locale : "en") as Locale);
@@ -17,7 +20,8 @@ export default async function Programmes({ params }: { params: Promise<{ locale:
   const { locale } = await params;
   const l = (isLocale(locale) ? locale : "en") as Locale;
   const t = getDictionary(l);
-  const items = t.programmes.items as Record<string, { title: string; tagline: string; summary: string }>;
+  const site = await fetchSite(l);
+  const items = mergeProgrammes(t.programmes.items as Record<string, { title: string; tagline: string; summary: string }>, site?.sections?.programmes);
   return (
     <>
       <Header locale={l} nav={t.nav} />
