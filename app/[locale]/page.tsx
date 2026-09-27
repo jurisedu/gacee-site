@@ -6,14 +6,13 @@ import HeroGlobe from "@/components/HeroGlobe";
 import Reveal from "@/components/Reveal";
 import Arrow from "@/components/Arrow";
 import ProgrammeArt from "@/components/ProgrammeArt";
-import { fetchSite, mergeSection } from "@/lib/site";
+import { fetchSite, mergeSection, mergeProgrammes } from "@/lib/site";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const l = (isLocale(locale) ? locale : "en") as Locale;
   const t = getDictionary(l);
   const p = (path: string) => localizedPath(l, path);
-  const items = t.programmes.items as Record<string, { title: string; tagline: string; summary: string }>;
   const rest = programmeSlugs.filter((s) => !featuredSlugs.includes(s));
   const news = t.news.items.slice(0, 3);
 
@@ -23,6 +22,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const intro = mergeSection(t.intro, site?.sections?.intro);
   const cta = mergeSection(t.cta, site?.sections?.cta);
   const pillars = mergeSection(t.pillars, site?.sections?.pillars);
+  const network = mergeSection(t.network, site?.sections?.network);
+  const items = mergeProgrammes(t.programmes.items as Record<string, { title: string; tagline: string; summary: string }>, site?.sections?.programmes);
   const statsItems = site?.sections?.stats?.items;
   const stats = (Array.isArray(statsItems) ? statsItems : t.stats) as typeof t.stats;
 
@@ -122,18 +123,18 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <section className="section section--white section--line">
         <div className="container">
           <Reveal className="section__head">
-            <div><div className="eyebrow">{t.network.eyebrow}</div><h2 className="display h2">{t.network.title}</h2></div>
-            <p>{t.network.body}</p>
+            <div><div className="eyebrow">{network.eyebrow}</div><h2 className="display h2">{network.title}</h2></div>
+            <p>{network.body}</p>
           </Reveal>
           <div className="net">
-            {t.network.items.map((it, i) => (
+            {network.items.map((it, i) => (
               <Reveal key={i} className="net__item" delay={i * 60}>
                 <span className="net__n">0{i + 1}</span>
                 <div><h3>{it.title}</h3><p>{it.body}</p></div>
               </Reveal>
             ))}
           </div>
-          <ul className="regions">{t.network.regions.map((r) => <li key={r}>{r}</li>)}</ul>
+          <ul className="regions">{network.regions.map((r) => <li key={r}>{r}</li>)}</ul>
         </div>
       </section>
 

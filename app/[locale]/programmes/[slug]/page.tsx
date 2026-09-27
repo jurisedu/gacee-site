@@ -7,6 +7,9 @@ import Header from "@/components/Header";
 import Reveal from "@/components/Reveal";
 import Arrow from "@/components/Arrow";
 import ProgrammeArt from "@/components/ProgrammeArt";
+import { fetchSite, mergeProgrammes } from "@/lib/site";
+
+export const revalidate = 300; // ISR：平台项目卡片编辑后 5 分钟内生效（body/facts/art 仍静态）
 
 type Item = { title: string; tagline: string; summary: string; body: string[]; facts: { label: string; value: string }[] };
 
@@ -26,7 +29,8 @@ export default async function Programme({ params }: { params: Promise<{ locale: 
   const l = (isLocale(locale) ? locale : "en") as Locale;
   if (!(programmeSlugs as readonly string[]).includes(slug)) notFound();
   const t = getDictionary(l);
-  const items = t.programmes.items as Record<string, Item>;
+  const site = await fetchSite(l);
+  const items = mergeProgrammes(t.programmes.items as Record<string, Item>, site?.sections?.programmes);
   const item = items[slug];
   const idx = programmeSlugs.indexOf(slug as ProgrammeSlug);
   const next = programmeSlugs[(idx + 1) % programmeSlugs.length];

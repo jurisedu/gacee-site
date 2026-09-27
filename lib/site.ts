@@ -32,7 +32,32 @@ export async function fetchSite(locale: Locale): Promise<SiteData | null> {
   }
 }
 
-// 板块合并助手：平台已发布则覆盖静态字段（保留静态里平台没有的字段，如 hero.scroll）。
+// 只保留平台的非空值（空串/空数组/undefined 不覆盖静态，避免部分填写把静态内容清空）。
+function nonEmpty(platform?: Blob): Blob {
+  const out: Blob = {};
+  if (!platform) return out;
+  for (const [k, v] of Object.entries(platform)) {
+    if (v === undefined || v === null || v === "") continue;
+    if (Array.isArray(v) && v.length === 0) continue;
+    out[k] = v;
+  }
+  return out;
+}
+
+// 板块合并助手：平台已发布的非空字段覆盖静态（保留静态独有字段，如 hero.scroll）。
 export function mergeSection<T extends Blob>(staticVal: T, platform?: Blob): T {
-  return platform && Object.keys(platform).length ? ({ ...staticVal, ...platform } as T) : staticVal;
+  const clean = nonEmpty(platform);
+  return Object.keys(clean).length ? ({ ...staticVal, ...clean } as T) : staticVal;
+}
+
+// 项目卡片按 slug 合并：平台 items 的非空字段覆盖对应 slug 的静态卡片；body/facts/art 保持静态。
+export function mergeProgrammes<T extends Blob>(staticItems: Record<string, T>, platform?: Blob): Record<string, T> {
+  const items = platform && Array.isArray((platform as { items?: unknown }).items) ? ((platform as { items: Blob[] }).items) : [];
+  if (!items.length) return staticItems;
+  const merged: Record<string, T> = { ...staticItems };
+  for (const it of items) {
+    const slug = typeof it.slug === "string" ? it.slug : "";
+    if (slug && merged[slug]) merged[slug] = { ...merged[slug], ...nonEmpty(it) };
+  }
+  return merged;
 }
