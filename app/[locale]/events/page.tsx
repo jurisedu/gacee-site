@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import PageHead from "@/components/PageHead";
 import Reveal from "@/components/Reveal";
 import { listEvents } from "@/lib/db";
+import { fetchSite } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
@@ -18,6 +19,8 @@ export default async function Events({ params }: { params: Promise<{ locale: str
   const l = (isLocale(locale) ? locale : "en") as Locale;
   const t = getDictionary(l);
   const live = await listEvents().catch(() => []);
+  const site = await fetchSite(l);
+  const platEvents = (site?.events || []).filter((e) => e.title);
   const d = t.live;
   const fmt = (iso: string) => new Intl.DateTimeFormat(l === "zh" ? "zh-CN" : l === "fr" ? "fr-FR" : "en-GB", { timeZone: "Asia/Shanghai", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date(iso));
   const up = t.events.items.filter((e) => e.upcoming);
@@ -46,6 +49,20 @@ export default async function Events({ params }: { params: Promise<{ locale: str
                 <span className="btn btn--primary">{ev.status === "closed" ? d.replayTitle : d.register} →</span>
               </Link>); })}
           </div>}
+          {platEvents.length > 0 && (
+            <div style={{ marginBottom: 40 }}>
+              <div className="eyebrow eyebrow--gold" style={{ marginBottom: 8 }}>{l === "zh" ? "协会活动" : l === "fr" ? "Activités de l’association" : "Association events"}</div>
+              <div>
+                {platEvents.map((e, i) => (
+                  <Reveal as="article" key={e.id} className="event" delay={i * 60}>
+                    <time>{e.time ? fmt(String(e.time)) : ""}</time>
+                    <div><h3>{e.title}</h3>{e.location ? <div className="place">{e.location}</div> : null}{e.summary ? <p>{e.summary}</p> : null}</div>
+                    <span />
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          )}
           <div className="eyebrow eyebrow--gold" style={{ marginBottom: 8 }}>{t.events.upcoming}</div>
           <List items={up} cta />
           <div className="eyebrow" style={{ margin: "64px 0 8px" }}>{t.events.past}</div>
