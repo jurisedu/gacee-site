@@ -40,7 +40,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
             <div className="eyebrow" style={{ marginBottom: 20 }}>{about.valuesTitle}</div>
             <div className="card-grid" style={{ gridTemplateColumns: "1fr 1fr" }}>
               {about.values.map((v, i) => (
-                <div className={`card ${i === 0 ? "card--ink" : ""}`} key={i}><h3>{v.title}</h3><p>{v.body}</p></div>
+                <div className={`card ${i === 0 ? "card--ink" : ""}`} key={i}>{(v as { image?: string }).image ? <img className="card__img" src={(v as { image?: string }).image} alt={v.title} loading="lazy" /> : null}<h3>{v.title}</h3><p>{v.body}</p></div>
               ))}
             </div>
           </Reveal>
@@ -57,7 +57,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
           <Reveal className="section__head"><div><div className="eyebrow">{about.structureTitle}</div></div></Reveal>
           <div className="card-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
             {about.structure.map((s, i) => (
-              <Reveal key={i} className={`card ${i === 3 ? "card--ink" : ""}`} delay={i * 80}><h3>{s.title}</h3><p>{s.body}</p></Reveal>
+              <Reveal key={i} className={`card ${i === 3 ? "card--ink" : ""}`} delay={i * 80}>{(s as { image?: string }).image ? <img className="card__img" src={(s as { image?: string }).image} alt={s.title} loading="lazy" /> : null}<h3>{s.title}</h3><p>{s.body}</p></Reveal>
             ))}
           </div>
         </div>

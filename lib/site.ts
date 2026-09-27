@@ -82,15 +82,18 @@ function parseFacts(v: unknown): { label: string; value: string }[] | undefined 
   return undefined;
 }
 
-// 每行「标题 | 说明」→ [{title,body}]；已是数组则原样；空/无效则 undefined（调用方回退静态）。
-export function parsePairs(v: unknown): { title: string; body: string }[] | undefined {
-  if (Array.isArray(v)) return v as { title: string; body: string }[];
+// 每行「标题 | 说明 | 图片URL(可选)」→ [{title,body,image?}]；已是数组则原样；空/无效则 undefined（调用方回退静态）。
+export function parsePairs(v: unknown): { title: string; body: string; image?: string }[] | undefined {
+  if (Array.isArray(v)) return v as { title: string; body: string; image?: string }[];
   if (typeof v === "string" && v.trim()) {
     const out = v.split(/\n/).map((line) => {
-      const i = line.indexOf("|");
-      if (i < 0) return line.trim() ? { title: line.trim(), body: "" } : null;
-      return { title: line.slice(0, i).trim(), body: line.slice(i + 1).trim() };
-    }).filter((x): x is { title: string; body: string } => !!x && !!x.title);
+      const parts = line.split("|");
+      const title = (parts[0] || "").trim();
+      if (!title) return null;
+      const body = (parts[1] || "").trim();
+      const image = (parts[2] || "").trim();
+      return image ? { title, body, image } : { title, body };
+    }).filter((x): x is { title: string; body: string; image?: string } => !!x && !!x.title);
     return out.length ? out : undefined;
   }
   return undefined;
