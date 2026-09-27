@@ -59,10 +59,10 @@ export default function Header({ locale, nav, dark = false }: { locale: Locale; 
                 </Link>
               ))}
             </div>
-            <Link href={localizedPath(locale, "/login")} className="signin" aria-current={isCurrent(localizedPath(locale, "/login")) ? "page" : undefined}>
+            <a href="https://hub.gacee.org/login" className="signin">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="5.5" r="3" stroke="currentColor" strokeWidth="1.4" /><path d="M2.5 14c.6-3 3-4.5 5.5-4.5s4.9 1.5 5.5 4.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" /></svg>
               {nav.signin}
-            </Link>
+            </a>
             <Link href={localizedPath(locale, "/partners")} className="btn btn--ghost btn--sm">{nav.join}</Link>
             <button className="burger" aria-label={nav.menu} aria-expanded={open} onClick={() => setOpen(true)}><span /></button>
           </div>
@@ -79,7 +79,7 @@ export default function Header({ locale, nav, dark = false }: { locale: Locale; 
               <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>
             ))}
             <Link href={localizedPath(locale, "/contact")} onClick={() => setOpen(false)}>{nav.contact}</Link>
-            <Link href={localizedPath(locale, "/login")} onClick={() => setOpen(false)} className="menu__signin">{nav.signin}</Link>
+            <a href="https://hub.gacee.org/login" onClick={() => setOpen(false)} className="menu__signin">{nav.signin}</a>
           </div>
           <div className="menu__foot">
             <span>{nav.language}</span>

@@ -44,6 +44,12 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary })
             <Newsletter placeholder={t.footer.email} label={t.footer.subscribe} done={t.footer.subscribed} />
           </div>
         </div>
+        <div className="footer__portals" style={{ display: "flex", flexWrap: "wrap", gap: "10px 26px", alignItems: "center", padding: "26px 0 2px", marginTop: 20, borderTop: "1px solid rgba(148,163,184,0.18)" }}>
+          <span style={{ fontSize: 11.5, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.55 }}>{locale === "zh" ? "协会数字平台" : locale === "fr" ? "Plateformes GACEE" : "GACEE Platforms"}</span>
+          <a href="https://gacee.org" style={{ fontSize: 14 }}>{locale === "zh" ? "官网" : "Website"} · gacee.org</a>
+          <a href="https://hub.gacee.org" style={{ fontSize: 14 }}>{locale === "zh" ? "会员平台" : "Member Platform"} · hub.gacee.org</a>
+          <a href="https://learn.gacee.org" style={{ fontSize: 14 }}>{locale === "zh" ? "山海同文" : "Shanhai Tongwen"} · learn.gacee.org</a>
+        </div>
         <div className="footer__bottom">
           <span>© {year} {t.org.name}. {t.footer.rights}</span>
           <span>
