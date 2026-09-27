@@ -13,7 +13,7 @@
     "about": "About",
     "programmes": "Programmes",
     "events": "Events",
-    "impact": "Public Good",
+    "impact": "Public Welfare",
     "news": "News",
     "partners": "Partner With Us",
     "contact": "Contact",
@@ -505,28 +505,28 @@
     "lede": "GACEE works through partnerships. Tell us who you are and we will follow up with the right programme lead.",
     "types": [
       {
-        "title": "Schools",
-        "body": "Join the Principals Tour, enter the Composition Competition, host a study journey or bring the online Chinese programme to your classrooms."
+        "title": "Schools & Universities",
+        "body": "Sharing educational resources · Faculty and student exchange · Co-building courses and projects"
       },
       {
-        "title": "Universities and experts",
-        "body": "Lecture, mentor a study journey, review curricula or join the Principals Forum."
+        "title": "Experts & Scholars",
+        "body": "Think-tank support and research · Academic exchange · Professional advisory"
       },
       {
-        "title": "Publishers and cultural institutions",
-        "body": "Co-publish anthologies and readers, or bring heritage and arts programmes to international audiences."
+        "title": "Cultural Organizations & Social Groups",
+        "body": "Cultural dissemination and exchange · International event collaboration · Community resource networks"
       },
       {
-        "title": "Companies",
-        "body": "Commission Chinese-language classes for local teams, or support technology and education innovation."
+        "title": "Technology & Industry",
+        "body": "Sci-tech innovation partnerships · Industry resource matching · Digital platform building"
       },
       {
-        "title": "Foundations",
-        "body": "Fund public lectures, EduLink-Africa and inclusive access to learning."
+        "title": "Publishing & Media",
+        "body": "Content co-creation and dissemination · International media collaboration · Branding and public relations"
       },
       {
-        "title": "Volunteers",
-        "body": "Support events, reading initiatives and translation."
+        "title": "Non-profit & Volunteers",
+        "body": "Charity project collaboration · Volunteer service support · Advancing sustainable development"
       }
     ],
     "form": {
