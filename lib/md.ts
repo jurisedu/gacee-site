@@ -13,15 +13,15 @@ function inline(s: string): string {
   let out = s;
   out = out.replace(/`([^`]+)`/g, (_m, c) => `<code>${c}</code>`);
   out = out.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (_m, alt, url) => {
-    const u = escHtml(safeUrl(url));
+    const u = safeUrl(url); // url 已在全局转义阶段处理过,勿再次 escHtml(否则 & → &amp;amp; 破坏签名/查询串 URL)
     return /\.(mp4|webm|ogg|ogv|mov|m4v)(\?|#|$)/i.test(url)
       ? `<video src="${u}" controls preload="metadata"${alt ? ` aria-label="${alt}"` : ""}></video>`
       : `<img src="${u}" alt="${alt}" loading="lazy" />`;
   });
   out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_m, txt, url) => {
-    const u = safeUrl(url);
+    const u = safeUrl(url); // 已转义,勿双重转义(& → &amp;amp;)
     const ext = /^https?:\/\//i.test(u);
-    return `<a href="${escHtml(u)}"${ext ? ' target="_blank" rel="noopener noreferrer"' : ""}>${txt}</a>`;
+    return `<a href="${u}"${ext ? ' target="_blank" rel="noopener noreferrer"' : ""}>${txt}</a>`;
   });
   out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   out = out.replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>");
