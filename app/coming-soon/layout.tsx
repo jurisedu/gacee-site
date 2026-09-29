@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Manrope, Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
-import { cookies, headers } from "next/headers";
+import { headers } from "next/headers";
 import { detectLocale, htmlLang } from "@/lib/i18n";
 import "./soon.css";
 
@@ -11,8 +11,7 @@ const notoSerif = Noto_Serif_SC({ subsets: ["latin"], weight: ["500", "600", "70
 
 async function reqLocale() {
   const h = await headers();
-  const c = await cookies();
-  return detectLocale(h.get("accept-language") ?? "", c.get("gacee_lang")?.value);
+  return detectLocale(h.get("accept-language") ?? ""); // 门控页忽略 Cookie,纯浏览器语言(默认英文)
 }
 
 export async function generateMetadata(): Promise<Metadata> {
