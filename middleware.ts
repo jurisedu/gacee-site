@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { locales, defaultLocale, type Locale } from "./lib/i18n";
+import { locales, detectLocale, type Locale } from "./lib/i18n";
 
 /**
  * 站点模式门控（平台可控）：
@@ -33,17 +33,9 @@ async function siteMode(): Promise<string> {
   return cachedMode;
 }
 
+// 语言选择:统一走 lib/i18n 的 detectLocale(手动 Cookie > 浏览器 q 权重 > 默认英文;★中文不自动识别)。
 function pickLocale(req: NextRequest): Locale {
-  const cookie = req.cookies.get("gacee_lang")?.value;
-  if (cookie && (locales as readonly string[]).includes(cookie)) return cookie as Locale;
-  const header = req.headers.get("accept-language") ?? "";
-  for (const part of header.split(",")) {
-    const tag = part.split(";")[0].trim().toLowerCase();
-    if (tag.startsWith("zh")) return "zh";
-    if (tag.startsWith("fr")) return "fr";
-    if (tag.startsWith("en")) return "en";
-  }
-  return defaultLocale;
+  return detectLocale(req.headers.get("accept-language") ?? "", req.cookies.get("gacee_lang")?.value);
 }
 
 export async function middleware(req: NextRequest) {
