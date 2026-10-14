@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale, locales, localizedPath, type Locale } from "@/lib/i18n";
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params;
   const t = getDictionary((isLocale(locale) ? locale : "en") as Locale);
   const item = (t.programmes.items as Record<string, Item>)[slug];
-  return item ? { title: item.title, description: item.summary } : {};
+  return item ? pageSeo(((isLocale(locale) ? locale : "en") as Locale), `/programmes/${slug}`, { title: item.title, description: item.summary }) : {};
 }
 
 export default async function Programme({ params }: { params: Promise<{ locale: string; slug: string }> }) {
@@ -36,7 +37,7 @@ export default async function Programme({ params }: { params: Promise<{ locale: 
   const next = programmeSlugs[(idx + 1) % programmeSlugs.length];
   return (
     <>
-      <Header locale={l} nav={t.nav} />
+      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
       <section className="page-head">
         <div className="container">
           <Link href={localizedPath(l, "/programmes")} className="link" style={{ marginBottom: 28 }}><span style={{ transform: "rotate(180deg)", display: "inline-flex" }}><Arrow /></span> {t.programmes.backToAll}</Link>

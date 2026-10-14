@@ -12,7 +12,7 @@ export default async function AdminEvent({ params }: { params: Promise<{ locale:
   const t = getDictionary(l);
   return (
     <>
-      <Header locale={l} nav={t.nav} />
+      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
       <section className="page-head" style={{ paddingBottom: 24 }}><div className="container"><div className="eyebrow">Admin · {slug}</div><h1 className="display" style={{ fontSize: 32 }}>活动管理台</h1><p className="mute small">主持人在此填写 Zoom 与腾讯会议链接、回放地址，查看报名与进入记录，回复留言。</p></div></section>
       <section className="section" style={{ paddingTop: 32 }}><div className="container"><AdminConsole slug={slug} /></div></section>
     </>

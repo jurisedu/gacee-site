@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
 import Header from "@/components/Header";
 import PageHead from "@/components/PageHead";
@@ -7,7 +8,7 @@ import MockForm from "@/components/MockForm";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params; const t = getDictionary((isLocale(locale) ? locale : "en") as Locale);
-  return { title: t.nav.contact, description: t.contact.lede };
+  return pageSeo(((isLocale(locale) ? locale : "en") as Locale), "/contact", { title: t.nav.contact, description: t.contact.lede });
 }
 
 export default async function Contact({ params }: { params: Promise<{ locale: string }> }) {
@@ -17,7 +18,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
   const c = t.contact;
   return (
     <>
-      <Header locale={l} nav={t.nav} />
+      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
       <PageHead eyebrow={c.eyebrow} title={c.title} lede={c.lede} />
       <section className="section">
         <div className="container contact-grid">

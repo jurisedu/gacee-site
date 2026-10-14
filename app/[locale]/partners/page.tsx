@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
 import Header from "@/components/Header";
 import PageHead from "@/components/PageHead";
@@ -10,7 +11,7 @@ export const revalidate = 300; // ISR：平台「官网内容 · 合作」编辑
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params; const t = getDictionary((isLocale(locale) ? locale : "en") as Locale);
-  return { title: t.nav.partners, description: t.partners.lede };
+  return pageSeo(((isLocale(locale) ? locale : "en") as Locale), "/partners", { title: t.nav.partners, description: t.partners.lede });
 }
 
 export default async function Partners({ params }: { params: Promise<{ locale: string }> }) {
@@ -27,7 +28,7 @@ export default async function Partners({ params }: { params: Promise<{ locale: s
   const types = (parsePairs(pp?.types) ?? t.partners.types) as { title: string; body: string }[];
   return (
     <>
-      <Header locale={l} nav={t.nav} />
+      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
       <PageHead eyebrow={eyebrow} title={title} lede={lede} />
       <section className="section">
         <div className="container card-grid">

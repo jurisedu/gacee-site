@@ -21,7 +21,9 @@
     "menu": "Menu",
     "close": "Fermer",
     "language": "Langue",
-    "signin": "Connexion"
+    "signin": "Connexion",
+    "verify": "Vérifier un certificat",
+    "candidatePreview": "Aperçu de navigation (proposition non validée)"
   },
   "hero": {
     "eyebrow": "Singapour · Fondée en 2025",
@@ -334,7 +336,13 @@
         "source": "GACEE",
         "body": "Cent directeurs de plus de vingt pays sur cinq continents se réunissent pour une semaine de dialogue éducatif et d'immersion culturelle."
       }
-    ]
+    ],
+    "originalZh": "Texte original en chinois",
+    "originalEn": "Texte original en anglais",
+    "readMore": "Lire l'article",
+    "unavailable": "Les dernières actualités n'ont pas pu être chargées ; voici des actualités antérieures.",
+    "updated": "Mis à jour",
+    "back": "Toutes les actualités"
   },
   "cta": {
     "title": "Construisons le pont ensemble.",
@@ -354,7 +362,9 @@
     "newsletterBody": "Des nouvelles occasionnelles sur les programmes, événements et opportunités.",
     "email": "Adresse e-mail",
     "subscribe": "S'abonner",
-    "subscribed": "Merci. Vous êtes inscrit."
+    "subscribed": "Presque terminé : consultez votre boîte de réception et cliquez sur le lien de confirmation.",
+    "subscribeConsent": "J'accepte de recevoir des nouvelles occasionnelles de GACEE et peux me désabonner à tout moment.",
+    "subscribeError": "L'e-mail de confirmation n'a pas pu être envoyé. Veuillez réessayer plus tard."
   },
   "about": {
     "eyebrow": "À propos",
@@ -698,5 +708,40 @@
     "live": "En direct",
     "closed": "Terminé",
     "open": "Inscriptions ouvertes"
-  }
+  },
+  "navCandidate": {
+    "aboutGov": "À propos et gouvernance",
+    "programmesEvents": "Programmes et événements",
+    "network": "Réseau mondial",
+    "resources": "Ressources pédagogiques",
+    "participate": "Participer",
+    "welfare": "Action caritative"
+  },
+  "roles": {
+    "eyebrow": "Par où commencer",
+    "title": "Trouvez votre point d’entrée",
+    "items": [
+      {
+        "title": "Écoles et chefs d’établissement",
+        "body": "Voyage des chefs d’établissement en Chine, forum et partenariats scolaires.",
+        "href": "/programmes/principals-tour"
+      },
+      {
+        "title": "Enseignants",
+        "body": "Ressources pédagogiques, formation en ligne et échanges professionnels.",
+        "href": "/programmes/online-chinese"
+      },
+      {
+        "title": "Élèves et parents",
+        "body": "Concours mondial de rédaction en chinois et voyages d’étude.",
+        "href": "/programmes/composition-competition"
+      },
+      {
+        "title": "Partenaires solidaires",
+        "body": "Conférences gratuites, lecture et soutien aux écoles en Afrique.",
+        "href": "/impact"
+      }
+    ]
+  },
+  "statsNote": "Portée cumulée des programmes de GACEE au fil des années, et non inscriptions sur le portail."
 }

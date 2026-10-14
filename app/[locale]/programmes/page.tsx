@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import { getDictionary, isLocale, localizedPath, type Locale } from "@/lib/i18n";
 import { programmeSlugs } from "@/lib/programmes";
@@ -13,7 +14,7 @@ export const revalidate = 300; // ISR：平台项目卡片编辑后 5 分钟内�
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params; const t = getDictionary((isLocale(locale) ? locale : "en") as Locale);
-  return { title: t.nav.programmes, description: t.programmes.body };
+  return pageSeo(((isLocale(locale) ? locale : "en") as Locale), "/programmes", { title: t.nav.programmes, description: t.programmes.body });
 }
 
 export default async function Programmes({ params }: { params: Promise<{ locale: string }> }) {
@@ -24,7 +25,7 @@ export default async function Programmes({ params }: { params: Promise<{ locale:
   const items = mergeProgrammes(t.programmes.items as Record<string, { title: string; tagline: string; summary: string; image?: string }>, site?.sections?.programmes);
   return (
     <>
-      <Header locale={l} nav={t.nav} />
+      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
       <PageHead eyebrow={t.programmes.eyebrow} title={t.programmes.title} lede={t.programmes.body} />
       <section className="section">
         <div className="container prog-feature">

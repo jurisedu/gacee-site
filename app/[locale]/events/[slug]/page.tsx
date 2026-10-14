@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale, localizedPath, type Locale } from "@/lib/i18n";
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const ev = await getEvent(slug);
   if (!ev) return {};
   const p = pick(ev, (isLocale(locale) ? locale : "en") as Locale);
-  return { title: p.title, description: p.body.slice(0, 160) };
+  return pageSeo(((isLocale(locale) ? locale : "en") as Locale), `/events/${slug}`, { title: p.title, description: p.body.slice(0, 160) });
 }
 
 export default async function EventPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
@@ -33,7 +34,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
   const status = ev.status === "live" ? d.live : ev.status === "closed" ? d.closed : d.open;
   return (
     <>
-      <Header locale={l} nav={t.nav} />
+      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
       <section className="page-head">
         <div className="container">
           <Link href={localizedPath(l, "/events")} className="link"><span style={{ transform: "rotate(180deg)", display: "inline-flex" }}><Arrow /></span> {t.nav.events}</Link>

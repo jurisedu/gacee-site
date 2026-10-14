@@ -21,7 +21,9 @@
     "menu": "Menu",
     "close": "Close",
     "language": "Language",
-    "signin": "Sign in"
+    "signin": "Sign in",
+    "verify": "Verify a certificate",
+    "candidatePreview": "Navigation preview (candidate, not approved)"
   },
   "hero": {
     "eyebrow": "Singapore · Est. 2025",
@@ -334,7 +336,13 @@
         "source": "GACEE",
         "body": "One hundred principals from more than twenty countries on five continents gather for a week of education dialogue and cultural immersion."
       }
-    ]
+    ],
+    "originalZh": "Original text in Chinese",
+    "originalEn": "Original text in English",
+    "readMore": "Read article",
+    "unavailable": "Latest updates could not be loaded; showing earlier news.",
+    "updated": "Updated",
+    "back": "All news"
   },
   "cta": {
     "title": "Build the bridge with us.",
@@ -354,7 +362,9 @@
     "newsletterBody": "Occasional updates on programmes, events and opportunities.",
     "email": "Email address",
     "subscribe": "Subscribe",
-    "subscribed": "Thank you. You are on the list."
+    "subscribed": "Almost done — please check your inbox and click the confirmation link.",
+    "subscribeConsent": "I agree to receive occasional GACEE updates and can unsubscribe at any time.",
+    "subscribeError": "We could not send the confirmation email. Please try again later."
   },
   "about": {
     "eyebrow": "About",
@@ -698,5 +708,40 @@
     "live": "Live now",
     "closed": "Ended",
     "open": "Open for registration"
-  }
+  },
+  "navCandidate": {
+    "aboutGov": "About & Governance",
+    "programmesEvents": "Programmes & Events",
+    "network": "Global Network",
+    "resources": "Teaching Resources",
+    "participate": "Take Part",
+    "welfare": "Public Welfare"
+  },
+  "roles": {
+    "eyebrow": "Where to start",
+    "title": "Find your way in",
+    "items": [
+      {
+        "title": "Schools & principals",
+        "body": "Principals’ China tour, the principals’ forum and school partnerships.",
+        "href": "/programmes/principals-tour"
+      },
+      {
+        "title": "Teachers",
+        "body": "Teaching resources, online training and professional exchange.",
+        "href": "/programmes/online-chinese"
+      },
+      {
+        "title": "Students & parents",
+        "body": "The World Chinese Composition Competition and study journeys.",
+        "href": "/programmes/composition-competition"
+      },
+      {
+        "title": "Charitable partners",
+        "body": "Free lectures, reading programmes and support for schools in Africa.",
+        "href": "/impact"
+      }
+    ]
+  },
+  "statsNote": "Cumulative reach of GACEE programmes over the years, not portal registrations."
 }

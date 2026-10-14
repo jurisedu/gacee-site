@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import { getDictionary, isLocale, localizedPath, type Locale } from "@/lib/i18n";
 import Header from "@/components/Header";
@@ -11,7 +12,7 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params; const t = getDictionary((isLocale(locale) ? locale : "en") as Locale);
-  return { title: t.nav.events, description: t.events.title };
+  return pageSeo(((isLocale(locale) ? locale : "en") as Locale), "/events", { title: t.nav.events, description: t.events.title });
 }
 
 export default async function Events({ params }: { params: Promise<{ locale: string }> }) {
@@ -38,7 +39,7 @@ export default async function Events({ params }: { params: Promise<{ locale: str
   );
   return (
     <>
-      <Header locale={l} nav={t.nav} />
+      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
       <PageHead eyebrow={t.events.eyebrow} title={t.events.title} />
       <section className="section">
         <div className="container">

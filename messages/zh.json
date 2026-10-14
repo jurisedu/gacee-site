@@ -21,7 +21,9 @@
     "menu": "菜单",
     "close": "关闭",
     "language": "语言",
-    "signin": "登录"
+    "signin": "登录",
+    "verify": "查验证书",
+    "candidatePreview": "导航候选预览（未经批准）"
   },
   "hero": {
     "eyebrow": "新加坡 · 2025 年成立",
@@ -334,7 +336,13 @@
         "source": "GACEE",
         "body": "来自五大洲 20 余个国家的百位校长汇聚河南，开展一周的教育对话与文化体验。"
       }
-    ]
+    ],
+    "originalZh": "原文为中文",
+    "originalEn": "原文为英文",
+    "readMore": "阅读全文",
+    "unavailable": "最新资讯暂时无法读取，以下为早前资讯。",
+    "updated": "更新于",
+    "back": "全部新闻"
   },
   "cta": {
     "title": "与我们一起搭桥。",
@@ -354,7 +362,9 @@
     "newsletterBody": "不定期发送项目、活动与合作机会。",
     "email": "电子邮箱",
     "subscribe": "订阅",
-    "subscribed": "谢谢，您已订阅。"
+    "subscribed": "还差一步：请查收邮件并点击确认链接，完成订阅。",
+    "subscribeConsent": "我同意接收 GACEE 不定期通讯，可随时退订。",
+    "subscribeError": "确认邮件发送失败，请稍后再试。"
   },
   "about": {
     "eyebrow": "关于协会",
@@ -698,5 +708,40 @@
     "live": "直播中",
     "closed": "已结束",
     "open": "报名中"
-  }
+  },
+  "navCandidate": {
+    "aboutGov": "关于与治理",
+    "programmesEvents": "项目与活动",
+    "network": "全球网络",
+    "resources": "教研资源",
+    "participate": "参与合作",
+    "welfare": "公益专题"
+  },
+  "roles": {
+    "eyebrow": "从这里开始",
+    "title": "按你的身份找到入口",
+    "items": [
+      {
+        "title": "学校与校长",
+        "body": "全球校长中国行、全球华文校长论坛与校际合作。",
+        "href": "/programmes/principals-tour"
+      },
+      {
+        "title": "教师",
+        "body": "教研资源、在线培训与教研交流。",
+        "href": "/programmes/online-chinese"
+      },
+      {
+        "title": "学生与家长",
+        "body": "世界中文作文大赛与国际研学。",
+        "href": "/programmes/composition-competition"
+      },
+      {
+        "title": "公益伙伴",
+        "body": "公益讲座、阅读推广与非洲学校支持。",
+        "href": "/impact"
+      }
+    ]
+  },
+  "statsNote": "以上为协会各项目历年累计覆盖情况，不是门户注册人数。"
 }

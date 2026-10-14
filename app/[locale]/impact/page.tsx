@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import { getDictionary, isLocale, localizedPath, type Locale } from "@/lib/i18n";
 import Header from "@/components/Header";
@@ -17,7 +18,7 @@ const LIVE_LABELS: Record<string, { zh: string; en: string }> = {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params; const t = getDictionary((isLocale(locale) ? locale : "en") as Locale);
-  return { title: t.nav.impact, description: t.impact.lede };
+  return pageSeo(((isLocale(locale) ? locale : "en") as Locale), "/impact", { title: t.nav.impact, description: t.impact.lede });
 }
 
 export default async function Impact({ params }: { params: Promise<{ locale: string }> }) {
@@ -31,7 +32,7 @@ export default async function Impact({ params }: { params: Promise<{ locale: str
     : [];
   return (
     <>
-      <Header locale={l} nav={t.nav} />
+      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
       <PageHead eyebrow={t.impact.eyebrow} title={t.impact.title} lede={t.impact.lede} />
       {live.length ? (
         <section className="stats">

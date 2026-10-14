@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
 import Header from "@/components/Header";
 import PageHead from "@/components/PageHead";
@@ -9,7 +10,7 @@ export const revalidate = 300; // ISR：平台 about 文案编辑后 5 分钟内
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params; const t = getDictionary((isLocale(locale) ? locale : "en") as Locale);
-  return { title: t.nav.about, description: t.about.lede };
+  return pageSeo(((isLocale(locale) ? locale : "en") as Locale), "/about", { title: t.nav.about, description: t.about.lede });
 }
 
 export default async function About({ params }: { params: Promise<{ locale: string }> }) {
@@ -26,7 +27,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
   };
   return (
     <>
-      <Header locale={l} nav={t.nav} />
+      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
       <PageHead eyebrow={about.eyebrow} title={about.title} lede={about.lede} />
       <section className="section">
         <div className="container two">

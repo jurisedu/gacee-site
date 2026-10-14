@@ -88,9 +88,16 @@ export default function HeroGlobe() {
       }
     };
 
-    const loop = (now: number) => { t = now; draw(); raf = requestAnimationFrame(loop); };
+    // 离屏或页面在后台时停止动画，回到可见时继续；尊重「减少动态效果」偏好
+    let visible = true;
+    const loop = (now: number) => { t = now; draw(); raf = visible && !document.hidden ? requestAnimationFrame(loop) : 0; };
+    const resume = () => { if (!reduce && visible && !document.hidden && !raf) raf = requestAnimationFrame(loop); };
+    const io = "IntersectionObserver" in window ? new IntersectionObserver(([e]) => { visible = e.isIntersecting; resume(); }) : null;
+    io?.observe(canvas);
+    const onVis = () => resume();
+    document.addEventListener("visibilitychange", onVis);
     if (reduce) { t = 4000; draw(); } else raf = requestAnimationFrame(loop);
-    return () => { cancelAnimationFrame(raf); ro.disconnect(); };
+    return () => { cancelAnimationFrame(raf); ro.disconnect(); io?.disconnect(); document.removeEventListener("visibilitychange", onVis); };
   }, []);
   return <canvas ref={ref} className="hero__canvas" aria-hidden="true" />;
 }

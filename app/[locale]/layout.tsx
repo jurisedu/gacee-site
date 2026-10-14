@@ -10,7 +10,7 @@ const manrope = Manrope({ subsets: ["latin", "latin-ext"], weight: ["400", "500"
 const notoSans = Noto_Sans_SC({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--font-noto-sans", display: "swap", preload: false });
 const notoSerif = Noto_Serif_SC({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-noto-serif", display: "swap", preload: false });
 
-export const SITE = "https://gacee.org";
+const SITE = "https://gacee.org";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(SITE),
     title: { default: t.meta.title, template: `%s · ${t.org.short}` },
     description: t.meta.description,
-    alternates: { canonical: `/${l}`, languages: { en: "/en", "zh-Hans": "/zh", fr: "/fr", "x-default": "/en" } },
-    openGraph: { type: "website", siteName: t.org.name, title: t.meta.title, description: t.meta.description, locale: htmlLang[l], url: `/${l}` },
+    // canonical / hreflang / og:url 由各页面 generateMetadata（lib/seo.ts pageSeo）分别生成，布局不再统一指向首页
+    openGraph: { type: "website", siteName: t.org.name, title: t.meta.title, description: t.meta.description, locale: htmlLang[l] },
     icons: { icon: [{ url: "/icon.png", sizes: "64x64", type: "image/png" }, { url: "/icon-192.png", sizes: "192x192", type: "image/png" }], apple: "/apple-touch-icon.png" },
     robots: { index: true, follow: true },
   };
@@ -36,8 +36,10 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   if (!isLocale(locale)) notFound();
   const t = getDictionary(locale);
   return (
-    <html lang={htmlLang[locale]} className={`${garamond.variable} ${manrope.variable} ${notoSans.variable} ${notoSerif.variable}`}>
+    <html lang={htmlLang[locale]} suppressHydrationWarning className={`${garamond.variable} ${manrope.variable} ${notoSans.variable} ${notoSerif.variable}`}>
       <body>
+        {/* 标记脚本可用；渐显动画仅在此之后启用。若 2.5 秒内未完成初始化，强制显示全部内容 */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js');setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')})},2500);" }} />
         {children}
         <Footer locale={locale} t={t} />
       </body>

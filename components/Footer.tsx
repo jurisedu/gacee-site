@@ -41,7 +41,7 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary })
           <div>
             <h4>{t.footer.newsletter}</h4>
             <p className="small">{t.footer.newsletterBody}</p>
-            <Newsletter placeholder={t.footer.email} label={t.footer.subscribe} done={t.footer.subscribed} />
+            <Newsletter placeholder={t.footer.email} label={t.footer.subscribe} done={t.footer.subscribed} consent={t.footer.subscribeConsent} error={t.footer.subscribeError} locale={locale} />
           </div>
         </div>
         <div className="footer__portals" style={{ display: "flex", flexWrap: "wrap", gap: "10px 26px", alignItems: "center", padding: "26px 0 2px", marginTop: 20, borderTop: "1px solid rgba(148,163,184,0.18)" }}>

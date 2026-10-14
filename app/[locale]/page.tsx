@@ -1,4 +1,6 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import { getDictionary, isLocale, localizedPath, type Locale } from "@/lib/i18n";
 import { programmeSlugs, featuredSlugs } from "@/lib/programmes";
 import Header from "@/components/Header";
@@ -7,6 +9,14 @@ import Reveal from "@/components/Reveal";
 import Arrow from "@/components/Arrow";
 import ProgrammeArt from "@/components/ProgrammeArt";
 import { fetchSite, mergeSection, mergeProgrammes } from "@/lib/site";
+import { newsItems } from "@/lib/news";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (isLocale(locale) ? locale : "en") as Locale;
+  const t = getDictionary(l);
+  return pageSeo(l, "", { title: { absolute: t.meta.title } as never, description: t.meta.description });
+}
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -14,7 +24,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const t = getDictionary(l);
   const p = (path: string) => localizedPath(l, path);
   const rest = programmeSlugs.filter((s) => !featuredSlugs.includes(s));
-  const news = t.news.items.slice(0, 3);
+  const { items: news } = await newsItems(l, 3);
 
   // 平台已发布板块覆盖静态字典（未发布/不可达则用静态，官网永远可用）。
   const site = await fetchSite(l);
@@ -29,14 +39,14 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
   return (
     <>
-      <Header locale={l} nav={t.nav} dark />
+      <Header locale={l} nav={t.nav} cand={t.navCandidate} dark />
       <section className="hero">
         <HeroGlobe />
         <div className="hero__grad" />
         <div className="container hero__inner">
           <div className="hero__content">
             <div className="eyebrow eyebrow--gold">{hero.eyebrow}</div>
-            <h1 className="display hero__title">{hero.title}</h1>
+            <h1 className="display hero__title">{String(hero.title).replace(/ · /g, "\u00a0· ")}</h1>
             <p className="hero__sub">{hero.subtitle}</p>
             <div className="hero__actions">
               <Link href={p("/programmes")} className="btn btn--light">{hero.cta1}</Link>
@@ -44,6 +54,22 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </div>
           </div>
           <div className="hero__scroll">{hero.scroll}</div>
+        </div>
+      </section>
+
+      <section className="section section--line roles" aria-labelledby="roles-title">
+        <div className="container">
+          <div className="eyebrow">{t.roles.eyebrow}</div>
+          <h2 id="roles-title" className="display h2">{t.roles.title}</h2>
+          <div className="roles__grid">
+            {t.roles.items.map((r) => (
+              <Link key={r.href} href={p(r.href)} className="roles__item">
+                <h3>{r.title}</h3>
+                <p>{r.body}</p>
+                <span className="link">{t.programmes.learnMore} <Arrow /></span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -56,6 +82,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </Reveal>
           ))}
         </div>
+        <div className="container"><p className="small stats__note" style={{ opacity: 0.85, marginTop: 12 }}>{t.statsNote}</p></div>
       </section>
 
       <section className="section">
@@ -146,10 +173,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           </Reveal>
           <div className="news-grid">
             {news.map((n, i) => (
-              <Reveal as="article" key={i} className="news-item" delay={i * 80}>
+              <Reveal as="article" key={n.id || i} className="news-item" delay={i * 80}>
                 <time dateTime={n.date}>{n.date}</time>
-                <h3>{n.title}</h3>
-                <p>{n.body}</p>
+                <h3 lang={n.lang}>{n.id ? <Link href={p(`/news/${n.id}`)}>{n.title}</Link> : n.title}</h3>
+                <p lang={n.lang}>{n.body.length > 160 ? n.body.slice(0, 160) + "…" : n.body}</p>
                 <div className="src">{n.source}</div>
               </Reveal>
             ))}
