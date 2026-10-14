@@ -47,7 +47,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mute); font-weight: 600;
 }
 html[lang="zh-Hans"] .eyebrow { letter-spacing: 0.3em; }
-.eyebrow--gold { color: var(--gold); }
+.eyebrow--gold { color: #7d6420; } /* 浅底：深金 5.3:1 */
+.hero .eyebrow--gold, .section--dark .eyebrow--gold { color: var(--gold); } /* 深色底保留品牌金 */
 .lede { font-size: clamp(18px, 1.6vw, 21px); line-height: 1.6; color: var(--ink-2); max-width: 62ch; }
 .mute { color: var(--mute); }
 .num { font-variant-numeric: tabular-nums; }
@@ -186,7 +187,7 @@ html[lang="zh-Hans"] .h2 { letter-spacing: 0; font-weight: 600; }
 .prog-list { margin-top: 20px; border-top: 1px solid var(--line); }
 .prog-row { display: grid; grid-template-columns: 56px 1fr 1fr auto; gap: 24px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); transition: padding-left .3s var(--ease); }
 .prog-row:hover { padding-left: 8px; }
-.prog-row__n { font-family: var(--font-display); color: var(--gold); font-size: 15px; }
+.prog-row__n { font-family: var(--font-display); color: #7d6420; font-size: 15px; } /* 浅底小字用深金（5.3:1），品牌金仅用于装饰或深色底 */
 .prog-row h3 { font-size: 20px; font-weight: 600; }
 .prog-row p { font-size: 14px; color: var(--mute); }
 @media (max-width: 960px) { .prog-feature { grid-template-columns: 1fr; } .prog-card { min-height: 0; } .prog-row { grid-template-columns: 40px 1fr auto; } .prog-row p { display: none; } }
