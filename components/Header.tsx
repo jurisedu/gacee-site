@@ -2,6 +2,7 @@
 // 官网页眉：五个一级栏目（关于协会／项目与活动／全球伙伴／资源中心／参与合作）＋公益专题，必要工具（查验证书、会员登录、语言）。
 // 二级菜单只列已有真实内容的页面（宁缺不空）；桌面端悬停或键盘聚焦展开，手机端菜单按栏目分组。语言以各自语言书写，不拆行。
 import Link from "next/link";
+import { extProps } from "@/lib/links";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { locales, localeNames, localizedPath, swapLocale, type Locale } from "@/lib/i18n";
@@ -21,7 +22,7 @@ type Leaf = { href: string; label: string };
 // 站内用 Link，门户等外部地址用 a（组件定义在外层，避免每次渲染重建导致子树重挂载）。
 function A({ href, children, className, onClick, current, title }: { href: string; children: React.ReactNode; className?: string; onClick?: () => void; current?: boolean; title?: string }) {
   return href.startsWith("http")
-    ? <a href={href} className={className} onClick={onClick} title={title}>{children}</a>
+    ? <a href={href} className={className} onClick={onClick} title={title} {...extProps(href)}>{children}</a>
     : <Link href={href} className={className} onClick={onClick} title={title} aria-current={current ? "page" : undefined}>{children}</Link>;
 }
 type Column = { href: string; label: string; short?: string; items: Leaf[] };
@@ -116,8 +117,8 @@ export default function Header({ locale, nav, dark = false, cand }: { locale: Lo
             <Link href={L("/impact")} className="nav__aside" aria-current={isCurrent(L("/impact")) ? "page" : undefined}>{cand.welfare}</Link>
           </nav>
           <div className="header__right" ref={rightRef}>
-            {nav.verify ? <a href={hubVerify} className="signin tool-verify" ref={verifyRef}>{nav.verify}</a> : null}
-            <a href={hubLogin} className="signin">
+            {nav.verify ? <a href={hubVerify} {...extProps(hubVerify)} className="signin tool-verify" ref={verifyRef}>{nav.verify}</a> : null}
+            <a href={hubLogin} {...extProps(hubLogin)} className="signin">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="5.5" r="3" stroke="currentColor" strokeWidth="1.4" /><path d="M2.5 14c.6-3 3-4.5 5.5-4.5s4.9 1.5 5.5 4.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" /></svg>
               {nav.signin}
             </a>
@@ -150,8 +151,8 @@ export default function Header({ locale, nav, dark = false, cand }: { locale: Lo
               </div>
             ))}
             <Link href={L("/impact")} onClick={() => setOpen(false)}>{cand.welfare}</Link>
-            {nav.verify ? <a href={hubVerify} onClick={() => setOpen(false)} className="menu__signin">{nav.verify}</a> : null}
-            <a href={hubLogin} onClick={() => setOpen(false)} className="menu__signin">{nav.signin}</a>
+            {nav.verify ? <a href={hubVerify} {...extProps(hubVerify)} onClick={() => setOpen(false)} className="menu__signin">{nav.verify}</a> : null}
+            <a href={hubLogin} {...extProps(hubLogin)} onClick={() => setOpen(false)} className="menu__signin">{nav.signin}</a>
           </div>
           <div className="menu__foot">
             <span>{nav.language}</span>

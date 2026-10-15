@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ExternalLinks from "@/components/ExternalLinks";
 import { fontVars, CJK_FONTS_HREF } from "@/lib/fonts";
 import { notFound } from "next/navigation";
 import { locales, isLocale, htmlLang, getDictionary, type Locale } from "@/lib/i18n";
@@ -41,6 +42,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         </head>
       ) : null}
       <body>
+        <ExternalLinks />
         {/* 标记脚本可用；渐显动画仅在此之后启用。若 2.5 秒内未完成初始化，强制显示全部内容 */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js');setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')})},2500);" }} />
         {children}

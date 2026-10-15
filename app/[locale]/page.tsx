@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { extProps } from "@/lib/links";
 import type { Metadata } from "next";
 import { pageSeo } from "@/lib/seo";
 import { getDictionary, isLocale, localizedPath, type Locale } from "@/lib/i18n";
@@ -167,7 +168,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 </div>
                 <figcaption>
                   <span className="gallery__no">{String(i + 1).padStart(2, "0")}</span>
-                  <span className="gallery__cap">{g.link ? <a href={g.link}>{g.caption}</a> : g.caption}</span>
+                  <span className="gallery__cap">{g.link ? <a href={g.link} {...extProps(g.link)}>{g.caption}</a> : g.caption}</span>
                   {g.credit ? <small className="gallery__credit">{g.credit}</small> : null}
                 </figcaption>
               </figure>

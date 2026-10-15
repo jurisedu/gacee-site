@@ -23,7 +23,7 @@ export default function LoginPanel({ t, partnersHref }: { t: Login; partnersHref
           <>
             <h2 className="display h3">{t.members.title}</h2>
             <p className="mute">{t.members.body}</p>
-            <p><a href="https://hub.gacee.org/login" className="btn btn--primary" rel="noopener">{t.members.submit} →</a></p>
+            <p><a href="https://hub.gacee.org/login" className="btn btn--primary" target="_blank" rel="noopener noreferrer">{t.members.submit} →</a></p>
             <p className="form__note">{t.members.note}</p>
             <p style={{ marginTop: 24 }}><Link href={partnersHref} className="link">{t.members.apply} →</Link></p>
           </>

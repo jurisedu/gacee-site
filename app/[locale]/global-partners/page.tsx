@@ -68,7 +68,7 @@ export default async function GlobalPartners({ params }: { params: Promise<{ loc
           </Reveal>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <Link href={localizedPath(l, "/partners")} className="btn">{t.columns.apply}</Link>
-            <a href={`${HUB}/login?lang=${l}`} className="btn btn--ghost">{t.columns.portal}</a>
+            <a href={`${HUB}/login?lang=${l}`} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">{t.columns.portal}</a>
           </div>
         </div>
       </section>

@@ -67,7 +67,7 @@ export default async function Events({ params }: { params: Promise<{ locale: str
                 <Reveal as="article" key={e.id} className="event" delay={i * 60}>
                   <time>{e.time ? day(String(e.time)) : ev.tbd || t.events.tba}</time>
                   <div><h3>{e.title}</h3>{e.mode || e.location ? <div className="place">{e.mode || e.location}</div> : null}{e.summary ? <p>{e.summary}</p> : null}</div>
-                  <a href={`${HUB}/events/${e.id}?lang=${l}`} className="btn btn--primary btn--sm">{t.events.register}</a>
+                  <a href={`${HUB}/events/${e.id}?lang=${l}`} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">{t.events.register}</a>
                 </Reveal>
               ))}
               {up.length ? <div className="eyebrow" style={{ margin: "48px 0 8px" }}>{ev.planning || t.events.upcoming}</div> : null}
@@ -77,7 +77,7 @@ export default async function Events({ params }: { params: Promise<{ locale: str
                 <Reveal as="article" key={e.id} className="event" delay={i * 60}>
                   <time>{day(String(e.time))}</time>
                   <div><h3>{e.title}</h3>{e.mode || e.location ? <div className="place">{e.mode || e.location}</div> : null}{e.summary ? <p>{e.summary}</p> : null}</div>
-                  <a href={`${HUB}/events/${e.id}?lang=${l}`} className="btn btn--ghost btn--sm">{ev.details || "→"}</a>
+                  <a href={`${HUB}/events/${e.id}?lang=${l}`} target="_blank" rel="noopener noreferrer" className="btn btn--ghost btn--sm">{ev.details || "→"}</a>
                 </Reveal>
               ))}
               <List items={past} />
