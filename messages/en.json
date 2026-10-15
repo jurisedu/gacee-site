@@ -396,7 +396,9 @@
     "subscribe": "Subscribe",
     "subscribed": "Almost done — please check your inbox and click the confirmation link.",
     "subscribeConsent": "I agree to receive occasional GACEE updates and can unsubscribe at any time.",
-    "subscribeError": "We could not send the confirmation email. Please try again later."
+    "subscribeError": "We could not send the confirmation email. Please try again later.",
+    "subscribeConsentHint": "Please tick the consent box above, then subscribe.",
+    "subscribeBusy": "Sending…"
   },
   "about": {
     "eyebrow": "About",
@@ -640,10 +642,6 @@
         "label": "Members & partners"
       },
       {
-        "key": "learn",
-        "label": "Learning platform"
-      },
-      {
         "key": "events",
         "label": "Event registrations"
       }
@@ -657,15 +655,6 @@
       "forgot": "Forgot password?",
       "apply": "Apply to become a partner",
       "note": "Preview: member accounts open with the first partner cohort."
-    },
-    "learn": {
-      "title": "Learning platform",
-      "body": "Teachers, learners and schools on the Global Online Chinese Programme sign in on the learning platform.",
-      "button": "Go to shanhai.gacee.org",
-      "status": "Opens with the first pilot cohort in October 2026.",
-      "teacher": "Teacher sign-in",
-      "learner": "Learner sign-in",
-      "school": "School administrator"
     },
     "events": {
       "title": "Event registrations",
@@ -798,7 +787,6 @@
     "issued": "Issued",
     "issuer": "Issuer",
     "issuerGacee": "GACEE Secretariat",
-    "issuerShanhai": "Shanhai Tongwen (issued through GACEE)",
     "approved": "Approved",
     "revokedAt": "Revoked",
     "checkedAt": "Checked at",
@@ -839,5 +827,17 @@
     "foundedNote": "The Global Association of Cultural and Educational Exchange (GACEE) was founded in Singapore in 2025.",
     "empty": "No entries yet.",
     "read": "Read"
+  },
+  "subscribeBand": {
+    "eyebrow": "Newsletter",
+    "title": "Subscribe to the GACEE newsletter for programmes, events and opportunities",
+    "body": "Sent occasionally, with new programmes, event registrations and replays, partnership calls and association news. After you submit, we will email you a confirmation link — click it to complete your subscription.",
+    "points": [
+      "New programmes & competitions",
+      "Events & replays",
+      "Partnerships & calls",
+      "Association news"
+    ],
+    "note": "We never share your email with third parties. Every issue includes a one-click unsubscribe link."
   }
 }

@@ -12,7 +12,7 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary })
         <div className="footer__grid">
           <div>
             <div className="footer__brand">
-              <Image src="/seal.png" alt="GACEE seal" width={56} height={56} />
+              <Image src="/seal.svg" alt="GACEE seal" width={56} height={56} unoptimized />
               <div>
                 <div className="footer__name">{t.org.name}</div>
                 <div className="footer__tag">{t.org.tagline}</div>
@@ -43,7 +43,7 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary })
           <div>
             <h4>{t.footer.newsletter}</h4>
             <p className="small">{t.footer.newsletterBody}</p>
-            <Newsletter placeholder={t.footer.email} label={t.footer.subscribe} done={t.footer.subscribed} consent={t.footer.subscribeConsent} error={t.footer.subscribeError} locale={locale} />
+            <Newsletter id="nl-footer" placeholder={t.footer.email} label={t.footer.subscribe} done={t.footer.subscribed} consent={t.footer.subscribeConsent} error={t.footer.subscribeError} consentHint={t.footer.subscribeConsentHint} busy={t.footer.subscribeBusy} locale={locale} />
           </div>
         </div>
         <div className="footer__portals" style={{ display: "flex", flexWrap: "wrap", gap: "10px 26px", alignItems: "center", padding: "26px 0 2px", marginTop: 20, borderTop: "1px solid rgba(148,163,184,0.18)" }}>
@@ -51,7 +51,6 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary })
           <a href="https://gacee.org" style={{ fontSize: 14 }}>{locale === "zh" ? "官网" : locale === "fr" ? "Site web" : "Website"} · gacee.org</a>
           <a href="https://hub.gacee.org" style={{ fontSize: 14 }}>{t.columns.portal} · hub.gacee.org</a>
           <Link href={p("/verify")} style={{ fontSize: 14 }}>{t.nav.verify}</Link>
-          <a href="https://shanhai.gacee.org" style={{ fontSize: 14 }}>{locale === "zh" ? "山海同文" : "Shanhai Tongwen"} · shanhai.gacee.org</a>
         </div>
         <div className="footer__bottom">
           <span>© {year} {t.org.name}. {t.footer.rights}</span>

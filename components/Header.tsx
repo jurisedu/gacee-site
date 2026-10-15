@@ -99,7 +99,7 @@ export default function Header({ locale, nav, dark = false, cand }: { locale: Lo
       <header className={cls}>
         <div className="container header__inner" ref={innerRef}>
           <Link href={L("/")} className="brand" aria-label="GACEE home" ref={brandRef}>
-            <span className="brand__seal"><Image src="/seal.png" alt="" width={40} height={40} priority /></span>
+            <span className="brand__seal"><Image src="/seal.svg" alt="" width={40} height={40} unoptimized priority /></span>
             <span>GACEE</span>
           </Link>
           <nav className="nav" aria-label="Primary" ref={navRef} aria-hidden={fit === 2 ? true : undefined}>
@@ -135,7 +135,7 @@ export default function Header({ locale, nav, dark = false, cand }: { locale: Lo
       {open && (
         <div className="menu" id="site-menu" role="dialog" aria-modal="true" aria-label={nav.menu}>
           <div className="menu__top">
-            <span className="brand"><span className="brand__seal"><Image src="/seal.png" alt="" width={40} height={40} /></span><span>GACEE</span></span>
+            <span className="brand"><span className="brand__seal"><Image src="/seal.svg" alt="" width={40} height={40} unoptimized /></span><span>GACEE</span></span>
             <button ref={closeRef} className="btn btn--ghost btn--sm" onClick={() => { setOpen(false); burgerRef.current?.focus(); }}>{nav.close}</button>
           </div>
           <div className="menu__links">

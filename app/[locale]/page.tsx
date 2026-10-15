@@ -10,6 +10,7 @@ import Arrow from "@/components/Arrow";
 import ProgrammeArt from "@/components/ProgrammeArt";
 import { fetchSite, mergeSection, mergeProgrammes } from "@/lib/site";
 import { newsItems } from "@/lib/news";
+import Newsletter from "@/components/Newsletter";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -210,6 +211,21 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section subscribe" id="subscribe" aria-labelledby="subscribe-title">
+        <div className="container subscribe__inner">
+          <Reveal>
+            <div className="eyebrow eyebrow--gold">{t.subscribeBand.eyebrow}</div>
+            <h2 id="subscribe-title" className="display">{t.subscribeBand.title}</h2>
+            <p className="subscribe__body">{t.subscribeBand.body}</p>
+            <ul className="subscribe__points">{t.subscribeBand.points.map((x) => <li key={x}>{x}</li>)}</ul>
+          </Reveal>
+          <Reveal delay={80}>
+            <Newsletter id="nl-home" tone="light" placeholder={t.footer.email} label={t.footer.subscribe} done={t.footer.subscribed} consent={t.footer.subscribeConsent} error={t.footer.subscribeError} consentHint={t.footer.subscribeConsentHint} busy={t.footer.subscribeBusy} locale={l} />
+            <p className="subscribe__note">{t.subscribeBand.note}</p>
+          </Reveal>
         </div>
       </section>
 

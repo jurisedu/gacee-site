@@ -21,7 +21,7 @@ export default async function Verify({ params }: { params: Promise<{ locale: str
       <Header locale={l} nav={t.nav} cand={t.columns} />
       <main className="verify-page">
         <section className="container verify-hero">
-          <span className="verify-seal"><Image src="/seal.png" alt="" width={76} height={76} priority /></span>
+          <span className="verify-seal"><Image src="/seal.svg" alt="" width={76} height={76} unoptimized priority /></span>
           <div className="eyebrow">{v.eyebrow}</div>
           <h1 className="display h2">{v.title}</h1>
           <p className="lede">{v.lede}</p>

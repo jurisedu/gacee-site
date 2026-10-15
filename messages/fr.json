@@ -397,7 +397,9 @@
     "subscribe": "S'abonner",
     "subscribed": "Presque terminé : consultez votre boîte de réception et cliquez sur le lien de confirmation.",
     "subscribeConsent": "J'accepte de recevoir des nouvelles occasionnelles de GACEE et peux me désabonner à tout moment.",
-    "subscribeError": "L'e-mail de confirmation n'a pas pu être envoyé. Veuillez réessayer plus tard."
+    "subscribeError": "L'e-mail de confirmation n'a pas pu être envoyé. Veuillez réessayer plus tard.",
+    "subscribeConsentHint": "Veuillez d'abord cocher la case de consentement ci-dessus, puis vous abonner.",
+    "subscribeBusy": "Envoi…"
   },
   "about": {
     "eyebrow": "À propos",
@@ -641,10 +643,6 @@
         "label": "Membres et partenaires"
       },
       {
-        "key": "learn",
-        "label": "Plateforme d'apprentissage"
-      },
-      {
         "key": "events",
         "label": "Inscriptions"
       }
@@ -658,15 +656,6 @@
       "forgot": "Mot de passe oublié ?",
       "apply": "Devenir partenaire",
       "note": "Prévisualisation : les comptes membres ouvrent avec la première cohorte de partenaires."
-    },
-    "learn": {
-      "title": "Plateforme d'apprentissage",
-      "body": "Enseignants, apprenants et écoles du Programme mondial de chinois en ligne se connectent sur la plateforme d'apprentissage.",
-      "button": "Aller sur shanhai.gacee.org",
-      "status": "Ouverture avec la première cohorte pilote en octobre 2026.",
-      "teacher": "Connexion enseignant",
-      "learner": "Connexion apprenant",
-      "school": "Administrateur d'école"
     },
     "events": {
       "title": "Inscriptions aux événements",
@@ -799,7 +788,6 @@
     "issued": "Délivré le",
     "issuer": "Émetteur",
     "issuerGacee": "Secrétariat de GACEE",
-    "issuerShanhai": "Shanhai Tongwen (délivré via GACEE)",
     "approved": "Validé le",
     "revokedAt": "Révoqué le",
     "checkedAt": "Vérifié le",
@@ -840,5 +828,17 @@
     "foundedNote": "La Global Association of Cultural and Educational Exchange (GACEE) a été créée à Singapour en 2025.",
     "empty": "Aucune entrée pour le moment.",
     "read": "Lire"
+  },
+  "subscribeBand": {
+    "eyebrow": "Lettre d’information",
+    "title": "Abonnez-vous à la lettre de la GACEE : programmes, événements et opportunités",
+    "body": "Envoyée ponctuellement : nouveaux programmes, inscriptions et rediffusions d’événements, appels à partenariats et actualités de l’association. Après votre inscription, nous vous enverrons un lien de confirmation : cliquez dessus pour finaliser l’abonnement.",
+    "points": [
+      "Programmes et concours",
+      "Événements et rediffusions",
+      "Partenariats et appels",
+      "Actualités"
+    ],
+    "note": "Votre adresse n’est jamais transmise à des tiers. Chaque lettre comporte un lien de désabonnement en un clic."
   }
 }

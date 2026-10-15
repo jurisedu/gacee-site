@@ -392,7 +392,9 @@
     "subscribe": "订阅",
     "subscribed": "还差一步：请查收邮件并点击确认链接，完成订阅。",
     "subscribeConsent": "我同意接收 GACEE 不定期通讯，可随时退订。",
-    "subscribeError": "确认邮件发送失败，请稍后再试。"
+    "subscribeError": "确认邮件发送失败，请稍后再试。",
+    "subscribeConsentHint": "请先勾选上方的同意选项，再点击订阅。",
+    "subscribeBusy": "发送中…"
   },
   "about": {
     "eyebrow": "关于协会",
@@ -636,10 +638,6 @@
         "label": "会员与合作伙伴"
       },
       {
-        "key": "learn",
-        "label": "学习平台"
-      },
-      {
         "key": "events",
         "label": "活动报名查询"
       }
@@ -653,15 +651,6 @@
       "forgot": "忘记密码？",
       "apply": "申请成为合作伙伴",
       "note": "预览版：会员账号将随首批合作伙伴同步开通。"
-    },
-    "learn": {
-      "title": "学习平台",
-      "body": "全球中文在线培训的老师、学员与学校，请在学习平台登录。",
-      "button": "前往 shanhai.gacee.org",
-      "status": "将随 2026 年 10 月首批试点班开放。",
-      "teacher": "老师登录",
-      "learner": "学员登录",
-      "school": "学校管理员"
     },
     "events": {
       "title": "活动报名查询",
@@ -794,7 +783,6 @@
     "issued": "签发日期",
     "issuer": "签发机构",
     "issuerGacee": "全球文化教育交流协会秘书处",
-    "issuerShanhai": "山海同文（经协会统一签发）",
     "approved": "复核日期",
     "revokedAt": "作废日期",
     "checkedAt": "查验时间",
@@ -835,5 +823,17 @@
     "foundedNote": "全球文化教育交流协会（GACEE）于 2025 年在新加坡成立。",
     "empty": "暂无可展示的记录。",
     "read": "查看"
+  },
+  "subscribeBand": {
+    "eyebrow": "协会通讯",
+    "title": "订阅协会通讯，及时了解项目、活动与合作机会",
+    "body": "不定期发送，每期精选新项目发布、活动报名与回放、合作招募和协会动态。提交后我们会发送一封确认邮件，点击确认即完成订阅。",
+    "points": [
+      "新项目与赛事",
+      "活动报名与回放",
+      "合作与招募",
+      "协会动态"
+    ],
+    "note": "不会向第三方提供您的邮箱，每期邮件底部均可一键退订。"
   }
 }

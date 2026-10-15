@@ -5,7 +5,6 @@ import { useState } from "react";
 type Login = {
   tabs: { key: string; label: string }[];
   members: { title: string; body: string; email: string; password: string; submit: string; forgot: string; apply: string; note: string };
-  learn: { title: string; body: string; button: string; status: string; teacher: string; learner: string; school: string };
   events: { title: string; body: string; email: string; submit: string; sent: string; note: string };
 };
 
@@ -27,17 +26,6 @@ export default function LoginPanel({ t, partnersHref }: { t: Login; partnersHref
             <p><a href="https://hub.gacee.org/login" className="btn btn--primary" rel="noopener">{t.members.submit} →</a></p>
             <p className="form__note">{t.members.note}</p>
             <p style={{ marginTop: 24 }}><Link href={partnersHref} className="link">{t.members.apply} →</Link></p>
-          </>
-        )}
-        {tab === "learn" && (
-          <>
-            <h2 className="display h3">{t.learn.title}</h2>
-            <p className="mute">{t.learn.body}</p>
-            <div className="login__roles">
-              <span>{t.learn.teacher}</span><span>{t.learn.learner}</span><span>{t.learn.school}</span>
-            </div>
-            <p><a href="https://shanhai.gacee.org" className="btn btn--primary" rel="noopener">{t.learn.button}</a></p>
-            <p className="form__note">{t.learn.status}</p>
           </>
         )}
         {tab === "events" && (

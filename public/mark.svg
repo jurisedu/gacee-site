@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="GACEE">
+  <circle cx="256" cy="256" r="255" fill="#fff"/>
+  <g fill="#0D11D4">
+  <path d="M0.7 256a255.3 255.3 0 1 1 510.6 0a255.3 255.3 0 1 1 -510.6 0ZM20 256a236 236 0 1 0 472 0a236 236 0 1 0 -472 0Z" fill-rule="evenodd"/>
+  <g transform="translate(256 256) scale(1.62) translate(-256 -256)"><defs>
+    <mask id="kL" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512"><rect width="512" height="512" fill="#fff"/><path d="M261.42 203.42L255.91 197.08L218.18 229.88L223.69 236.22Z" fill="#000"/><circle cx="256.0" cy="256.0" r="34.8" fill="#000"/></mask>
+    <mask id="kR" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512"><rect width="512" height="512" fill="#fff"/><path d="M293.82 282.12L288.31 275.78L250.58 308.58L256.09 314.92Z" fill="#000"/><circle cx="256.0" cy="256.0" r="34.8" fill="#000"/></mask>
+    <clipPath id="kC"><ellipse cx="256.0" cy="256.0" rx="33.3" ry="27.8"/></clipPath>
+    <mask id="kG" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512"><rect width="512" height="512" fill="#fff"/>
+      <g fill="none" stroke="#000" stroke-width="3.3">
+        <line x1="256.0" y1="216.0" x2="256.0" y2="296.0"/>
+        <ellipse cx="256.0" cy="256.0" rx="18.45" ry="30.8"/>
+        <line x1="216.0" y1="256.0" x2="296.0" y2="256.0"/>
+        <line x1="216.0" y1="242.4" x2="296.0" y2="242.4"/>
+        <line x1="216.0" y1="269.6" x2="296.0" y2="269.6"/>
+      </g></mask>
+  </defs>
+  <path d="M124.75 256a74.4 74.4 0 1 1 148.8 0a74.4 74.4 0 1 1 -148.8 0ZM164.23 256a34.92 34.92 0 1 0 69.84 0a34.92 34.92 0 1 0 -69.84 0Z" fill-rule="evenodd" mask="url(#kL)"/>
+  <path d="M238.45 256a74.4 74.4 0 1 1 148.8 0a74.4 74.4 0 1 1 -148.8 0ZM277.93 256a34.92 34.92 0 1 0 69.84 0a34.92 34.92 0 1 0 -69.84 0Z" fill-rule="evenodd" mask="url(#kR)"/>
+  <g clip-path="url(#kC)"><rect x="216.0" y="216.0" width="80" height="80" mask="url(#kG)"/></g>
+  </g>
+  </g>
+</svg>

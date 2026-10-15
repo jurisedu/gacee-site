@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: t.meta.description,
     // canonical / hreflang / og:url 由各页面 generateMetadata（lib/seo.ts pageSeo）分别生成，布局不再统一指向首页
     openGraph: { type: "website", siteName: t.org.name, title: t.meta.title, description: t.meta.description, locale: htmlLang[l] },
-    icons: { icon: [{ url: "/icon.png", sizes: "64x64", type: "image/png" }, { url: "/icon-192.png", sizes: "192x192", type: "image/png" }], apple: "/apple-touch-icon.png" },
+    icons: { icon: [{ url: "/mark.svg", type: "image/svg+xml" }, { url: "/icon.png", sizes: "64x64", type: "image/png" }, { url: "/icon-192.png", sizes: "192x192", type: "image/png" }], apple: "/apple-touch-icon.png" },
     robots: { index: true, follow: true },
   };
 }

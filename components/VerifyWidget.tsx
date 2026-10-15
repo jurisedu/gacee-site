@@ -7,14 +7,14 @@ const HUB = process.env.NEXT_PUBLIC_PLATFORM_URL ?? "https://hub.gacee.org";
 type Dict = Record<string, string> & { tips: string[] };
 type Result =
   | { found: false; code: string; checkedAt?: string }
-  | { found: true; code: string; status: "valid" | "revoked"; kind: string; holder: string; issuedAt?: string; reviewedAt?: string; revokedAt?: string; issuer: "gacee" | "shanhai"; batch?: string; project?: { zh?: string; en?: string }; checkedAt?: string };
+  | { found: true; code: string; status: "valid" | "revoked"; kind: string; holder: string; issuedAt?: string; reviewedAt?: string; revokedAt?: string; issuer: string; batch?: string; project?: { zh?: string; en?: string }; checkedAt?: string };
 
 const KIND: Record<string, Record<Locale, string>> = {
   composition: { zh: "世界中文作文大赛", en: "World Chinese Writing Competition", fr: "Concours mondial d'écriture en chinois" },
   study: { zh: "研学结业", en: "Study Tour Completion", fr: "Fin de séjour d'étude" },
   forum: { zh: "论坛 / 校长行", en: "Forum / Principals' Tour", fr: "Forum / Tournée des directeurs" },
   training: { zh: "培训", en: "Training", fr: "Formation" },
-  "hanyu-course": { zh: "山海同文结业", en: "Shanhai Tongwen Course Completion", fr: "Fin de cours Shanhai Tongwen" },
+  "hanyu-course": { zh: "中文课程结业", en: "Chinese Language Course Completion", fr: "Fin de cours de chinois" },
 };
 const valid = (c: string) => /^[A-Z0-9-]{6,40}$/.test(c);
 
@@ -61,7 +61,7 @@ export default function VerifyWidget({ locale, t }: { locale: Locale; t: Dict })
       {state === "done" && res ? (
         <article className={"vw-doc " + cls} aria-live="polite">
           <header className="vw-doc__head">
-            <img src="/seal.png" alt="" width={44} height={44} />
+            <img src="/seal.svg" alt="" width={44} height={44} />
             <div><div className="vw-doc__org">{t.org}</div><div className="vw-doc__sub">{t.resultTitle} · GACEE</div></div>
           </header>
           <div className="vw-status">
@@ -79,7 +79,7 @@ export default function VerifyWidget({ locale, t }: { locale: Locale; t: Dict })
               {res.project ? <div><dt>{t.programme}</dt><dd>{locale === "zh" ? res.project.zh : res.project.en || res.project.zh}</dd></div> : null}
               {res.batch ? <div><dt>{t.batch}</dt><dd>{res.batch}</dd></div> : null}
               <div><dt>{t.issued}</dt><dd>{fmt(res.issuedAt)}</dd></div>
-              <div><dt>{t.issuer}</dt><dd>{res.issuer === "shanhai" ? t.issuerShanhai : t.issuerGacee}</dd></div>
+              <div><dt>{t.issuer}</dt><dd>{t.issuerGacee}</dd></div>
               {res.reviewedAt ? <div><dt>{t.approved}</dt><dd>{fmt(res.reviewedAt)}</dd></div> : null}
               {res.status === "revoked" ? <div><dt>{t.revokedAt}</dt><dd className="vw-red">{fmt(res.revokedAt)}</dd></div> : null}
             </dl>

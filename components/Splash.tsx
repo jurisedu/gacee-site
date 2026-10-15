@@ -54,7 +54,7 @@ export default function Splash({ locale, variant }: { locale: Locale; variant: S
 
       <div className="soon__inner">
         <div className="soon__seal">
-          <img src="/seal.png" alt={s.org} width={116} height={116} />
+          <img src="/seal.svg" alt={s.org} width={116} height={116} />
         </div>
 
         <div className="soon__eyebrow">{s.org}</div>
