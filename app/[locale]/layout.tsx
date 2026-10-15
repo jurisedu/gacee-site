@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ExternalLinks from "@/components/ExternalLinks";
+import JsonLd, { ORG_ID } from "@/components/JsonLd";
 import { fontVars, CJK_FONTS_HREF } from "@/lib/fonts";
 import { notFound } from "next/navigation";
 import { locales, isLocale, htmlLang, getDictionary, type Locale } from "@/lib/i18n";
@@ -43,6 +44,13 @@ export default async function LocaleLayout({ children, params }: { children: Rea
       ) : null}
       <body>
         <ExternalLinks />
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            { "@type": "Organization", "@id": ORG_ID, name: "Global Association of Cultural and Educational Exchange", alternateName: ["GACEE", "全球文化教育交流协会"], url: SITE, logo: `${SITE}/seal.png`, email: "info@gacee.org", foundingDate: "2025", address: { "@type": "PostalAddress", addressCountry: "SG" } },
+            { "@type": "WebSite", "@id": `${SITE}/#website`, url: SITE, name: t.org.name, inLanguage: htmlLang[locale], publisher: { "@id": ORG_ID } },
+          ],
+        }} />
         {/* 标记脚本可用；渐显动画仅在此之后启用。若 2.5 秒内未完成初始化，强制显示全部内容 */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js');setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')})},2500);" }} />
         {children}

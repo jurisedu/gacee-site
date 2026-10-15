@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import EventRegister from "@/components/EventRegister";
 import TimeZones from "@/components/TimeZones";
 import Arrow from "@/components/Arrow";
+import JsonLd, { SITE, ORG_ID } from "@/components/JsonLd";
 
 export const dynamic = "force-dynamic";
 
@@ -37,6 +38,11 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
   return (
     <>
       <Header locale={l} nav={t.nav} cand={t.columns} />
+      <JsonLd data={{
+        "@context": "https://schema.org", "@type": "Event", name: p.title, description: p.body, startDate: ev.starts_at,
+        ...(ev.ends_at ? { endDate: ev.ends_at } : {}), eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode", eventStatus: "https://schema.org/EventScheduled",
+        location: { "@type": "VirtualLocation", url: `${SITE}${localizedPath(l, `/events/${slug}`)}` }, organizer: { "@id": ORG_ID }, inLanguage: l === "zh" ? "zh-Hans" : l,
+      }} />
       <section className="page-head">
         <div className="container">
           <Link href={localizedPath(l, "/events")} className="link"><span style={{ transform: "rotate(180deg)", display: "inline-flex" }}><Arrow /></span> {t.nav.events}</Link>
@@ -50,14 +56,25 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
           <div>
             <div className="eyebrow" style={{ marginBottom: 12 }}>{d.startsAt}</div>
             <TimeZones iso={ev.starts_at} labels={d.tz} yourTime={d.yourTime} locale={l} />
-            {!ev.time_confirmed && <p className="small mute" style={{ marginTop: 8 }}>{d.timeTba}</p>}
+            {!ev.time_confirmed && ev.status !== "closed" && <p className="small mute" style={{ marginTop: 8 }}>{d.timeTba}</p>}
             <dl className="kv" style={{ marginTop: 16 }}><dt>{d.duration}</dt><dd>{ev.duration_min} {d.minutes}</dd><dt>{d.host}</dt><dd>{ev.host}</dd></dl>
-            <div className="eyebrow" style={{ margin: "28px 0 8px" }}>{d.howTo}</div>
-            <ol className="steps">{d.steps.map((s, i) => <li key={i}>{s}</li>)}</ol>
+            {ev.status !== "closed" ? (<>
+              <div className="eyebrow" style={{ margin: "28px 0 8px" }}>{d.howTo}</div>
+              <ol className="steps">{d.steps.map((s, i) => <li key={i}>{s}</li>)}</ol>
+            </>) : null}
           </div>
           <div>
-            <div className="eyebrow" style={{ marginBottom: 12 }}>{d.register}</div>
-            {ev.status === "closed" ? <p className="mute">{d.closed}</p> : <EventRegister slug={slug} locale={l} d={d} />}
+            {ev.status === "closed" ? (
+              /* 已结束：不再出现进入指引；回放只对报名者开放，经各自专属链接观看 */
+              <div className="ended-note">
+                <div className="eyebrow" style={{ marginBottom: 12 }}>{d.closed}</div>
+                <p>{d.endedNote}</p>
+                <p style={{ marginTop: 20 }}><Link href={localizedPath(l, "/events")} className="btn btn--ghost btn--sm">{d.moreEvents} →</Link></p>
+              </div>
+            ) : (<>
+              <div className="eyebrow" style={{ marginBottom: 12 }}>{d.register}</div>
+              <EventRegister slug={slug} locale={l} d={d} />
+            </>)}
           </div>
         </div>
       </section>

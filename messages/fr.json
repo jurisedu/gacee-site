@@ -733,7 +733,9 @@
     ],
     "live": "En direct",
     "closed": "Terminé",
-    "open": "Inscriptions ouvertes"
+    "open": "Inscriptions ouvertes",
+    "endedNote": "Cet événement est terminé — merci de votre participation. Les enregistrements sont réservés aux inscrits, via le lien personnel reçu lors de l’inscription.",
+    "moreEvents": "Voir les autres événements"
   },
   "roles": {
     "eyebrow": "Par où commencer",

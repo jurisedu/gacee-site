@@ -732,7 +732,9 @@
     ],
     "live": "Live now",
     "closed": "Ended",
-    "open": "Open for registration"
+    "open": "Open for registration",
+    "endedNote": "This event has ended — thank you for joining. Recordings are available to registrants only, through the personal link you received when you registered.",
+    "moreEvents": "See other events"
   },
   "roles": {
     "eyebrow": "Where to start",

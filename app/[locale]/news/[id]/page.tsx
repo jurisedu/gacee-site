@@ -7,6 +7,7 @@ import { getDictionary, isLocale, localizedPath, type Locale } from "@/lib/i18n"
 import Header from "@/components/Header";
 import { fetchFeed, articleLang, sgDate, creditLine } from "@/lib/content";
 import { mdToHtml } from "@/lib/md";
+import JsonLd, { SITE, ORG_ID } from "@/components/JsonLd";
 
 async function load(l: Locale, id: string) {
   if (!/^\d+$/.test(id)) return null;
@@ -34,6 +35,12 @@ export default async function NewsArticle({ params }: { params: Promise<{ locale
   return (
     <>
       <Header locale={l} nav={t.nav} cand={t.columns} />
+      <JsonLd data={{
+        "@context": "https://schema.org", "@type": "NewsArticle", headline: a.title, datePublished: a.publishedAt, ...(a.updatedAt ? { dateModified: a.updatedAt } : {}),
+        ...(a.cover?.url ? { image: [a.cover.url] } : {}), inLanguage: lang || (l === "zh" ? "zh-Hans" : l), mainEntityOfPage: `${SITE}${localizedPath(l, `/news/${id}`)}`,
+        ...(thirdParty ? { author: { "@type": "Organization", name: a.sourceName || "—" }, isBasedOn: a.sourceUrl || undefined } : { author: { "@id": ORG_ID } }),
+        publisher: { "@id": ORG_ID },
+      }} />
       <main className="section" style={{ paddingTop: 140 }}>
         <article className="container" style={{ maxWidth: 760 }} lang={lang}>
           <p className="small"><Link href={localizedPath(l, "/news")} lang={l === "zh" ? "zh-Hans" : l}>← {t.news.back}</Link></p>

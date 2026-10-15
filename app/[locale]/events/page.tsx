@@ -56,8 +56,8 @@ export default async function Events({ params }: { params: Promise<{ locale: str
           {live.length > 0 && <div className="evlist">
             {live.map((ev0) => { const ev = { ...ev0, status: ev0.status !== "closed" && new Date(ev0.starts_at).getTime() < Date.now() - 3 * 3600_000 ? "closed" : ev0.status }; /* 开始已逾 3 小时视为已结束 */ const title = l === "zh" ? ev.title_zh : l === "fr" ? ev.title_fr || ev.title_en : ev.title_en; const body = l === "zh" ? ev.body_zh : l === "fr" ? ev.body_fr || ev.body_en : ev.body_en; return (
               <Link key={ev.slug} href={localizedPath(l, `/events/${ev.slug}`)} className="evcard">
-                <div><div className="eyebrow eyebrow--gold">{ev.status === "live" ? d.live : ev.status === "closed" ? d.closed : d.open} · {fmt(ev.starts_at)} ({d.tz.beijing}){!ev.time_confirmed && ` · ${d.timeTba}`}</div><h3>{title}</h3><p>{body}</p></div>
-                <span className="btn btn--primary">{ev.status === "closed" ? d.replayTitle : d.register} →</span>
+                <div><div className="eyebrow eyebrow--gold">{ev.status === "live" ? d.live : ev.status === "closed" ? d.closed : d.open} · {fmt(ev.starts_at)} ({d.tz.beijing}){!ev.time_confirmed && ev.status !== "closed" && ` · ${d.timeTba}`}</div><h3>{title}</h3><p>{body}</p></div>
+                <span className={ev.status === "closed" ? "btn btn--ghost" : "btn btn--primary"}>{ev.status === "closed" ? (t.events as { details?: string }).details || d.replayTitle : d.register} →</span>
               </Link>); })}
           </div>}
           {platEvents.length > 0 ? (
