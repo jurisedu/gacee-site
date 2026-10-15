@@ -33,9 +33,9 @@ export default async function Impact({ params }: { params: Promise<{ locale: str
       <RelatedNews l={l} items={related} title={t.programmes.related} more={t.programmes.relatedMore} />
       <section className="section section--white section--line">
         <div className="container two">
-          <Reveal><div className="eyebrow">{t.impact.principlesTitle}</div></Reveal>
+          <Reveal><div className="eyebrow">{t.impact.joinEyebrow}</div><h2 className="display h3" style={{ marginTop: 14 }}>{t.impact.joinTitle}</h2></Reveal>
           <Reveal delay={100}>
-            <ol className="steps">{t.impact.principles.map((s, i) => <li key={i}>{s}</li>)}</ol>
+            <p className="lede" style={{ marginTop: 0 }}>{t.impact.joinBody}</p>
             <p style={{ marginTop: 32 }}><Link href={localizedPath(l, "/partners")} className="btn btn--primary">{t.impact.cta}</Link></p>
           </Reveal>
         </div>

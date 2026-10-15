@@ -539,15 +539,10 @@
         "body": "Promotion de la lecture, comme « Cinq continents lisent un livre », bénévolat et soutien aux enfants à besoins particuliers."
       }
     ],
-    "principlesTitle": "Notre façon de travailler en Afrique",
-    "principles": [
-      "Les enseignants dirigent ; la technologie assiste sans jamais remplacer.",
-      "L'inclusion d'abord : appareils partagés, profils multiples, téléphones à bas coût.",
-      "Réseaux faibles et hors-ligne sont la condition de conception par défaut.",
-      "Les langues premières des apprenants, dont le swahili, comme échafaudage vers le chinois.",
-      "Conformité et protection des données intégrées aux fondations."
-    ],
-    "cta": "Soutenir un programme"
+    "cta": "Soutenir un programme",
+    "joinEyebrow": "S’engager",
+    "joinTitle": "Faire aller l’éducation plus loin",
+    "joinBody": "Écoles, organismes éducatifs, experts et bénévoles sont invités à rejoindre nos actions solidaires : donner une conférence, soutenir la lecture ou aider des écoles africaines en ressources pédagogiques et en enseignants."
   },
   "partners": {
     "eyebrow": "Partenariats",
@@ -751,8 +746,8 @@
       },
       {
         "title": "Enseignants",
-        "body": "Ressources pédagogiques, formation en ligne et échanges professionnels.",
-        "href": "/programmes/online-chinese"
+        "body": "Conférences solidaires mondiales, ressources pédagogiques et échanges professionnels.",
+        "href": "/programmes/public-good"
       },
       {
         "title": "Élèves et parents",

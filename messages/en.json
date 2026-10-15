@@ -538,15 +538,10 @@
         "body": "Reading promotion such as \"Five continents read one book\", volunteer service and care for children with special needs."
       }
     ],
-    "principlesTitle": "How we work in Africa",
-    "principles": [
-      "Teachers lead; technology assists and never replaces.",
-      "Inclusive first: shared devices, multiple learner profiles, low-cost phones.",
-      "Weak networks and offline use are the default design condition.",
-      "Learners' first languages, including Swahili, as scaffolding for Chinese.",
-      "Compliance and data protection built into the foundation."
-    ],
-    "cta": "Support a programme"
+    "cta": "Support a programme",
+    "joinEyebrow": "Get involved",
+    "joinTitle": "Help education reach further",
+    "joinBody": "Schools, education organisations, experts and volunteers are welcome to join our public-good work: give a lecture, support reading programmes, or help schools in Africa with learning resources and teachers."
   },
   "partners": {
     "eyebrow": "Partner with us",
@@ -750,8 +745,8 @@
       },
       {
         "title": "Teachers",
-        "body": "Teaching resources, online training and professional exchange.",
-        "href": "/programmes/online-chinese"
+        "body": "Global public-good lectures, teaching resources and professional exchange.",
+        "href": "/programmes/public-good"
       },
       {
         "title": "Students & parents",
