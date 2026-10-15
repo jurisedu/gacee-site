@@ -33,7 +33,7 @@ export default async function News({ params }: { params: Promise<{ locale: strin
               <div><time dateTime={n.date}>{n.date}</time><div className="src">{n.thirdParty ? `${t.news.source}${sep}` : ""}{n.source}</div></div>
               <div lang={n.lang}>
                 {n.cover ? (
-                  <figure className="news-cover">
+                  <figure className={"news-cover" + (n.cover.width && n.cover.height && n.cover.height > n.cover.width ? " news-cover--portrait" : "")}>
                     <img src={n.cover.url} alt={n.cover.alt || n.title} loading="lazy" />
                     {creditLine(n.cover) ? <figcaption>{t.news.photo}{sep}{creditLine(n.cover)}</figcaption> : null}
                   </figure>

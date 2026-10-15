@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { EB_Garamond, Manrope, Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
+import { fontVars, CJK_FONTS_HREF } from "@/lib/fonts";
 import { notFound } from "next/navigation";
 import { locales, isLocale, htmlLang, getDictionary, type Locale } from "@/lib/i18n";
 import Footer from "@/components/Footer";
 import "../globals.css";
 
-const garamond = EB_Garamond({ subsets: ["latin", "latin-ext"], weight: ["400", "500", "600"], style: ["normal", "italic"], variable: "--font-garamond", display: "swap" });
-const manrope = Manrope({ subsets: ["latin", "latin-ext"], weight: ["400", "500", "600", "700"], variable: "--font-manrope", display: "swap" });
-const notoSans = Noto_Sans_SC({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--font-noto-sans", display: "swap", preload: false });
-const notoSerif = Noto_Serif_SC({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-noto-serif", display: "swap", preload: false });
 
 const SITE = "https://gacee.org";
 
@@ -36,7 +32,14 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   if (!isLocale(locale)) notFound();
   const t = getDictionary(locale);
   return (
-    <html lang={htmlLang[locale]} suppressHydrationWarning className={`${garamond.variable} ${manrope.variable} ${notoSans.variable} ${notoSerif.variable}`}>
+    <html lang={htmlLang[locale]} suppressHydrationWarning className={fontVars}>
+      {locale === "zh" ? (
+        <head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+          <link rel="stylesheet" href={CJK_FONTS_HREF} />
+        </head>
+      ) : null}
       <body>
         {/* 标记脚本可用；渐显动画仅在此之后启用。若 2.5 秒内未完成初始化，强制显示全部内容 */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js');setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')})},2500);" }} />

@@ -44,7 +44,7 @@ export default async function NewsArticle({ params }: { params: Promise<{ locale
             {lang ? <> · {lang.startsWith("zh") ? t.news.originalZh : t.news.originalEn}</> : null}
           </p>
           {a.cover ? (
-            <figure className="news-cover news-cover--lead">
+            <figure className={"news-cover news-cover--lead" + (a.cover.width && a.cover.height && a.cover.height > a.cover.width ? " news-cover--portrait" : "")}>
               <img src={a.cover.url} alt={a.cover.alt || a.title} />
               {creditLine(a.cover) ? <figcaption>{t.news.photo}{sep}{a.cover.sourceUrl ? <a href={a.cover.sourceUrl} target="_blank" rel="noopener noreferrer">{creditLine(a.cover)}</a> : creditLine(a.cover)}</figcaption> : null}
             </figure>

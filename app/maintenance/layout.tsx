@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import { EB_Garamond, Manrope, Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
+import { fontVars, CJK_FONTS_HREF } from "@/lib/fonts";
 import { headers } from "next/headers";
 import { detectLocale, htmlLang } from "@/lib/i18n";
 import "../coming-soon/soon.css";
 
-const garamond = EB_Garamond({ subsets: ["latin", "latin-ext"], weight: ["400", "500", "600"], style: ["normal", "italic"], variable: "--font-garamond", display: "swap" });
-const manrope = Manrope({ subsets: ["latin", "latin-ext"], weight: ["400", "500", "600", "700"], variable: "--font-manrope", display: "swap" });
-const notoSans = Noto_Sans_SC({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-noto-sans", display: "swap", preload: false });
-const notoSerif = Noto_Serif_SC({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-noto-serif", display: "swap", preload: false });
 
 async function reqLocale() {
   const h = await headers();
@@ -33,7 +29,14 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function MaintenanceLayout({ children }: { children: React.ReactNode }) {
   const locale = await reqLocale();
   return (
-    <html lang={htmlLang[locale]} className={`${garamond.variable} ${manrope.variable} ${notoSans.variable} ${notoSerif.variable}`}>
+    <html lang={htmlLang[locale]} className={fontVars}>
+      {locale === "zh" ? (
+        <head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+          <link rel="stylesheet" href={CJK_FONTS_HREF} />
+        </head>
+      ) : null}
       <body className="soon-body">{children}</body>
     </html>
   );

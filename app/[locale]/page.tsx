@@ -151,24 +151,26 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      {gallery.length ? (
-        <section className="section gallery-sec" aria-labelledby="gallery-title">
-          <div className="container">
-            <Reveal className="section__head">
-              <div><div className="eyebrow">{gallerySec?.eyebrow}</div><h2 id="gallery-title" className="display h2">{gallerySec?.title}</h2></div>
+      {gallery.length >= 4 ? (
+        <section className="gallery-sec" aria-labelledby="gallery-title">
+          <div className="container gallery">
+            <Reveal className="gallery-head">
+              <div className="eyebrow">{gallerySec?.eyebrow}</div>
+              <h2 id="gallery-title" className="display h2">{gallerySec?.title}</h2>
               {gallerySec?.body ? <p>{gallerySec.body}</p> : null}
             </Reveal>
-            <div className="gallery">
-              {gallery.slice(0, 9).map((g, i) => (
-                <Reveal as="figure" key={i} className={"gallery__item" + (i === 0 ? " gallery__item--lead" : "")} delay={i * 50}>
-                  <img src={g.image} alt={g.caption || ""} loading={i < 3 ? "eager" : "lazy"} />
-                  <figcaption>
-                    {g.caption ? <span>{g.link ? <a href={g.link}>{g.caption}</a> : g.caption}</span> : null}
-                    {g.credit ? <small>{g.credit}</small> : null}
-                  </figcaption>
-                </Reveal>
-              ))}
-            </div>
+            {gallery.slice(0, 7).map((g, i) => (
+              <figure key={i} className={"gallery__item" + (i === 0 ? " gallery__item--lead" : "")}>
+                <div className="gallery__frame">
+                  <img src={g.image} alt={g.caption || ""} loading={i < 4 ? "eager" : "lazy"} decoding="async" />
+                </div>
+                <figcaption>
+                  <span className="gallery__no">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="gallery__cap">{g.link ? <a href={g.link}>{g.caption}</a> : g.caption}</span>
+                  {g.credit ? <small className="gallery__credit">{g.credit}</small> : null}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </section>
       ) : null}
@@ -200,7 +202,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <div className="news-grid">
             {news.map((n, i) => (
               <Reveal as="article" key={n.id || i} className="news-item" delay={i * 80}>
-                {n.cover ? <img className="news-item__img" src={n.cover.url} alt={n.cover.alt || n.title} loading="lazy" /> : null}
+                {n.cover && (!n.cover.width || !n.cover.height || n.cover.width >= n.cover.height * 1.2) ? <img className="news-item__img" src={n.cover.url} alt={n.cover.alt || n.title} loading="lazy" /> : null}
                 <time dateTime={n.date}>{n.date}</time>
                 <h3 lang={n.lang}>{n.id ? <Link href={p(`/news/${n.id}`)}>{n.title}</Link> : n.title}</h3>
                 <p lang={n.lang}>{n.excerpt || (n.body.length > 160 ? n.body.slice(0, 160) + "…" : n.body)}</p>

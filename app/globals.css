@@ -1,4 +1,7 @@
 :root {
+  /* 中文字体：浏览器从 Google Fonts 加载（仅中文页），不可达时由各处字体栈回退到系统中文字体 */
+  --font-noto-sans: "Noto Sans SC";
+  --font-noto-serif: "Noto Serif SC";
   --ink: #0e1428;
   --ink-2: #1b2540;
   --paper: #f7f7f4;
@@ -450,24 +453,42 @@ a:focus-visible, button:focus-visible { outline: 2px solid #B28A45; outline-offs
 
 /* ---------- 图文：新闻封面、首页图片展示、项目配图署名、来源 ---------- */
 .news-cover { margin: 0 0 14px; }
-.news-cover img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; display: block; background: var(--line); }
+.news-cover img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 2px; display: block; background: var(--line); }
 .news-cover figcaption, .prog-figure figcaption { font-size: 12px; opacity: .7; margin-top: 6px; line-height: 1.5; }
 .news-cover--lead { margin: 22px 0 26px; }
+/* 竖版封面（海报等）按原比例完整显示，不裁切 */
+.news-cover--portrait img { aspect-ratio: auto; width: auto; max-width: 100%; max-height: 380px; object-fit: contain; background: none; }
 .news-cover--lead img { aspect-ratio: auto; max-height: 480px; }
-.news-item__img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 10px; margin-bottom: 14px; display: block; background: var(--line); }
+.news-item__img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 2px; margin-bottom: 14px; display: block; background: var(--line); }
 .news-source { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; }
 .news-source a, .news-cover figcaption a { text-decoration: underline; text-underline-offset: 3px; }
 .news-external { opacity: .75; border-left: 2px solid var(--line-strong); padding-left: 10px; }
 .prog-figure { margin: 0; }
-.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.gallery__item { margin: 0; position: relative; overflow: hidden; border-radius: 12px; background: var(--line); }
-.gallery__item img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform .6s var(--ease); }
-.gallery__item:hover img { transform: scale(1.03); }
-.gallery__item--lead { grid-column: span 2; grid-row: span 2; min-height: 320px; }
-.gallery__item--lead img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; }
-.gallery__item img { object-position: 50% 30%; }
-.gallery__item figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 14px 10px; color: #fff; background: linear-gradient(transparent, rgba(8,12,24,.78)); display: flex; flex-direction: column; gap: 2px; font-size: 13.5px; line-height: 1.45; }
-.gallery__item figcaption small { font-size: 11px; opacity: .8; }
-.gallery__item figcaption a { color: #fff; }
-@media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, 1fr); } .gallery__item--lead { grid-column: span 2; grid-row: auto; aspect-ratio: 16 / 9; min-height: 0; } }
-@media (max-width: 560px) { .gallery { grid-template-columns: 1fr; } .gallery__item--lead { grid-column: auto; aspect-ratio: 4 / 3; } }
+/* 首页图片展示：深色画廊带。所有画框统一 3:2（与实景原图比例一致，不裁切）；
+   第一行：标题说明 4 列 + 大图 8 列；其后每行三张各 4 列；说明置于图下，不叠加渐变。 */
+.gallery-sec { background: #0b1020; color: #f3f1ea; padding: clamp(80px, 10vw, 140px) 0; }
+.gallery { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(16px, 2vw, 28px); row-gap: clamp(36px, 4vw, 56px); align-items: start; }
+.gallery-head { grid-column: 1 / span 4; align-self: end; padding-bottom: 58px; }
+.gallery-head .eyebrow { color: #c9a75a; }
+.gallery-head h2 { color: #fff; margin-top: 16px; }
+.gallery-head p { margin-top: 18px; color: rgba(243,241,234,.62); font-size: 14.5px; line-height: 1.85; }
+.gallery__item { margin: 0; grid-column: span 4; min-width: 0; }
+.gallery__item--lead { grid-column: 5 / span 8; }
+.gallery__frame { position: relative; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 2px; background: #151b2c; }
+.gallery__frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.4s cubic-bezier(.2,.7,.2,1), filter .8s; filter: saturate(.9); }
+.gallery__item:hover .gallery__frame img { transform: scale(1.03); filter: saturate(1.02); }
+.gallery__item figcaption { display: grid; grid-template-columns: 28px 1fr; row-gap: 4px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(243,241,234,.12); }
+.gallery__no { font-family: var(--font-garamond), Georgia, serif; font-size: 13px; color: #c9a75a; letter-spacing: .06em; line-height: 1.55; }
+.gallery__cap { font-family: var(--font-display); font-size: 15px; line-height: 1.55; color: #f3f1ea; }
+.gallery__item--lead .gallery__cap { font-size: 17px; }
+.gallery__cap a { color: inherit; }
+.gallery__credit { grid-column: 2; font-size: 11px; letter-spacing: .02em; color: rgba(243,241,234,.4); line-height: 1.5; }
+@media (max-width: 1024px) {
+  .gallery-head { grid-column: 1 / -1; padding-bottom: 0; }
+  .gallery__item { grid-column: span 6; }
+  .gallery__item--lead { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  .gallery { row-gap: 32px; }
+  .gallery__item, .gallery__item--lead { grid-column: 1 / -1; }
+}
