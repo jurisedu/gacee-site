@@ -4,12 +4,6 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: { formats: ["image/avif", "image/webp"] },
-  async rewrites() {
-    return [
-      { source: "/internal/brand-guidelines", destination: "/internal/brand-guidelines.html" },
-      { source: "/internal/hanqiao-plan", destination: "/internal/hanqiao-plan.html" },
-    ];
-  },
   async redirects() {
     return [
       { source: "/:path*", has: [{ type: "host", value: "www.gacee.org" }], destination: "https://gacee.org/:path*", permanent: true },
