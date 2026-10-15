@@ -843,5 +843,73 @@
       "Actualités"
     ],
     "note": "Votre adresse n’est jamais transmise à des tiers. Chaque lettre comporte un lien de désabonnement en un clic."
+  },
+  "footprint": {
+    "eyebrow": "Présence mondiale",
+    "title": "Là où l’association agit concrètement",
+    "lede": "Seuls les partenaires et lieux de programmes attestés publiquement sont listés. Chaque entrée renvoie à sa source.",
+    "source": "Source",
+    "regions": [
+      {
+        "name": "Asie",
+        "items": [
+          {
+            "label": "Singapour",
+            "text": "Siège de l’association, enregistrée à Singapour en 2025.",
+            "href": "/about"
+          },
+          {
+            "label": "Chine · Henan",
+            "text": "Trois éditions de la Tournée en Chine des 100 directeurs d’écoles et le Forum mondial des directeurs d’écoles chinoises se sont tenus au Henan : 180 directeurs de 34 pays.",
+            "href": "/programmes/principals-tour"
+          },
+          {
+            "label": "Chine · Pékin et plaines centrales",
+            "text": "Le premier camp d’étude, en 2025, a duré huit jours et sept nuits : Pékin, Anyang, Kaifeng et Luoyang.",
+            "href": "/news/16"
+          },
+          {
+            "label": "Chine · Xi’an",
+            "text": "Le 30 août 2026, le deuxième camp d’étude est parti pour Xi’an, capitale de treize dynasties.",
+            "href": "/news/5"
+          }
+        ]
+      },
+      {
+        "name": "Europe",
+        "items": [
+          {
+            "label": "Centre de coopération européen",
+            "text": "En août 2025, l’association et le Journal d’étude des collégiens ont désigné conjointement 意大利中华社会促进协会, association de la communauté chinoise en Italie, comme Centre de coopération européen.",
+            "href": "/news/22"
+          }
+        ]
+      },
+      {
+        "name": "Amériques",
+        "items": [
+          {
+            "label": "Centre de coopération des Amériques",
+            "text": "En août 2025, l’association et le Journal d’étude des collégiens ont désigné conjointement 加中文化教育交流中心, centre d’échanges culturels et éducatifs Canada–Chine, comme Centre de coopération des Amériques.",
+            "href": "/news/22"
+          }
+        ]
+      },
+      {
+        "name": "Cinq continents",
+        "items": [
+          {
+            "label": "Concours mondial d’écriture en chinois",
+            "text": "La première édition a touché plus de 30 pays et 100 écoles sur les cinq continents ; les meilleurs textes ont été publiés en recueil.",
+            "href": "/news/7"
+          },
+          {
+            "label": "Camp d’étude international",
+            "text": "Les participants du premier camp venaient notamment de Malaisie, du Myanmar, d’Allemagne, de Grèce et d’Égypte.",
+            "href": "/news/16"
+          }
+        ]
+      }
+    ]
   }
 }

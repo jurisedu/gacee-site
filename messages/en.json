@@ -842,5 +842,73 @@
       "Association news"
     ],
     "note": "We never share your email with third parties. Every issue includes a one-click unsubscribe link."
+  },
+  "footprint": {
+    "eyebrow": "Global footprint",
+    "title": "Where the association is on the ground",
+    "lede": "Only partner institutions and programme locations with a public record are listed. Each entry links to its source.",
+    "source": "Source",
+    "regions": [
+      {
+        "name": "Asia",
+        "items": [
+          {
+            "label": "Singapore",
+            "text": "Headquarters of the association, registered in Singapore in 2025.",
+            "href": "/about"
+          },
+          {
+            "label": "China · Henan",
+            "text": "Three editions of the Global 100 Principals China Tour and the Global Chinese School Principals Forum were held in Henan, bringing 180 principals from 34 countries.",
+            "href": "/programmes/principals-tour"
+          },
+          {
+            "label": "China · Beijing and the Central Plains",
+            "text": "The first study camp in 2025 ran eight days and seven nights through Beijing, Anyang, Kaifeng and Luoyang.",
+            "href": "/news/16"
+          },
+          {
+            "label": "China · Xi’an",
+            "text": "On 30 August 2026 the second study camp set off for Xi’an, capital of thirteen dynasties.",
+            "href": "/news/5"
+          }
+        ]
+      },
+      {
+        "name": "Europe",
+        "items": [
+          {
+            "label": "European Cooperation Centre",
+            "text": "In August 2025 the association and the Secondary School Students’ Study Newspaper jointly authorised 意大利中华社会促进协会, a Chinese community association in Italy, as the European Cooperation Centre.",
+            "href": "/news/22"
+          }
+        ]
+      },
+      {
+        "name": "Americas",
+        "items": [
+          {
+            "label": "Americas Cooperation Centre",
+            "text": "In August 2025 the association and the Secondary School Students’ Study Newspaper jointly authorised 加中文化教育交流中心, a Canada–China cultural and educational exchange centre, as the Americas Cooperation Centre.",
+            "href": "/news/22"
+          }
+        ]
+      },
+      {
+        "name": "Five continents",
+        "items": [
+          {
+            "label": "World Chinese Writing Competition",
+            "text": "The first competition reached more than 30 countries and 100 schools across five continents; the best entries were published as a collection.",
+            "href": "/news/7"
+          },
+          {
+            "label": "International study camp",
+            "text": "Participants in the first study camp came from Malaysia, Myanmar, Germany, Greece, Egypt and other countries.",
+            "href": "/news/16"
+          }
+        ]
+      }
+    ]
   }
 }

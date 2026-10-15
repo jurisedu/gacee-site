@@ -56,7 +56,31 @@ export default async function GlobalPartners({ params }: { params: Promise<{ loc
               </Reveal>
             ))}
           </div>
-          <ul className="regions">{network.regions.map((r) => <li key={r}>{r}</li>)}</ul>
+        </div>
+      </section>
+
+      <section className="section footprint" aria-labelledby="fp-title">
+        <div className="container">
+          <Reveal className="section__head">
+            <div><div className="eyebrow eyebrow--gold">{t.footprint.eyebrow}</div><h2 id="fp-title" className="display h2">{t.footprint.title}</h2></div>
+            <p>{t.footprint.lede}</p>
+          </Reveal>
+          <div className="footprint__grid">
+            {t.footprint.regions.map((r, i) => (
+              <Reveal key={r.name} className="footprint__region" delay={i * 70}>
+                <h3>{r.name}</h3>
+                <ul>
+                  {r.items.map((it) => (
+                    <li key={it.label + it.href}>
+                      <div className="footprint__label">{it.label}</div>
+                      <p>{it.text}</p>
+                      <Link href={localizedPath(l, it.href)} className="footprint__src">{t.footprint.source} →</Link>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
