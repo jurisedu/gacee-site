@@ -10,7 +10,7 @@ import Image from "next/image";
 type NavDict = { about: string; programmes: string; events: string; impact: string; news: string; partners: string; contact: string; join: string; menu: string; close: string; language: string; signin: string; verify?: string };
 export type Columns = {
   aboutGov: string; programmesEvents: string; globalPartners: string; resources: string; participate: string; welfare: string;
-  intro: string; contactUs: string; library: string; matching: string; apply: string; portal: string; partnerNetwork: string; flagship: string;
+  intro: string; contactUs: string; milestones: string; trust: string; library: string; matching: string; apply: string; portal: string; partnerNetwork: string; flagship: string;
   short?: Partial<Record<"aboutGov" | "programmesEvents" | "globalPartners" | "resources" | "participate" | "welfare", string>>; // 桌面一级栏目短名（法文），完整名用于提示与菜单
 };
 
@@ -77,11 +77,11 @@ export default function Header({ locale, nav, dark = false, cand }: { locale: Lo
 
   const L = (p: string) => localizedPath(locale, p);
   const hubLogin = `${HUB}/login?lang=${locale}`;
-  const hubVerify = `${HUB}/verify?lang=${locale}`;
+  const hubVerify = L("/verify"); // 官网证书查验页（数据来自门户公开验真接口）
   const hubLibrary = `${HUB}/library?lang=${locale}`;
 
   const columns: Column[] = [
-    { href: L("/about"), label: cand.aboutGov, short: cand.short?.aboutGov, items: [{ href: L("/about"), label: cand.intro }, { href: L("/contact"), label: cand.contactUs }] },
+    { href: L("/about"), label: cand.aboutGov, short: cand.short?.aboutGov, items: [{ href: L("/about"), label: cand.intro }, { href: L("/milestones"), label: cand.milestones }, { href: `${HUB}/trust?lang=${locale}`, label: cand.trust }, { href: L("/contact"), label: cand.contactUs }] },
     { href: L("/programmes"), label: cand.programmesEvents, short: cand.short?.programmesEvents, items: [{ href: L("/programmes"), label: cand.flagship }, { href: L("/events"), label: nav.events }, { href: L("/news"), label: nav.news }] },
     { href: L("/global-partners"), label: cand.globalPartners, short: cand.short?.globalPartners, items: [{ href: L("/global-partners"), label: cand.partnerNetwork }, { href: L("/partners"), label: cand.apply }] },
     { href: hubLibrary, label: cand.resources, short: cand.short?.resources, items: [{ href: hubLibrary, label: cand.library }, { href: `${HUB}/market?lang=${locale}`, label: cand.matching }] },

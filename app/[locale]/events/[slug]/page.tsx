@@ -29,6 +29,8 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
   const t = getDictionary(l);
   const ev = await getEvent(slug);
   if (!ev || ev.status === "hidden") notFound();
+  // 开始已逾 3 小时仍未手动关闭的活动，按已结束处理（停止报名，显示回放）
+  if (ev.status !== "closed" && new Date(ev.starts_at).getTime() < Date.now() - 3 * 3600_000) ev.status = "closed";
   const p = pick(ev, l);
   const d = t.live;
   const status = ev.status === "live" ? d.live : ev.status === "closed" ? d.closed : d.open;

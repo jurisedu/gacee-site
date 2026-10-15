@@ -7,10 +7,8 @@ import PageHead from "@/components/PageHead";
 import Reveal from "@/components/Reveal";
 import { fetchSite } from "@/lib/site";
 
-// 实时数字标签（zh/en；fr 回退 en）
+// 实时数字标签（zh/en；fr 回退 en）。会员与机构数量不在前端展示。
 const LIVE_LABELS: Record<string, { zh: string; en: string }> = {
-  members: { zh: "协会会员", en: "Members" },
-  organizations: { zh: "成员机构", en: "Organizations" },
   certificates: { zh: "已签发证书", en: "Certificates issued" },
   eventsHeld: { zh: "已举办活动", en: "Events held" },
   studyTours: { zh: "研学线路", en: "Study tours" },

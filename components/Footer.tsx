@@ -50,7 +50,7 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary })
           <span style={{ fontSize: 11.5, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.55 }}>{locale === "zh" ? "协会数字平台" : locale === "fr" ? "Plateformes GACEE" : "GACEE Platforms"}</span>
           <a href="https://gacee.org" style={{ fontSize: 14 }}>{locale === "zh" ? "官网" : locale === "fr" ? "Site web" : "Website"} · gacee.org</a>
           <a href="https://hub.gacee.org" style={{ fontSize: 14 }}>{t.columns.portal} · hub.gacee.org</a>
-          <a href={`https://hub.gacee.org/verify?lang=${locale}`} style={{ fontSize: 14 }}>{t.nav.verify}</a>
+          <Link href={p("/verify")} style={{ fontSize: 14 }}>{t.nav.verify}</Link>
           <a href="https://shanhai.gacee.org" style={{ fontSize: 14 }}>{locale === "zh" ? "山海同文" : "Shanhai Tongwen"} · shanhai.gacee.org</a>
         </div>
         <div className="footer__bottom">

@@ -15,12 +15,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return pageSeo(((isLocale(locale) ? locale : "en") as Locale), "/news", { title: t.nav.news, description: t.news.title });
 }
 
-export default async function News({ params }: { params: Promise<{ locale: string }> }) {
+export default async function News({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ cat?: string }> }) {
   const { locale } = await params;
+  const { cat } = await searchParams;
   const l = (isLocale(locale) ? locale : "en") as Locale;
   const t = getDictionary(l);
   const sep = l === "zh" ? "：" : ": "; // 中文全角冒号，英法半角
-  const { items, unavailable } = await newsItems(l, 40);
+  const { items: all, unavailable } = await newsItems(l, 50);
+  const CATS = ["association", "coverage", "industry", "notice"] as const;
+  const cats = t.news.categories as Record<string, string>;
+  const present = CATS.filter((c) => all.some((n) => n.category === c));
+  const active = cat && (present as readonly string[]).includes(cat) ? cat : "";
+  const items = active ? all.filter((n) => n.category === active) : all;
   return (
     <>
       <Header locale={l} nav={t.nav} cand={t.columns} />
@@ -28,6 +34,12 @@ export default async function News({ params }: { params: Promise<{ locale: strin
       <section className="section">
         <div className="container news-list">
           {unavailable ? <p className="small" role="note" style={{ opacity: 1 }}>{t.news.unavailable}</p> : null}
+          {present.length > 1 ? (
+            <nav className="news-tabs" aria-label={t.news.eyebrow}>
+              <Link href={localizedPath(l, "/news")} aria-current={!active ? "page" : undefined}>{cats.all}</Link>
+              {present.map((c) => <Link key={c} href={`${localizedPath(l, "/news")}?cat=${c}`} aria-current={active === c ? "page" : undefined}>{cats[c]}</Link>)}
+            </nav>
+          ) : null}
           {items.map((n, i) => (
             <Reveal as="article" key={n.id || i} className="news-item" delay={i * 50}>
               <div><time dateTime={n.date}>{n.date}</time><div className="src">{n.thirdParty ? `${t.news.source}${sep}` : ""}{n.source}</div></div>

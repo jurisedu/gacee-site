@@ -43,7 +43,9 @@
       "globalPartners": "Partenaires"
     },
     "matching": "Mise en relation",
-    "contactUs": "Nous contacter"
+    "contactUs": "Nous contacter",
+    "milestones": "Repères",
+    "trust": "Conformité et transparence"
   },
   "hero": {
     "eyebrow": "Singapour · Fondée en 2025",
@@ -366,7 +368,14 @@
     "source": "Source",
     "readOriginal": "Lire l'article original",
     "externalNote": "Résumé rédigé par GACEE. Consultez l'article original pour le texte complet.",
-    "photo": "Photo"
+    "photo": "Photo",
+    "categories": {
+      "all": "Tout",
+      "association": "Actualités de GACEE",
+      "coverage": "Dans les médias",
+      "industry": "Actualités du secteur",
+      "notice": "Avis"
+    }
   },
   "cta": {
     "title": "Construisons le pont ensemble.",
@@ -503,7 +512,10 @@
         "body": "Cent directeurs de plus de vingt pays.",
         "upcoming": false
       }
-    ]
+    ],
+    "tbd": "Date à confirmer",
+    "details": "Détails",
+    "planning": "En préparation"
   },
   "impact": {
     "eyebrow": "Intérêt public",
@@ -759,5 +771,74 @@
       }
     ]
   },
-  "statsNote": "Portée cumulée des programmes de GACEE au fil des années, et non inscriptions sur le portail."
+  "statsNote": "Portée cumulée des programmes de GACEE au fil des années, et non inscriptions sur le portail.",
+  "verify": {
+    "eyebrow": "Vérification de certificat",
+    "title": "Vérifier un certificat GACEE",
+    "lede": "Saisissez le numéro imprimé sur le certificat pour vérifier qu'il a été délivré par GACEE et qu'il est valide.",
+    "label": "Numéro du certificat",
+    "placeholder": "GACEE-2026-XX-XXXXXXXXXX",
+    "submit": "Vérifier",
+    "checking": "Vérification…",
+    "hint": "Majuscules et minuscules indifférentes",
+    "badFormat": "Format invalide : lettres, chiffres et tirets uniquement, 6 à 40 caractères.",
+    "valid": "Certificat valide",
+    "validDesc": "Ce certificat a été enregistré par GACEE, délivré après contrôle et il est actuellement valide.",
+    "revoked": "Certificat révoqué",
+    "revokedDesc": "Ce certificat a été délivré par GACEE mais a été révoqué ; il n'a plus de valeur.",
+    "missing": "Certificat introuvable",
+    "missingDesc": "Vérifiez le numéro. Ce résultat s'affiche si le numéro n'existe pas, n'a pas encore été délivré ou contient une erreur.",
+    "busy": "Trop de vérifications — réessayez dans un instant.",
+    "down": "La vérification est momentanément indisponible. Réessayez plus tard ou rendez-vous sur hub.gacee.org/verify.",
+    "code": "Numéro du certificat",
+    "holder": "Titulaire",
+    "masked": "masqué",
+    "type": "Type",
+    "programme": "Programme",
+    "batch": "Lot",
+    "issued": "Délivré le",
+    "issuer": "Émetteur",
+    "issuerGacee": "Secrétariat de GACEE",
+    "issuerShanhai": "Shanhai Tongwen (délivré via GACEE)",
+    "approved": "Validé le",
+    "revokedAt": "Révoqué le",
+    "checkedAt": "Vérifié le",
+    "copy": "Copier",
+    "copied": "Copié",
+    "another": "Vérifier un autre certificat",
+    "org": "Global Association of Cultural and Educational Exchange",
+    "resultTitle": "Résultat de la vérification",
+    "tips": [
+      "Distinguez 0 (zéro) et O, 1 et I.",
+      "Un certificat récemment préparé devient vérifiable une fois validé.",
+      "En cas de doute, envoyez une photo du certificat à info@gacee.org."
+    ],
+    "trust": [
+      [
+        "Double validation",
+        "Chaque certificat n'est valide qu'après validation par une seconde personne."
+      ],
+      [
+        "Numéros imprévisibles",
+        "Les numéros contiennent des caractères aléatoires et ne peuvent pas être devinés."
+      ],
+      [
+        "Révocation immédiate",
+        "Un certificat révoqué apparaît aussitôt comme tel."
+      ],
+      [
+        "Noms masqués",
+        "Les résultats publics n'affichent qu'une partie du nom du titulaire."
+      ]
+    ],
+    "foot": "Les certificats sont délivrés et vérifiés de manière centralisée par GACEE. Pour toute question : info@gacee.org."
+  },
+  "history": {
+    "title": "Repères",
+    "lede": "Principaux programmes et activités depuis la création de GACEE. Chaque entrée provient d'une actualité publiée ou d'un article de presse.",
+    "founded": "Création à Singapour",
+    "foundedNote": "La Global Association of Cultural and Educational Exchange (GACEE) a été créée à Singapour en 2025.",
+    "empty": "Aucune entrée pour le moment.",
+    "read": "Lire"
+  }
 }

@@ -42,7 +42,9 @@
       "programmesEvents": "Programmes"
     },
     "matching": "Resource Matching",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "milestones": "Milestones",
+    "trust": "Trust & transparency"
   },
   "hero": {
     "eyebrow": "Singapore · Est. 2025",
@@ -365,7 +367,14 @@
     "source": "Source",
     "readOriginal": "Read the original",
     "externalNote": "Summary by GACEE. Please read the original for the full article.",
-    "photo": "Photo"
+    "photo": "Photo",
+    "categories": {
+      "all": "All",
+      "association": "GACEE news",
+      "coverage": "In the media",
+      "industry": "Sector news",
+      "notice": "Notices"
+    }
   },
   "cta": {
     "title": "Build the bridge with us.",
@@ -502,7 +511,10 @@
         "body": "One hundred principals from over twenty countries.",
         "upcoming": false
       }
-    ]
+    ],
+    "tbd": "Date TBC",
+    "details": "Details",
+    "planning": "In preparation"
   },
   "impact": {
     "eyebrow": "Public good",
@@ -758,5 +770,74 @@
       }
     ]
   },
-  "statsNote": "Cumulative reach of GACEE programmes over the years, not portal registrations."
+  "statsNote": "Cumulative reach of GACEE programmes over the years, not portal registrations.",
+  "verify": {
+    "eyebrow": "Certificate verification",
+    "title": "Verify a GACEE certificate",
+    "lede": "Enter the number printed on the certificate to check whether it was issued by GACEE and is currently valid.",
+    "label": "Certificate number",
+    "placeholder": "GACEE-2026-XX-XXXXXXXXXX",
+    "submit": "Verify",
+    "checking": "Checking…",
+    "hint": "Not case-sensitive",
+    "badFormat": "Invalid format: letters, digits and hyphens only, 6–40 characters.",
+    "valid": "Certificate valid",
+    "validDesc": "This certificate was registered by GACEE, issued after review, and is currently valid.",
+    "revoked": "Certificate revoked",
+    "revokedDesc": "This certificate was issued by GACEE but has been revoked and is no longer valid.",
+    "missing": "Certificate not found",
+    "missingDesc": "Please check the number. This result appears when a number does not exist, has not been issued, or was mistyped.",
+    "busy": "Too many checks — please try again shortly.",
+    "down": "Verification is temporarily unavailable. Please try again later, or go to hub.gacee.org/verify.",
+    "code": "Certificate number",
+    "holder": "Holder",
+    "masked": "masked",
+    "type": "Type",
+    "programme": "Programme",
+    "batch": "Batch",
+    "issued": "Issued",
+    "issuer": "Issuer",
+    "issuerGacee": "GACEE Secretariat",
+    "issuerShanhai": "Shanhai Tongwen (issued through GACEE)",
+    "approved": "Approved",
+    "revokedAt": "Revoked",
+    "checkedAt": "Checked at",
+    "copy": "Copy",
+    "copied": "Copied",
+    "another": "Verify another",
+    "org": "Global Association of Cultural and Educational Exchange",
+    "resultTitle": "Certificate verification result",
+    "tips": [
+      "Check 0 (zero) vs O and 1 vs I.",
+      "A newly prepared certificate becomes verifiable once it has been approved.",
+      "If in doubt, send a photo of the certificate to info@gacee.org."
+    ],
+    "trust": [
+      [
+        "Two-person approval",
+        "Each certificate takes effect only after a second person approves it."
+      ],
+      [
+        "Unguessable numbers",
+        "Numbers contain random characters and cannot be guessed in sequence."
+      ],
+      [
+        "Revocation is immediate",
+        "Once revoked, a certificate shows as revoked straight away."
+      ],
+      [
+        "Names are masked",
+        "Public results show only part of the holder's name."
+      ]
+    ],
+    "foot": "Certificates are issued and verified centrally by GACEE. For questions, contact the Secretariat at info@gacee.org."
+  },
+  "history": {
+    "title": "Milestones",
+    "lede": "Key programmes and activities since GACEE was founded. Every entry comes from a published GACEE update or media report — follow the link for details.",
+    "founded": "Founded in Singapore",
+    "foundedNote": "The Global Association of Cultural and Educational Exchange (GACEE) was founded in Singapore in 2025.",
+    "empty": "No entries yet.",
+    "read": "Read"
+  }
 }

@@ -2,7 +2,7 @@
 import { getDictionary, type Locale } from "@/lib/i18n";
 import { fetchFeed, articleLang, sgDate, type Cover } from "@/lib/content";
 
-export type NewsItem = { id?: string; date: string; updated?: string; source: string; title: string; body: string; lang?: string; excerpt?: string; cover?: Cover | null; sourceUrl?: string; thirdParty?: boolean };
+export type NewsItem = { id?: string; date: string; updated?: string; source: string; title: string; body: string; lang?: string; excerpt?: string; cover?: Cover | null; sourceUrl?: string; thirdParty?: boolean; category?: string };
 
 export async function newsItems(l: Locale, limit = 12): Promise<{ items: NewsItem[]; unavailable: boolean }> {
   const t = getDictionary(l);
@@ -13,7 +13,7 @@ export async function newsItems(l: Locale, limit = 12): Promise<{ items: NewsIte
       items: feed.items.map((a) => ({
         id: String(a.id), date: sgDate(a.publishedAt), updated: a.updatedAt ? sgDate(a.updatedAt) : undefined,
         source: a.sourceName || "GACEE", title: a.title, body: typeof a.body === "string" ? a.body : "", lang: articleLang(a, l),
-        excerpt: a.excerpt, cover: a.cover || null, sourceUrl: a.sourceUrl, thirdParty: a.category === "coverage" || a.category === "industry",
+        excerpt: a.excerpt, cover: a.cover || null, sourceUrl: a.sourceUrl, thirdParty: a.category === "coverage" || a.category === "industry", category: a.category || "association",
       })),
     };
   }
