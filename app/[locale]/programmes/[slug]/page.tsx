@@ -9,6 +9,8 @@ import Reveal from "@/components/Reveal";
 import Arrow from "@/components/Arrow";
 import ProgrammeArt from "@/components/ProgrammeArt";
 import { fetchSite, mergeProgrammes } from "@/lib/site";
+import { relatedNews } from "@/lib/news";
+import RelatedNews from "@/components/RelatedNews";
 
 export const revalidate = 300; // ISR：平台项目卡片编辑后 5 分钟内生效（body/facts/art 仍静态）
 
@@ -35,6 +37,7 @@ export default async function Programme({ params }: { params: Promise<{ locale: 
   const item = items[slug];
   const idx = programmeSlugs.indexOf(slug as ProgrammeSlug);
   const next = programmeSlugs[(idx + 1) % programmeSlugs.length];
+  const related = await relatedNews(l, slug);
   return (
     <>
       <Header locale={l} nav={t.nav} cand={t.columns} />
@@ -57,6 +60,7 @@ export default async function Programme({ params }: { params: Promise<{ locale: 
           </Reveal>
         </div>
       </section>
+      <RelatedNews l={l} items={related} title={t.programmes.related} more={t.programmes.relatedMore} />
       <section className="section--tight section--white section--line">
         <div className="container">
           <Link href={localizedPath(l, `/programmes/${next}`)} className="prog-row" style={{ borderBottom: 0 }}>

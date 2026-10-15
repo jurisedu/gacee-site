@@ -596,3 +596,18 @@ a:focus-visible, button:focus-visible { outline: 2px solid #B28A45; outline-offs
 .timeline__item p { margin: 4px 0 0; font-size: 13px; opacity: .65; line-height: 1.7; }
 .timeline__item--key b { color: var(--ink); }
 @media (max-width: 640px) { .timeline__year { grid-template-columns: 1fr; gap: 8px; } .timeline__label { font-size: 30px; } }
+/* 相关报道 */
+.related__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+.related__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.related__card { border: 1px solid rgba(14,20,40,.09); border-radius: 16px; overflow: hidden; background: #fff; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+.related__card:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -26px rgba(14,20,40,.45); }
+.related__img { aspect-ratio: 3 / 2; overflow: hidden; background: #ece6d8; }
+.related__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.related__body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.related__body time { font-size: 12px; letter-spacing: .06em; opacity: .6; }
+.related__body h3 { font-size: 17px; line-height: 1.45; font-weight: 600; }
+.related__body h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.related__src { margin-top: auto; font-size: 12px; opacity: .6; }
+.related__card:not(.has-img) .related__body { border-top: 3px solid var(--gold); }
+@media (max-width: 900px) { .related__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .related__grid { grid-template-columns: 1fr; } }

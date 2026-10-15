@@ -273,7 +273,9 @@
           }
         ]
       }
-    }
+    },
+    "related": "Actualités et couverture liées",
+    "relatedMore": "Toutes les actualités"
   },
   "network": {
     "eyebrow": "Partenaires mondiaux",
@@ -586,7 +588,10 @@
       "message": "Comment souhaitez-vous collaborer ?",
       "submit": "Envoyer",
       "sent": "Merci. Nous vous répondrons sous cinq jours ouvrés.",
-      "note": "Site en prévisualisation : les envois ne sont pas encore enregistrés."
+      "note": "Votre message est transmis directement au secrétariat de la GACEE, qui vous répondra dans les meilleurs délais. En l’envoyant, vous acceptez le traitement de ces informations conformément à notre politique de confidentialité.",
+      "errFailed": "L’envoi a échoué. Veuillez réessayer plus tard ou écrire à info@gacee.org.",
+      "errNetwork": "Erreur réseau. Vérifiez votre connexion et réessayez.",
+      "errRate": "Trop d’envois. Veuillez réessayer plus tard."
     }
   },
   "contact": {
@@ -609,7 +614,10 @@
       "message": "Message",
       "submit": "Envoyer",
       "sent": "Merci. Votre message a bien été reçu.",
-      "note": "Site en prévisualisation : les envois ne sont pas encore enregistrés."
+      "note": "Votre message est transmis directement au secrétariat de la GACEE, qui vous répondra dans les meilleurs délais. En l’envoyant, vous acceptez le traitement de ces informations conformément à notre politique de confidentialité.",
+      "errFailed": "L’envoi a échoué. Veuillez réessayer plus tard ou écrire à info@gacee.org.",
+      "errNetwork": "Erreur réseau. Vérifiez votre connexion et réessayez.",
+      "errRate": "Trop d’envois. Veuillez réessayer plus tard."
     }
   },
   "legal": {
@@ -636,7 +644,7 @@
   "login": {
     "eyebrow": "Connexion",
     "title": "Une seule entrée pour membres, partenaires et apprenants.",
-    "lede": "Choisissez votre destination. Les comptes se mettent en place avec les programmes de l'association ; cette prévisualisation présente les entrées qui seront actives.",
+    "lede": "Choisissez votre accès. Membres, partenaires et inscrits aux événements se connectent sur le portail numérique de la GACEE.",
     "tabs": [
       {
         "key": "members",
@@ -655,15 +663,13 @@
       "submit": "Se connecter",
       "forgot": "Mot de passe oublié ?",
       "apply": "Devenir partenaire",
-      "note": "Prévisualisation : les comptes membres ouvrent avec la première cohorte de partenaires."
+      "note": "Connexion par mot de passe ou par code envoyé par e-mail. Le portail s’ouvre dans une nouvelle fenêtre."
     },
     "events": {
-      "title": "Inscriptions aux événements",
-      "body": "Consultez ou modifiez une inscription avec l'e-mail utilisé. Nous envoyons un code à usage unique ; aucun mot de passe.",
-      "email": "E-mail utilisé pour l'inscription",
-      "submit": "Envoyer le code",
-      "sent": "Si une inscription existe pour cette adresse, un code est en route.",
-      "note": "Prévisualisation : les codes ne sont pas encore envoyés."
+      "title": "Inscriptions",
+      "body": "Connectez-vous au portail numérique de la GACEE avec l’adresse e-mail utilisée lors de l’inscription (code à usage unique, sans mot de passe) pour consulter, régler ou annuler vos inscriptions dans « Mes inscriptions ».",
+      "submit": "Voir mes inscriptions",
+      "note": "Le portail s’ouvre dans une nouvelle fenêtre."
     }
   },
   "live": {

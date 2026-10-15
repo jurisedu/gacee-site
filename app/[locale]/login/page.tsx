@@ -20,7 +20,7 @@ export default async function Login({ params }: { params: Promise<{ locale: stri
       <PageHead eyebrow={t.login.eyebrow} title={t.login.title} lede={t.login.lede} />
       <section className="section">
         <div className="container">
-          <LoginPanel t={t.login} partnersHref={localizedPath(l, "/partners")} />
+          <LoginPanel t={t.login} partnersHref={localizedPath(l, "/partners")} locale={l} />
         </div>
       </section>
     </>

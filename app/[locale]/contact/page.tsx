@@ -39,7 +39,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
                 { name: "subject", label: c.form.subject, required: true },
                 { name: "message", label: c.form.message, type: "textarea", required: true },
               ]}
-              submit={c.form.submit} sent={c.form.sent} note={c.form.note} lead="contact"
+              submit={c.form.submit} sent={c.form.sent} note={c.form.note} errors={c.form} lead="contact"
             />
           </Reveal>
         </div>

@@ -272,7 +272,9 @@
           }
         ]
       }
-    }
+    },
+    "related": "Related news and coverage",
+    "relatedMore": "All news"
   },
   "network": {
     "eyebrow": "Global Partners",
@@ -585,7 +587,10 @@
       "message": "How would you like to work together?",
       "submit": "Send",
       "sent": "Thank you. We will be in touch within five working days.",
-      "note": "This is a preview site. Submissions are not yet stored."
+      "note": "Your message goes straight to the GACEE secretariat and we will reply as soon as possible. By submitting, you agree to our handling of this information under our Privacy Policy.",
+      "errFailed": "Submission failed. Please try again later or email info@gacee.org.",
+      "errNetwork": "Network error. Please check your connection and try again.",
+      "errRate": "Too many submissions. Please try again later."
     }
   },
   "contact": {
@@ -608,7 +613,10 @@
       "message": "Message",
       "submit": "Send message",
       "sent": "Thank you. Your message has been received.",
-      "note": "This is a preview site. Submissions are not yet stored."
+      "note": "Your message goes straight to the GACEE secretariat and we will reply as soon as possible. By submitting, you agree to our handling of this information under our Privacy Policy.",
+      "errFailed": "Submission failed. Please try again later or email info@gacee.org.",
+      "errNetwork": "Network error. Please check your connection and try again.",
+      "errRate": "Too many submissions. Please try again later."
     }
   },
   "legal": {
@@ -635,7 +643,7 @@
   "login": {
     "eyebrow": "Sign in",
     "title": "One entrance for members, partners and learners.",
-    "lede": "Choose where you are going. Accounts are being set up alongside the association's programmes; this preview shows the entrances that will be live.",
+    "lede": "Choose your entrance. Members, partners and event registrants all sign in on the GACEE digital portal.",
     "tabs": [
       {
         "key": "members",
@@ -654,15 +662,13 @@
       "submit": "Sign in",
       "forgot": "Forgot password?",
       "apply": "Apply to become a partner",
-      "note": "Preview: member accounts open with the first partner cohort."
+      "note": "Sign in with a password or a one-time email code. The portal opens in a new window."
     },
     "events": {
       "title": "Event registrations",
-      "body": "Look up or change a registration with the email you used. We send a one-time code; no password needed.",
-      "email": "Email used for registration",
-      "submit": "Send code",
-      "sent": "If a registration exists for this address, a code is on its way.",
-      "note": "Preview: codes are not yet sent."
+      "body": "Sign in to the GACEE digital portal with the email you registered with (one-time code, no password needed) to view, pay for or cancel your registrations under “My registrations”.",
+      "submit": "View my registrations",
+      "note": "The portal opens in a new window."
     }
   },
   "live": {
