@@ -12,7 +12,7 @@ import { fetchSite, mergeProgrammes } from "@/lib/site";
 
 export const revalidate = 300; // ISR：平台项目卡片编辑后 5 分钟内生效（body/facts/art 仍静态）
 
-type Item = { title: string; tagline: string; summary: string; body: string[]; facts: { label: string; value: string }[]; image?: string };
+type Item = { title: string; tagline: string; summary: string; body: string[]; facts: { label: string; value: string }[]; image?: string; imageCredit?: string };
 
 export function generateStaticParams() {
   return locales.flatMap((locale) => programmeSlugs.map((slug) => ({ locale, slug })));
@@ -52,7 +52,7 @@ export default async function Programme({ params }: { params: Promise<{ locale: 
           <Reveal delay={100}>
             <div className="eyebrow" style={{ marginBottom: 16 }}>{t.programmes.factsTitle}</div>
             <div className="facts"><dl>{item.facts.map((f, i) => <div key={i}><dt>{f.label}</dt><dd>{f.value}</dd></div>)}</dl></div>
-            <div style={{ color: "var(--blue)", marginTop: 40 }}>{item.image ? <img className="prog-detail__img" src={item.image} alt={item.title} loading="lazy" /> : <ProgrammeArt slug={slug} className="" />}</div>
+            <div style={{ color: "var(--blue)", marginTop: 40 }}>{item.image ? <figure className="prog-figure"><img className="prog-detail__img" src={item.image} alt={item.title} loading="lazy" />{item.imageCredit ? <figcaption>{item.imageCredit}</figcaption> : null}</figure> : <ProgrammeArt slug={slug} className="" />}</div>
             <p style={{ marginTop: 32 }}><Link href={localizedPath(l, "/partners")} className="btn btn--primary">{t.hero.cta2}</Link></p>
           </Reveal>
         </div>

@@ -3,15 +3,38 @@
 // 不可用时回退到站内已核实的静态资讯，并在页面上不把「读取失败」显示成「没有内容」。
 import { type Locale } from "@/lib/i18n";
 
+export type Cover = { url: string; alt?: string; credit?: string; license?: string; author?: string; sourceUrl?: string; width?: number; height?: number };
 export type Article = {
   id: string;
   title: string;
   body?: unknown;
+  excerpt?: string;
   publishedAt?: string;
   updatedAt?: string;
   author?: string;
   contentLang?: "zh" | "en";
+  category?: "association" | "coverage" | "industry" | "notice";
+  sourceName?: string;
+  sourceUrl?: string;
+  cover?: Cover | null;
 };
+
+// 日期按协会所在地（新加坡）时区显示，避免 UTC 截取把当地凌晨的日期显示成前一天
+export function sgDate(iso?: string): string {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return String(iso).slice(0, 10);
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Singapore", year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
+}
+
+// 图片署名：署名/作者 + 许可（开放许可图片须标注作者与许可）
+const LICENSE_LABEL: Record<string, string> = { "cc0": "CC0", "cc-by": "CC BY", "cc-by-sa": "CC BY-SA" };
+export function creditLine(c?: { credit?: string; author?: string; license?: string } | null): string {
+  if (!c) return "";
+  const who = c.credit || c.author || "";
+  const lic = c.license ? LICENSE_LABEL[c.license] : "";
+  return [who, lic && !who.includes(lic) ? lic : ""].filter(Boolean).join(" · ");
+}
 export type Feed = { status: "ok" | "empty" | "unavailable"; items: Article[] };
 
 const BASE = process.env.PLATFORM_CONTENT_API_URL ?? "https://hub.gacee.org";

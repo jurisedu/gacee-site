@@ -33,6 +33,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const cta = mergeSection(t.cta, site?.sections?.cta);
   const pillars = mergeSection(t.pillars, site?.sections?.pillars);
   const network = mergeSection(t.network, site?.sections?.network);
+  // 图片展示：只在内容中枢「首页 · 图片展示」已发布且有图片时显示（宁缺不空；署名随图）
+  type GalleryItem = { image?: string; caption?: string; credit?: string; link?: string };
+  const gallerySec = site?.sections?.gallery as { eyebrow?: string; title?: string; body?: string; items?: GalleryItem[] } | undefined;
+  const gallery = (Array.isArray(gallerySec?.items) ? gallerySec!.items! : []).filter((g) => g.image && /^(https:\/\/|http:\/\/localhost[:/])/.test(g.image));
   const items = mergeProgrammes(t.programmes.items as Record<string, { title: string; tagline: string; summary: string }>, site?.sections?.programmes);
   const statsItems = site?.sections?.stats?.items;
   const stats = (Array.isArray(statsItems) ? statsItems : t.stats) as typeof t.stats;
@@ -147,6 +151,28 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
+      {gallery.length ? (
+        <section className="section gallery-sec" aria-labelledby="gallery-title">
+          <div className="container">
+            <Reveal className="section__head">
+              <div><div className="eyebrow">{gallerySec?.eyebrow}</div><h2 id="gallery-title" className="display h2">{gallerySec?.title}</h2></div>
+              {gallerySec?.body ? <p>{gallerySec.body}</p> : null}
+            </Reveal>
+            <div className="gallery">
+              {gallery.slice(0, 9).map((g, i) => (
+                <Reveal as="figure" key={i} className={"gallery__item" + (i === 0 ? " gallery__item--lead" : "")} delay={i * 50}>
+                  <img src={g.image} alt={g.caption || ""} loading={i < 3 ? "eager" : "lazy"} />
+                  <figcaption>
+                    {g.caption ? <span>{g.link ? <a href={g.link}>{g.caption}</a> : g.caption}</span> : null}
+                    {g.credit ? <small>{g.credit}</small> : null}
+                  </figcaption>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section className="section section--white section--line">
         <div className="container">
           <Reveal className="section__head">
@@ -174,9 +200,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <div className="news-grid">
             {news.map((n, i) => (
               <Reveal as="article" key={n.id || i} className="news-item" delay={i * 80}>
+                {n.cover ? <img className="news-item__img" src={n.cover.url} alt={n.cover.alt || n.title} loading="lazy" /> : null}
                 <time dateTime={n.date}>{n.date}</time>
                 <h3 lang={n.lang}>{n.id ? <Link href={p(`/news/${n.id}`)}>{n.title}</Link> : n.title}</h3>
-                <p lang={n.lang}>{n.body.length > 160 ? n.body.slice(0, 160) + "…" : n.body}</p>
+                <p lang={n.lang}>{n.excerpt || (n.body.length > 160 ? n.body.slice(0, 160) + "…" : n.body)}</p>
                 <div className="src">{n.source}</div>
               </Reveal>
             ))}

@@ -362,7 +362,11 @@
     "readMore": "Lire l'article",
     "unavailable": "Les dernières actualités n'ont pas pu être chargées ; voici des actualités antérieures.",
     "updated": "Mis à jour",
-    "back": "Toutes les actualités"
+    "back": "Toutes les actualités",
+    "source": "Source",
+    "readOriginal": "Lire l'article original",
+    "externalNote": "Résumé rédigé par GACEE. Consultez l'article original pour le texte complet.",
+    "photo": "Photo"
   },
   "cta": {
     "title": "Construisons le pont ensemble.",

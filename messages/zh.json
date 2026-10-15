@@ -357,7 +357,11 @@
     "readMore": "阅读全文",
     "unavailable": "最新资讯暂时无法读取，以下为早前资讯。",
     "updated": "更新于",
-    "back": "全部新闻"
+    "back": "全部新闻",
+    "source": "来源",
+    "readOriginal": "阅读原文",
+    "externalNote": "以下为本站摘要，完整内容请阅读原文。",
+    "photo": "图"
   },
   "cta": {
     "title": "与我们一起搭桥。",

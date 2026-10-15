@@ -35,7 +35,7 @@ export default async function Programmes({ params }: { params: Promise<{ locale:
                 <div className="prog-card__tag">{items[slug].tagline}</div>
                 <h3>{items[slug].title}</h3>
                 <p className="prog-card__sum">{items[slug].summary}</p>
-                {items[slug].image ? <img className="prog-card__img" src={items[slug].image} alt={items[slug].title} loading="lazy" /> : <ProgrammeArt slug={slug} />}
+                {items[slug].image ? <figure className="prog-figure"><img className="prog-card__img" src={items[slug].image} alt={items[slug].title} loading="lazy" />{(items[slug] as { imageCredit?: string }).imageCredit ? <figcaption>{(items[slug] as { imageCredit?: string }).imageCredit}</figcaption> : null}</figure> : <ProgrammeArt slug={slug} />}
                 <div className="prog-card__foot"><span className="link" style={{ color: "inherit" }}>{t.programmes.learnMore} <Arrow /></span></div>
               </Link>
             </Reveal>

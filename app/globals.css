@@ -447,3 +447,27 @@ html[lang="zh-Hans"] .choice legend{letter-spacing:.16em;text-transform:none}
 @media (max-width: 1024px) { .roles__grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .roles__grid { grid-template-columns: 1fr; } }
 a:focus-visible, button:focus-visible { outline: 2px solid #B28A45; outline-offset: 3px; }
+
+/* ---------- 图文：新闻封面、首页图片展示、项目配图署名、来源 ---------- */
+.news-cover { margin: 0 0 14px; }
+.news-cover img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; display: block; background: var(--line); }
+.news-cover figcaption, .prog-figure figcaption { font-size: 12px; opacity: .7; margin-top: 6px; line-height: 1.5; }
+.news-cover--lead { margin: 22px 0 26px; }
+.news-cover--lead img { aspect-ratio: auto; max-height: 480px; }
+.news-item__img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 10px; margin-bottom: 14px; display: block; background: var(--line); }
+.news-source { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; }
+.news-source a, .news-cover figcaption a { text-decoration: underline; text-underline-offset: 3px; }
+.news-external { opacity: .75; border-left: 2px solid var(--line-strong); padding-left: 10px; }
+.prog-figure { margin: 0; }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.gallery__item { margin: 0; position: relative; overflow: hidden; border-radius: 12px; background: var(--line); }
+.gallery__item img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform .6s var(--ease); }
+.gallery__item:hover img { transform: scale(1.03); }
+.gallery__item--lead { grid-column: span 2; grid-row: span 2; min-height: 320px; }
+.gallery__item--lead img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; }
+.gallery__item img { object-position: 50% 30%; }
+.gallery__item figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 14px 10px; color: #fff; background: linear-gradient(transparent, rgba(8,12,24,.78)); display: flex; flex-direction: column; gap: 2px; font-size: 13.5px; line-height: 1.45; }
+.gallery__item figcaption small { font-size: 11px; opacity: .8; }
+.gallery__item figcaption a { color: #fff; }
+@media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, 1fr); } .gallery__item--lead { grid-column: span 2; grid-row: auto; aspect-ratio: 16 / 9; min-height: 0; } }
+@media (max-width: 560px) { .gallery { grid-template-columns: 1fr; } .gallery__item--lead { grid-column: auto; aspect-ratio: 4 / 3; } }

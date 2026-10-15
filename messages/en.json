@@ -361,7 +361,11 @@
     "readMore": "Read article",
     "unavailable": "Latest updates could not be loaded; showing earlier news.",
     "updated": "Updated",
-    "back": "All news"
+    "back": "All news",
+    "source": "Source",
+    "readOriginal": "Read the original",
+    "externalNote": "Summary by GACEE. Please read the original for the full article.",
+    "photo": "Photo"
   },
   "cta": {
     "title": "Build the bridge with us.",
