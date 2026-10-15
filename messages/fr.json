@@ -377,7 +377,10 @@
       "coverage": "Dans les médias",
       "industry": "Actualités du secteur",
       "notice": "Avis"
-    }
+    },
+    "older": "Précédent",
+    "newer": "Suivant",
+    "relatedReading": "À lire aussi"
   },
   "cta": {
     "title": "Construisons le pont ensemble.",
@@ -909,6 +912,45 @@
             "href": "/news/16"
           }
         ]
+      }
+    ]
+  },
+  "aboutFacts": {
+    "eyebrow": "En bref",
+    "title": "La GACEE en faits",
+    "note": "Les chiffres proviennent des registres de programmes et de sources publiques. Chacun renvoie à sa source.",
+    "more1": "Jalons",
+    "more2": "Présence mondiale",
+    "items": [
+      {
+        "k": "2025",
+        "v": "Enregistrée à Singapour",
+        "href": "/milestones"
+      },
+      {
+        "k": "180",
+        "v": "directeurs d’école de 34 pays lors de trois Tournées en Chine des 100 directeurs",
+        "href": "/programmes/principals-tour"
+      },
+      {
+        "k": "30+",
+        "v": "pays et plus de 100 écoles lors du premier Concours mondial d’écriture en chinois ; les meilleurs textes ont été publiés",
+        "href": "/news/7"
+      },
+      {
+        "k": "2",
+        "v": "camps d’étude internationaux : Pékin et plaines centrales (2025), Xi’an (2026)",
+        "href": "/programmes/study-tours"
+      },
+      {
+        "k": "6",
+        "v": "conférences solidaires gratuites pour écoles et communautés, janvier–juin 2026",
+        "href": "/programmes/public-good"
+      },
+      {
+        "k": "2",
+        "v": "centres de coopération à l’étranger, en Europe (Italie) et aux Amériques (Canada), désignés en août 2025",
+        "href": "/news/22"
       }
     ]
   }

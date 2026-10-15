@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { pageSeo } from "@/lib/seo";
-import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
+import { localizedPath, getDictionary, isLocale, type Locale } from "@/lib/i18n";
 import Header from "@/components/Header";
 import PageHead from "@/components/PageHead";
 import Reveal from "@/components/Reveal";
@@ -45,6 +46,25 @@ export default async function About({ params }: { params: Promise<{ locale: stri
               ))}
             </div>
           </Reveal>
+        </div>
+      </section>
+      <section className="section section--white section--line glance" aria-labelledby="glance-title">
+        <div className="container">
+          <Reveal className="section__head">
+            <div><div className="eyebrow eyebrow--gold">{t.aboutFacts.eyebrow}</div><h2 id="glance-title" className="display h2">{t.aboutFacts.title}</h2></div>
+            <p>{t.aboutFacts.note}</p>
+          </Reveal>
+          <div className="glance__grid">
+            {t.aboutFacts.items.map((f, i) => (
+              <Reveal key={f.k + i} delay={i * 50}>
+                <Link href={localizedPath(l, f.href)} className="glance__item">
+                  <span className="glance__k num">{f.k}</span>
+                  <span className="glance__v">{f.v}</span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+          <p className="glance__more"><Link href={localizedPath(l, "/milestones")} className="link">{t.aboutFacts.more1} →</Link><Link href={localizedPath(l, "/global-partners")} className="link">{t.aboutFacts.more2} →</Link></p>
         </div>
       </section>
       <section className="section section--white section--line">

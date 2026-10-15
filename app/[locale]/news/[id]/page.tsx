@@ -8,6 +8,8 @@ import Header from "@/components/Header";
 import { fetchFeed, articleLang, sgDate, creditLine } from "@/lib/content";
 import { mdToHtml } from "@/lib/md";
 import JsonLd, { SITE, ORG_ID } from "@/components/JsonLd";
+import RelatedNews from "@/components/RelatedNews";
+import { newsItems } from "@/lib/news";
 
 async function load(l: Locale, id: string) {
   if (!/^\d+$/.test(id)) return null;
@@ -32,6 +34,12 @@ export default async function NewsArticle({ params }: { params: Promise<{ locale
   if (!a) notFound();
   const lang = articleLang(a, l);
   const thirdParty = a.category === "coverage" || a.category === "industry";
+  // 上一篇 / 下一篇（按发布时间）与同栏目相关阅读
+  const all = (await newsItems(l, 100)).items.filter((n) => n.id);
+  const idx = all.findIndex((n) => n.id === String(a.id));
+  const newer = idx > 0 ? all[idx - 1] : null;
+  const older = idx >= 0 && idx < all.length - 1 ? all[idx + 1] : null;
+  const related = all.filter((n) => n.id !== String(a.id) && n.category === (a.category || "association")).slice(0, 3);
   return (
     <>
       <Header locale={l} nav={t.nav} cand={t.columns} />
@@ -63,8 +71,15 @@ export default async function NewsArticle({ params }: { params: Promise<{ locale
               {t.news.source}{sep}{a.sourceName || a.sourceUrl} · <a href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{t.news.readOriginal} ↗</a>
             </p>
           ) : null}
+          {newer || older ? (
+            <nav className="news-pager" aria-label={t.news.eyebrow}>
+              {older ? <Link href={localizedPath(l, `/news/${older.id}`)} className="news-pager__item"><span>{t.news.older}</span><b lang={older.lang}>{older.title}</b></Link> : <span />}
+              {newer ? <Link href={localizedPath(l, `/news/${newer.id}`)} className="news-pager__item news-pager__item--next"><span>{t.news.newer}</span><b lang={newer.lang}>{newer.title}</b></Link> : <span />}
+            </nav>
+          ) : null}
         </article>
       </main>
+      <RelatedNews l={l} items={related} title={t.news.relatedReading} more={t.programmes.relatedMore} />
     </>
   );
 }

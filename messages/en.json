@@ -376,7 +376,10 @@
       "coverage": "In the media",
       "industry": "Sector news",
       "notice": "Notices"
-    }
+    },
+    "older": "Previous",
+    "newer": "Next",
+    "relatedReading": "Related reading"
   },
   "cta": {
     "title": "Build the bridge with us.",
@@ -908,6 +911,45 @@
             "href": "/news/16"
           }
         ]
+      }
+    ]
+  },
+  "aboutFacts": {
+    "eyebrow": "At a glance",
+    "title": "GACEE in facts",
+    "note": "Figures come from the association’s programme records and public reports. Each links to its source.",
+    "more1": "Milestones",
+    "more2": "Global footprint",
+    "items": [
+      {
+        "k": "2025",
+        "v": "Registered in Singapore",
+        "href": "/milestones"
+      },
+      {
+        "k": "180",
+        "v": "principals from 34 countries joined three Global 100 Principals China Tours",
+        "href": "/programmes/principals-tour"
+      },
+      {
+        "k": "30+",
+        "v": "countries and 100+ schools in the first World Chinese Writing Competition; the best entries were published",
+        "href": "/news/7"
+      },
+      {
+        "k": "2",
+        "v": "international study camps: Beijing and the Central Plains (2025), Xi’an (2026)",
+        "href": "/programmes/study-tours"
+      },
+      {
+        "k": "6",
+        "v": "free public-good lectures for schools and communities, January–June 2026",
+        "href": "/programmes/public-good"
+      },
+      {
+        "k": "2",
+        "v": "overseas cooperation centres, in Europe (Italy) and the Americas (Canada), authorised August 2025",
+        "href": "/news/22"
       }
     ]
   }
