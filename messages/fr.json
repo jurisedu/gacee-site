@@ -25,10 +25,10 @@
     "verify": "Vérifier un certificat"
   },
   "columns": {
-    "aboutGov": "À propos et gouvernance",
+    "aboutGov": "À propos de GACEE",
     "programmesEvents": "Programmes et événements",
     "globalPartners": "Partenaires mondiaux",
-    "resources": "Ressources pédagogiques",
+    "resources": "Ressources",
     "participate": "Participer",
     "welfare": "Action caritative",
     "intro": "L'Association",
@@ -40,9 +40,10 @@
     "short": {
       "aboutGov": "À propos",
       "programmesEvents": "Programmes",
-      "globalPartners": "Partenaires",
-      "resources": "Ressources"
-    }
+      "globalPartners": "Partenaires"
+    },
+    "matching": "Mise en relation",
+    "contactUs": "Nous contacter"
   },
   "hero": {
     "eyebrow": "Singapour · Fondée en 2025",

@@ -25,10 +25,10 @@
     "verify": "Verify a certificate"
   },
   "columns": {
-    "aboutGov": "About & Governance",
+    "aboutGov": "About GACEE",
     "programmesEvents": "Programmes & Events",
     "globalPartners": "Global Partners",
-    "resources": "Teaching Resources",
+    "resources": "Resources",
     "participate": "Take Part",
     "welfare": "Public Welfare",
     "intro": "About the Association",
@@ -39,9 +39,10 @@
     "flagship": "Flagship Programmes",
     "short": {
       "aboutGov": "About",
-      "programmesEvents": "Programmes",
-      "resources": "Resources"
-    }
+      "programmesEvents": "Programmes"
+    },
+    "matching": "Resource Matching",
+    "contactUs": "Contact Us"
   },
   "hero": {
     "eyebrow": "Singapore · Est. 2025",

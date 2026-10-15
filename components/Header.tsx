@@ -1,5 +1,5 @@
 "use client";
-// 官网页眉：五个一级栏目（关于与治理／项目与活动／全球伙伴／教研资源／参与合作）＋公益专题，必要工具（查验证书、会员登录、语言）。
+// 官网页眉：五个一级栏目（关于协会／项目与活动／全球伙伴／资源中心／参与合作）＋公益专题，必要工具（查验证书、会员登录、语言）。
 // 二级菜单只列已有真实内容的页面（宁缺不空）；桌面端悬停或键盘聚焦展开，手机端菜单按栏目分组。语言以各自语言书写，不拆行。
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,7 +10,7 @@ import Image from "next/image";
 type NavDict = { about: string; programmes: string; events: string; impact: string; news: string; partners: string; contact: string; join: string; menu: string; close: string; language: string; signin: string; verify?: string };
 export type Columns = {
   aboutGov: string; programmesEvents: string; globalPartners: string; resources: string; participate: string; welfare: string;
-  intro: string; library: string; apply: string; portal: string; partnerNetwork: string; flagship: string;
+  intro: string; contactUs: string; library: string; matching: string; apply: string; portal: string; partnerNetwork: string; flagship: string;
   short?: Partial<Record<"aboutGov" | "programmesEvents" | "globalPartners" | "resources" | "participate" | "welfare", string>>; // 桌面一级栏目短名（法文），完整名用于提示与菜单
 };
 
@@ -81,11 +81,11 @@ export default function Header({ locale, nav, dark = false, cand }: { locale: Lo
   const hubLibrary = `${HUB}/library?lang=${locale}`;
 
   const columns: Column[] = [
-    { href: L("/about"), label: cand.aboutGov, short: cand.short?.aboutGov, items: [{ href: L("/about"), label: cand.intro }, { href: L("/contact"), label: nav.contact }] },
+    { href: L("/about"), label: cand.aboutGov, short: cand.short?.aboutGov, items: [{ href: L("/about"), label: cand.intro }, { href: L("/contact"), label: cand.contactUs }] },
     { href: L("/programmes"), label: cand.programmesEvents, short: cand.short?.programmesEvents, items: [{ href: L("/programmes"), label: cand.flagship }, { href: L("/events"), label: nav.events }, { href: L("/news"), label: nav.news }] },
     { href: L("/global-partners"), label: cand.globalPartners, short: cand.short?.globalPartners, items: [{ href: L("/global-partners"), label: cand.partnerNetwork }, { href: L("/partners"), label: cand.apply }] },
-    { href: hubLibrary, label: cand.resources, short: cand.short?.resources, items: [{ href: hubLibrary, label: cand.library }] },
-    { href: L("/partners"), label: cand.participate, items: [{ href: L("/partners"), label: cand.apply }, { href: L("/contact"), label: nav.contact }, { href: hubLogin, label: cand.portal }] },
+    { href: hubLibrary, label: cand.resources, short: cand.short?.resources, items: [{ href: hubLibrary, label: cand.library }, { href: `${HUB}/market?lang=${locale}`, label: cand.matching }] },
+    { href: L("/partners"), label: cand.participate, items: [{ href: L("/partners"), label: cand.apply }, { href: L("/contact"), label: cand.contactUs }, { href: hubLogin, label: cand.portal }] },
   ];
 
   const ext = (href: string) => href.startsWith("http");

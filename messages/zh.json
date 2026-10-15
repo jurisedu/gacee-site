@@ -25,10 +25,10 @@
     "verify": "查验证书"
   },
   "columns": {
-    "aboutGov": "关于与治理",
+    "aboutGov": "关于协会",
     "programmesEvents": "项目与活动",
     "globalPartners": "全球伙伴",
-    "resources": "教研资源",
+    "resources": "资源中心",
     "participate": "参与合作",
     "welfare": "公益专题",
     "intro": "协会简介",
@@ -36,7 +36,9 @@
     "apply": "合作申请",
     "portal": "会员门户",
     "partnerNetwork": "伙伴网络",
-    "flagship": "旗舰项目"
+    "flagship": "旗舰项目",
+    "matching": "资源对接",
+    "contactUs": "联系我们"
   },
   "hero": {
     "eyebrow": "新加坡 · 2025 年成立",
