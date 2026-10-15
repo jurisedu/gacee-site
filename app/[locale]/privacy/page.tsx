@@ -15,7 +15,7 @@ export default async function Privacy({ params }: { params: Promise<{ locale: st
   const t = getDictionary(l);
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <PageHead eyebrow={`${t.legal.updated} 2026-09-05`} title={t.legal.privacyTitle} />
       <section className="section"><div className="container prose">{t.legal.privacy.map((p, i) => <p key={i}>{p}</p>)}</div></section>
     </>

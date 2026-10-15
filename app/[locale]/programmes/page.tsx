@@ -25,7 +25,7 @@ export default async function Programmes({ params }: { params: Promise<{ locale:
   const items = mergeProgrammes(t.programmes.items as Record<string, { title: string; tagline: string; summary: string; image?: string }>, site?.sections?.programmes);
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <PageHead eyebrow={t.programmes.eyebrow} title={t.programmes.title} lede={t.programmes.body} />
       <section className="section">
         <div className="container prog-feature">

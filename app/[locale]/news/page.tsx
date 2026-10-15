@@ -21,7 +21,7 @@ export default async function News({ params }: { params: Promise<{ locale: strin
   const { items, unavailable } = await newsItems(l);
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <PageHead eyebrow={t.news.eyebrow} title={t.news.title} />
       <section className="section">
         <div className="container news-list">

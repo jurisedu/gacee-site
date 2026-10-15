@@ -22,8 +22,26 @@
     "close": "Close",
     "language": "Language",
     "signin": "Sign in",
-    "verify": "Verify a certificate",
-    "candidatePreview": "Navigation preview (candidate, not approved)"
+    "verify": "Verify a certificate"
+  },
+  "columns": {
+    "aboutGov": "About & Governance",
+    "programmesEvents": "Programmes & Events",
+    "globalPartners": "Global Partners",
+    "resources": "Teaching Resources",
+    "participate": "Take Part",
+    "welfare": "Public Welfare",
+    "intro": "About the Association",
+    "library": "Digital Library",
+    "apply": "Partner With Us",
+    "portal": "Member Portal",
+    "partnerNetwork": "Partner Network",
+    "flagship": "Flagship Programmes",
+    "short": {
+      "aboutGov": "About",
+      "programmesEvents": "Programmes",
+      "resources": "Resources"
+    }
   },
   "hero": {
     "eyebrow": "Singapore · Est. 2025",
@@ -254,7 +272,7 @@
     }
   },
   "network": {
-    "eyebrow": "Global network",
+    "eyebrow": "Global Partners",
     "title": "Six partnership networks, one open ecosystem",
     "body": "Working from Singapore, GACEE connects schools, universities, cultural institutions, publishers, technology companies and philanthropic organisations. We are building not one-off collaborations, but shared resources, joint programmes, talent exchange, youth visits and long-term partnerships.",
     "items": [
@@ -626,7 +644,7 @@
     "learn": {
       "title": "Learning platform",
       "body": "Teachers, learners and schools on the Global Online Chinese Programme sign in on the learning platform.",
-      "button": "Go to learn.gacee.org",
+      "button": "Go to shanhai.gacee.org",
       "status": "Opens with the first pilot cohort in October 2026.",
       "teacher": "Teacher sign-in",
       "learner": "Learner sign-in",
@@ -708,14 +726,6 @@
     "live": "Live now",
     "closed": "Ended",
     "open": "Open for registration"
-  },
-  "navCandidate": {
-    "aboutGov": "About & Governance",
-    "programmesEvents": "Programmes & Events",
-    "network": "Global Network",
-    "resources": "Teaching Resources",
-    "participate": "Take Part",
-    "welfare": "Public Welfare"
   },
   "roles": {
     "eyebrow": "Where to start",

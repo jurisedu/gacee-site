@@ -36,7 +36,7 @@ export default function LoginPanel({ t, partnersHref }: { t: Login; partnersHref
             <div className="login__roles">
               <span>{t.learn.teacher}</span><span>{t.learn.learner}</span><span>{t.learn.school}</span>
             </div>
-            <p><a href="https://learn.gacee.org" className="btn btn--primary" rel="noopener">{t.learn.button}</a></p>
+            <p><a href="https://shanhai.gacee.org" className="btn btn--primary" rel="noopener">{t.learn.button}</a></p>
             <p className="form__note">{t.learn.status}</p>
           </>
         )}

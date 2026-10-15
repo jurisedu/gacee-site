@@ -34,7 +34,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
   const status = ev.status === "live" ? d.live : ev.status === "closed" ? d.closed : d.open;
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <section className="page-head">
         <div className="container">
           <Link href={localizedPath(l, "/events")} className="link"><span style={{ transform: "rotate(180deg)", display: "inline-flex" }}><Arrow /></span> {t.nav.events}</Link>

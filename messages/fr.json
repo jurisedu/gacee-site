@@ -22,8 +22,27 @@
     "close": "Fermer",
     "language": "Langue",
     "signin": "Connexion",
-    "verify": "Vérifier un certificat",
-    "candidatePreview": "Aperçu de navigation (proposition non validée)"
+    "verify": "Vérifier un certificat"
+  },
+  "columns": {
+    "aboutGov": "À propos et gouvernance",
+    "programmesEvents": "Programmes et événements",
+    "globalPartners": "Partenaires mondiaux",
+    "resources": "Ressources pédagogiques",
+    "participate": "Participer",
+    "welfare": "Action caritative",
+    "intro": "L'Association",
+    "library": "Bibliothèque numérique",
+    "apply": "Devenir partenaire",
+    "portal": "Portail des membres",
+    "partnerNetwork": "Réseau de partenaires",
+    "flagship": "Programmes phares",
+    "short": {
+      "aboutGov": "À propos",
+      "programmesEvents": "Programmes",
+      "globalPartners": "Partenaires",
+      "resources": "Ressources"
+    }
   },
   "hero": {
     "eyebrow": "Singapour · Fondée en 2025",
@@ -254,7 +273,7 @@
     }
   },
   "network": {
-    "eyebrow": "Réseau mondial",
+    "eyebrow": "Partenaires mondiaux",
     "title": "Six réseaux de partenaires, un écosystème ouvert",
     "body": "Depuis Singapour, GACEE relie écoles, universités, institutions culturelles, éditeurs, entreprises technologiques et organisations philanthropiques. Nous construisons non pas des collaborations ponctuelles, mais des ressources partagées, des programmes communs, des échanges de talents, des visites de jeunes et des partenariats durables.",
     "items": [
@@ -626,7 +645,7 @@
     "learn": {
       "title": "Plateforme d'apprentissage",
       "body": "Enseignants, apprenants et écoles du Programme mondial de chinois en ligne se connectent sur la plateforme d'apprentissage.",
-      "button": "Aller sur learn.gacee.org",
+      "button": "Aller sur shanhai.gacee.org",
       "status": "Ouverture avec la première cohorte pilote en octobre 2026.",
       "teacher": "Connexion enseignant",
       "learner": "Connexion apprenant",
@@ -708,14 +727,6 @@
     "live": "En direct",
     "closed": "Terminé",
     "open": "Inscriptions ouvertes"
-  },
-  "navCandidate": {
-    "aboutGov": "À propos et gouvernance",
-    "programmesEvents": "Programmes et événements",
-    "network": "Réseau mondial",
-    "resources": "Ressources pédagogiques",
-    "participate": "Participer",
-    "welfare": "Action caritative"
   },
   "roles": {
     "eyebrow": "Par où commencer",

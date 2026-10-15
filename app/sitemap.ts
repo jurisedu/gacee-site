@@ -3,7 +3,7 @@ import { locales } from "@/lib/i18n";
 import { programmeSlugs } from "@/lib/programmes";
 
 const SITE = "https://gacee.org";
-const paths = ["", "/about", "/programmes", "/events", "/impact", "/news", "/partners", "/contact", ...programmeSlugs.map((s) => `/programmes/${s}`)];
+const paths = ["", "/about", "/programmes", "/events", "/impact", "/news", "/global-partners", "/partners", "/contact", ...programmeSlugs.map((s) => `/programmes/${s}`)];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

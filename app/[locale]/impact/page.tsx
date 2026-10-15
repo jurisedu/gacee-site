@@ -32,7 +32,7 @@ export default async function Impact({ params }: { params: Promise<{ locale: str
     : [];
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <PageHead eyebrow={t.impact.eyebrow} title={t.impact.title} lede={t.impact.lede} />
       {live.length ? (
         <section className="stats">

@@ -27,7 +27,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
   };
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <PageHead eyebrow={about.eyebrow} title={about.title} lede={about.lede} />
       <section className="section">
         <div className="container two">

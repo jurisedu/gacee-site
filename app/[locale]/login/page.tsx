@@ -16,7 +16,7 @@ export default async function Login({ params }: { params: Promise<{ locale: stri
   const t = getDictionary(l);
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <PageHead eyebrow={t.login.eyebrow} title={t.login.title} lede={t.login.lede} />
       <section className="section">
         <div className="container">

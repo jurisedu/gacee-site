@@ -39,7 +39,7 @@ export default async function Events({ params }: { params: Promise<{ locale: str
   );
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <PageHead eyebrow={t.events.eyebrow} title={t.events.title} />
       <section className="section">
         <div className="container">

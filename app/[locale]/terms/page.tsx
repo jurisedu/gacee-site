@@ -15,7 +15,7 @@ export default async function Terms({ params }: { params: Promise<{ locale: stri
   const t = getDictionary(l);
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <PageHead eyebrow={`${t.legal.updated} 2026-09-05`} title={t.legal.termsTitle} />
       <section className="section"><div className="container prose">{t.legal.terms.map((p, i) => <p key={i}>{p}</p>)}</div></section>
     </>

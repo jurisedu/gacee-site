@@ -28,7 +28,7 @@ export default async function Partners({ params }: { params: Promise<{ locale: s
   const types = (parsePairs(pp?.types) ?? t.partners.types) as { title: string; body: string }[];
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <PageHead eyebrow={eyebrow} title={title} lede={lede} />
       <section className="section">
         <div className="container card-grid">

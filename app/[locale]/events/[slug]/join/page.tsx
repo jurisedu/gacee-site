@@ -17,7 +17,7 @@ export default async function JoinPage({ params }: { params: Promise<{ locale: s
   const t = getDictionary(l);
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <section className="page-head" style={{ paddingBottom: 24 }}><div className="container"><div className="eyebrow">{t.nav.events}</div></div></section>
       <section className="section" style={{ paddingTop: 32 }}><div className="container"><JoinHub slug={slug} locale={l} d={t.live as never} registerPath={localizedPath(l, `/events/${slug}`)} /></div></section>
     </>

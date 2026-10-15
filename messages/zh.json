@@ -22,8 +22,21 @@
     "close": "关闭",
     "language": "语言",
     "signin": "登录",
-    "verify": "查验证书",
-    "candidatePreview": "导航候选预览（未经批准）"
+    "verify": "查验证书"
+  },
+  "columns": {
+    "aboutGov": "关于与治理",
+    "programmesEvents": "项目与活动",
+    "globalPartners": "全球伙伴",
+    "resources": "教研资源",
+    "participate": "参与合作",
+    "welfare": "公益专题",
+    "intro": "协会简介",
+    "library": "数字图书馆",
+    "apply": "合作申请",
+    "portal": "会员门户",
+    "partnerNetwork": "伙伴网络",
+    "flagship": "旗舰项目"
   },
   "hero": {
     "eyebrow": "新加坡 · 2025 年成立",
@@ -254,7 +267,7 @@
     }
   },
   "network": {
-    "eyebrow": "全球网络",
+    "eyebrow": "全球伙伴",
     "title": "六大合作网络，一个开放生态",
     "body": "以新加坡为枢纽，GACEE 连接学校、高校、文化机构、出版与媒体、科技企业与公益力量。我们希望建立的不是一次合作，而是资源共享、项目共建、人才交流、青少年互访与长期伙伴关系。",
     "items": [
@@ -626,7 +639,7 @@
     "learn": {
       "title": "学习平台",
       "body": "全球中文在线培训的老师、学员与学校，请在学习平台登录。",
-      "button": "前往 learn.gacee.org",
+      "button": "前往 shanhai.gacee.org",
       "status": "将随 2026 年 10 月首批试点班开放。",
       "teacher": "老师登录",
       "learner": "学员登录",
@@ -708,14 +721,6 @@
     "live": "直播中",
     "closed": "已结束",
     "open": "报名中"
-  },
-  "navCandidate": {
-    "aboutGov": "关于与治理",
-    "programmesEvents": "项目与活动",
-    "network": "全球网络",
-    "resources": "教研资源",
-    "participate": "参与合作",
-    "welfare": "公益专题"
   },
   "roles": {
     "eyebrow": "从这里开始",

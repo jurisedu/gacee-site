@@ -37,7 +37,7 @@ export default async function Programme({ params }: { params: Promise<{ locale: 
   const next = programmeSlugs[(idx + 1) % programmeSlugs.length];
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <section className="page-head">
         <div className="container">
           <Link href={localizedPath(l, "/programmes")} className="link" style={{ marginBottom: 28 }}><span style={{ transform: "rotate(180deg)", display: "inline-flex" }}><Arrow /></span> {t.programmes.backToAll}</Link>

@@ -31,7 +31,7 @@ export default async function NewsArticle({ params }: { params: Promise<{ locale
   const lang = articleLang(a, l);
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <main className="section" style={{ paddingTop: 140 }}>
         <article className="container" style={{ maxWidth: 760 }} lang={lang}>
           <p className="small"><Link href={localizedPath(l, "/news")} lang={l === "zh" ? "zh-Hans" : l}>← {t.news.back}</Link></p>

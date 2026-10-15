@@ -18,7 +18,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
   const c = t.contact;
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} />
+      <Header locale={l} nav={t.nav} cand={t.columns} />
       <PageHead eyebrow={c.eyebrow} title={c.title} lede={c.lede} />
       <section className="section">
         <div className="container contact-grid">

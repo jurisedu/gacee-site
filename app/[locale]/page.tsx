@@ -39,7 +39,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
   return (
     <>
-      <Header locale={l} nav={t.nav} cand={t.navCandidate} dark />
+      <Header locale={l} nav={t.nav} cand={t.columns} dark />
       <section className="hero">
         <HeroGlobe />
         <div className="hero__grad" />
